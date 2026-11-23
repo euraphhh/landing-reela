@@ -19,7 +19,8 @@ export const metadata: Metadata = {
   title: "reela music · links",
   description: `selo de trap e r&b. o mais novo: ${ULTIMO.titulo}.`,
   alternates: { canonical: "/links/" },
-  openGraph: { title: "reela music", description: `o mais novo: ${ULTIMO.titulo}.`, url: "/links/", images: ULTIMO.capa ? [{ url: ULTIMO.capa, width: 640, height: 640 }] : undefined },
+  openGraph: { title: "reela music", description: `o mais novo: ${ULTIMO.titulo}.`, url: "/links/", images: [{ url: "/links/og.png", width: 1200, height: 630, alt: `o mais novo da reela: ${ULTIMO.titulo}` }] },
+  twitter: { card: "summary_large_image", images: ["/links/og.png"] },
 };
 
 const real = (href?: string) => Boolean(href && href !== "#");

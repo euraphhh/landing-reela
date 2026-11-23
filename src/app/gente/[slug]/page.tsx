@@ -18,13 +18,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!a) return {};
   const titulo = `${a.nome} · reela music`;
   const desc = `${a.papel}. ${a.faixas} ${a.faixas > 1 ? "lançamentos" : "lançamento"} com a reela.`;
-  const capa = a.foto ?? RELEASES.find((r) => r.id === a.lancamentos[0]?.id)?.capa;
   return {
     title: titulo,
     description: desc,
     alternates: { canonical: `/gente/${a.slug}/` },
-    openGraph: { title: titulo, description: desc, type: "profile", locale: "pt_BR", url: `/gente/${a.slug}/`, images: capa ? [{ url: capa, width: 640, height: 640 }] : undefined },
-    twitter: { card: "summary", title: titulo, description: desc, images: capa ? [capa] : undefined },
+    openGraph: { title: titulo, description: desc, type: "profile", locale: "pt_BR", url: `/gente/${a.slug}/`, images: [{ url: `/gente/${a.slug}/og.png`, width: 1200, height: 630, alt: a.nome }] },
+    twitter: { card: "summary_large_image", title: titulo, description: desc, images: [`/gente/${a.slug}/og.png`] },
   };
 }
 

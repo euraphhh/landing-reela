@@ -1,20 +1,24 @@
-import { Simbolo } from "@/components/marca/Simbolo";
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { SomProvider } from "@/hooks/useSom";
+import { Barra } from "@/components/Barra/Barra";
+import { Hero } from "@/components/Hero/Hero";
+import { Grao } from "@/components/Grao/Grao";
+import { MOSTRAR_SELO_PROTOTIPO } from "@/data/links";
 
-// etapa 1: placa de teste de tokens, fontes e símbolo. substituída na etapa 2.
 export default function Home() {
   return (
-    <main id="conteudo" style={{ padding: "var(--gutter)", display: "grid", gap: 24 }}>
-      <Simbolo titulo="reela" className="teste-sym" />
-      <h1 className="t-display">de novo, até amanhecer.</h1>
-      <p className="t-heading">tem uma faixa que não sai da cabeça?</p>
-      <p>a gente faz o beat, a mix e a arte. a faixa é sua.</p>
-      <span className="t-caption">sexta, 00h. em todas as plataformas.</span>
-      <span className="t-credit">prod. reela · mix reela</span>
-      <div style={{ display: "flex", gap: 10 }}>
-        <a className="btn btn-1" href="#">mandar faixa</a>
-        <a className="btn btn-2" href="#">abrir release</a>
-      </div>
-      <style>{`.teste-sym{width:120px;height:120px}`}</style>
-    </main>
+    <SmoothScroll>
+      <SomProvider>
+        <a className="skip" href="#conteudo">pular para o conteúdo</a>
+        <Grao />
+        <Barra />
+        <main id="conteudo" tabIndex={-1}>
+          <Hero />
+          {/* etapa 3: Laco · etapa 4: QuemPassou, Selo, Replay */}
+          <section id="releases" style={{ minHeight: "100svh", borderTop: "1px solid var(--line)" }} aria-label="releases (etapa 3)" />
+        </main>
+        {MOSTRAR_SELO_PROTOTIPO && <div className="selo-prot">protótipo · nomes e faixas de exemplo</div>}
+      </SomProvider>
+    </SmoothScroll>
   );
 }

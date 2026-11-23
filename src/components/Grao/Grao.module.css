@@ -1,0 +1,2 @@
+.grao { position: fixed; inset: -50%; z-index: 150; pointer-events: none; opacity: 0.075; background-size: 180px 180px; }
+:global(html[data-tema="papel"]) .grao { opacity: 0.05; }

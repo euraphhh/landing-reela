@@ -20,6 +20,8 @@ export type Release = {
   capa?: string;
   /** caminho em /public/audio, ex.: "/audio/001.mp3" */
   previa?: string;
+  /** bpm da prévia, para o ponto pulsar no tempo (padrão 90) */
+  bpm?: number;
   links?: Partial<Record<Plataforma, string>>;
 };
 

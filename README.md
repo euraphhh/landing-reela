@@ -24,5 +24,5 @@ Vitrine da reela music. Next.js (App Router, export estático) + GSAP + Lenis. D
 ## Regras de movimento
 
 Dois momentos ligados ao scroll (manifesto e laço do fim), mais a bolinha de quem passou.
-Curvas suaves, sem back/elastic/bounce. Com `prefers-reduced-motion`: sem Lenis, sem animação, nada escondido.
+Curvas suaves, sem back/elastic/bounce, com uma exceção aprovada: a gota do toggle claro/escuro (elastic). Título do release no laço entra com blur (vindo do /lab). Com `prefers-reduced-motion`: sem Lenis, sem animação, nada escondido.
 Todo GSAP dentro de `useGSAP({ scope })`; ScrollTrigger, Draggable, SplitText e Lenis limpos no unmount.

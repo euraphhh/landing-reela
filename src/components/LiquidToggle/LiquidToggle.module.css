@@ -1,0 +1,5 @@
+.toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; }
+.rotulo { min-width: 3.6em; text-align: right; font-weight: 500; font-size: 14px; }
+.svg { width: 52px; height: 24px; overflow: visible; display: block; }
+.trilho { fill: none; stroke: currentColor; stroke-width: 3; }
+.bola { fill: currentColor; }

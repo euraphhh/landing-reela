@@ -111,13 +111,13 @@ export function Laco() {
     { scope: sec }
   );
 
-  // o título do release ativo sobe letra por letra (key = ativo remonta o <p>)
+  // o título do release ativo sai da névoa letra por letra (blur, vindo do lab; key = ativo remonta o <p>)
   useGSAP(
     () => {
       if (primeiro.current) { primeiro.current = false; return; }
       if (calmo() || !titulo.current) return;
-      const split = new SplitText(titulo.current, { type: "words,chars", mask: "chars" });
-      gsap.fromTo(split.chars, { yPercent: 100 }, { yPercent: 0, duration: 0.55, stagger: 0.018, ease: "power3.out" });
+      const split = new SplitText(titulo.current, { type: "words,chars" });
+      gsap.fromTo(split.chars, { opacity: 0, filter: "blur(12px)", y: 8 }, { opacity: 1, filter: "blur(0px)", y: 0, duration: 0.8, stagger: { each: 0.025, from: "random" }, ease: "power2.out" });
       gsap.fromTo("[data-troca]", { opacity: 0 }, { opacity: 1, duration: 0.4, overwrite: true });
       return () => split.revert();
     },

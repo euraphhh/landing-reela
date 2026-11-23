@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap, useGSAP, ScrollTrigger, calmo } from "@/lib/gsap";
 import { Simbolo } from "@/components/marca/Simbolo";
 import { useAncora, useScroll } from "@/components/providers/SmoothScroll";
-import { useTema } from "@/hooks/useTema";
+import { LiquidToggle } from "@/components/LiquidToggle/LiquidToggle";
 import { usePulso } from "@/hooks/usePulso";
 import { EV, ouvir } from "@/lib/eventos";
 import s from "./Barra.module.css";
@@ -34,7 +34,6 @@ export function Barra() {
   const [naMarca, setNaMarca] = useState(true);
   const ancora = useAncora();
   const { parar, retomar } = useScroll();
-  const { tema, alternar } = useTema();
   usePulso(lockup);
 
   useGSAP(
@@ -93,14 +92,7 @@ export function Barra() {
           {LINKS.map((l) => (
             <a key={l.href} className={s.lnk} href={l.href} onClick={ancora}>{l.rot}</a>
           ))}
-          <button
-            className={s.toggle} type="button" role="switch"
-            aria-checked={tema === "madrugada"} aria-label="tema escuro"
-            onClick={alternar}
-          >
-            <span className={s.rotulo} aria-hidden="true">{tema === "madrugada" ? "escuro" : "claro"}</span>
-            <span className={s.trilho} aria-hidden="true"><span className={s.bola} /></span>
-          </button>
+          <LiquidToggle className={s.toggle} />
           <button ref={menuBtn} className={s.menuBtn} type="button" aria-expanded={menuAberto} aria-controls="menu" onClick={() => setMenuAberto(true)}>
             menu
           </button>

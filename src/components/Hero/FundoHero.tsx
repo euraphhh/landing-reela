@@ -36,10 +36,11 @@ export function FundoHero({ className }: { className?: string }) {
       tras.load();
       tras.addEventListener("canplay", function troca() {
         tras.removeEventListener("canplay", troca);
-        tocar(tras);
-        gsap.to(tras, { opacity: 1, duration: 1.2, ease: "sine.inOut" });
-        gsap.to(frente, { opacity: 0, duration: 1.2, ease: "sine.inOut", onComplete: () => frente.pause() });
-        [frente, tras] = [tras, frente];
+        const novo = tras, velho = frente; // fixa as referências: frente/tras trocam logo abaixo
+        tocar(novo);
+        gsap.to(novo, { opacity: 1, duration: 1.2, ease: "sine.inOut" });
+        gsap.to(velho, { opacity: 0, duration: 1.2, ease: "sine.inOut", onComplete: () => velho.pause() });
+        [frente, tras] = [novo, velho];
         setAtual(i);
       });
     };

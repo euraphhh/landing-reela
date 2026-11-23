@@ -3,6 +3,7 @@
 // Precisa do ffmpeg no PATH (ex.: `brew install ffmpeg`).
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 
 const url = (p) => new URL(`../${p}`, import.meta.url);
 const { clips } = JSON.parse(readFileSync(url("docs/canvas/clips.json"), "utf8"));
@@ -18,9 +19,10 @@ const duracaoDe = (arq) => {
 };
 
 const saida = [];
-for (const c of clips) {
-  const src = url(`docs/canvas/originais/${c.arquivo}`).pathname;
-  const mp4 = url(`public/canvas/${c.id}.mp4`).pathname, jpg = url(`public/canvas/${c.id}.jpg`).pathname;
+for (const c of clips.filter((c) => c.usar !== false)) {
+  // fileURLToPath decodifica espaços e emoji dos nomes (pathname deixaria %20)
+  const src = fileURLToPath(url(`docs/canvas/originais/${c.arquivo}`));
+  const mp4 = fileURLToPath(url(`public/canvas/${c.id}.mp4`)), jpg = fileURLToPath(url(`public/canvas/${c.id}.jpg`));
   if (!existsSync(src)) { console.log(`- ${c.id}: falta ${c.arquivo}`); continue; }
   const inicio = c.inicio ?? Math.round(duracaoDe(src) * 0.3);
   const vf = "scale=1280:-2:flags=lanczos,format=gray,eq=contrast=1.06";

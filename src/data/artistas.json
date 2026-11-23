@@ -156,6 +156,18 @@
     }
   },
   {
+    "nome": "Calebb",
+    "slug": "calebb",
+    "papel": "voz",
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "nin",
+        "papel": "voz"
+      }
+    ]
+  },
+  {
     "nome": "Cyclop Beats",
     "slug": "cyclop-beats",
     "papel": "beat",
@@ -252,6 +264,18 @@
     ]
   },
   {
+    "nome": "montero",
+    "slug": "montero",
+    "papel": "mix e master",
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "nin",
+        "papel": "mix e master"
+      }
+    ]
+  },
+  {
     "nome": "Morgana",
     "slug": "morgana",
     "papel": "voz",
@@ -294,6 +318,18 @@
       "spotify": 11690,
       "em": "2026-11-23"
     }
+  },
+  {
+    "nome": "prodbybila",
+    "slug": "prodbybila",
+    "papel": "beat",
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "nin",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "R-ASH Beats",

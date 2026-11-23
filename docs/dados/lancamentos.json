@@ -2,35 +2,324 @@
   "_fonte": "Spotify (páginas públicas dos perfis raphh e REELA Music), extraído em 2026-11-23. Streams = contagem pública do Spotify nessa data, só para faixas que aparecem em 'Populares'. Data exata, ISRC e UPC faltam (vêm da Symphonic).",
   "_regra_liberado": "liberado = true quando o ℗ (selo) do lançamento é REELA Music, REELA Studio ou nevermind.",
   "lancamentos": [
-    { "titulo": "CULPA DA PARTY", "tipo": "EP", "ano": 2026, "faixas": 6, "selo": "nevermind.", "liberado": true, "streams": null, "spotify": "https://open.spotify.com/intl-pt/album/0pAiODicHi9ryrzZBbuwtK" },
-    { "titulo": "strngluv!", "tipo": "EP", "ano": 2025, "faixas": 4, "selo": "nevermind.", "liberado": true, "streams": null, "spotify": "https://open.spotify.com/intl-pt/album/3FVbPjc60ddd46NEhisonm" },
-    { "titulo": "ONDE CÊ TÁ?", "tipo": "Single", "ano": 2025, "faixas": 1, "selo": "nevermind.", "liberado": true, "streams": null, "spotify": "https://open.spotify.com/intl-pt/album/5Ub2ggYey7EQg0upEe15Xp" },
-    { "titulo": "REESENHA #3 (Nada Além)", "tipo": "Single", "ano": 2024, "faixas": 1, "selo": "REELA Studio", "liberado": true, "streams": null, "artistas": ["M4relli", "Ramos Bt", "raphh", "Aionn", "Mika Mc"], "spotify": "https://open.spotify.com/intl-pt/album/52MdfzS09AtxtpDrDcdKnn" },
-    { "titulo": "Te Vejo Longe", "tipo": "Single", "ano": 2023, "faixas": 2, "selo": "REELA Studio", "liberado": true, "streams": 11690, "_streams_obs": "10.591 (Te Vejo Longe) + 1.099 (Speed)", "artistas": ["raphh", "Gringoo"], "spotify": "https://open.spotify.com/intl-pt/album/16dmZw1zBOZze2DW19LBBK" },
-    { "titulo": "Rolê (Remix)", "tipo": "Single", "ano": 2023, "faixas": 1, "selo": "REELA Studio", "liberado": true, "streams": 1267, "artistas": ["LX", "T'H", "raphh"], "spotify": "https://open.spotify.com/intl-pt/album/3LqiQz76Z03hpPRt1GjGAO" },
-    { "titulo": "COELHA MÁ (Speed)", "tipo": "Single", "ano": 2023, "faixas": 1, "selo": "REELA Music", "liberado": true, "streams": 22105, "artistas": ["Krys", "REELA Music", "prodbyeros", "Tkd"], "spotify": "https://open.spotify.com/intl-pt/album/4aIbdXFWu4ipnpJwqynAvk" },
-    { "titulo": "COELHA MÁ", "tipo": "Single", "ano": 2023, "faixas": 1, "selo": "REELA Studio", "liberado": true, "streams": 17152, "artistas": ["Krys", "REELA Music", "prodbyeros", "Tkd"], "spotify": "https://open.spotify.com/intl-pt/album/7IUN677dFJNlaUXuAPLLz1" },
-    { "titulo": "DE NOVO (Speed)", "tipo": "Single", "ano": 2023, "faixas": 1, "selo": "REELA Studio", "liberado": true, "streams": 1222, "artistas": ["Krys", "raphh", "REELA Music"], "spotify": "https://open.spotify.com/intl-pt/album/60CN8M7Ov3lz3byw6wuPcM" },
-    { "titulo": "DE NOVO", "tipo": "Single", "ano": 2023, "faixas": 1, "selo": "REELA Studio", "liberado": true, "streams": 15395, "artistas": ["Krys", "raphh", "REELA Music"], "spotify": "https://open.spotify.com/intl-pt/album/6CRLGAg6tyToSjri0NDSes" },
-    { "titulo": "Wave", "tipo": "Single", "ano": 2022, "faixas": 1, "selo": "REELA Music", "liberado": true, "streams": null, "artistas": ["raphh", "REELA Music", "Cyclop Beats"], "spotify": "https://open.spotify.com/intl-pt/album/41FYO8UUi04NNQPgfQuJrZ" },
-    { "titulo": "Mentirosa", "tipo": "Single", "ano": 2022, "faixas": 1, "selo": "REELA Music", "liberado": true, "streams": null, "artistas": ["raphh", "REELA Music", "R-ASH Beats"], "spotify": "https://open.spotify.com/intl-pt/album/6mSbpldBqly0vXtSxMouQ8" },
-    { "titulo": "amor&copos", "tipo": "Single", "ano": 2022, "faixas": 1, "selo": "REELA Music", "liberado": true, "streams": null, "artistas": ["raphh", "Steif"], "spotify": "https://open.spotify.com/intl-pt/album/3xV8vYWmd7I8I0RIulz4j8" },
-    { "titulo": "Reesenha #1", "tipo": "Single", "ano": 2022, "faixas": 1, "selo": "REELA Music GRAVACAO", "liberado": true, "streams": null, "artistas": ["Vários intérpretes"], "spotify": "https://open.spotify.com/intl-pt/album/4j4DhTeRwVXwYovm3eMZ34" },
-    { "titulo": "Reesenha, Pt. 2 - Planos", "tipo": "Single", "ano": 2022, "faixas": 1, "selo": "REELA Music / REELA Studio (duas versões)", "liberado": true, "streams": 2562, "artistas": ["REELA Music", "raphh", "Victor Winner", "Taiga", "Astral Oficial", "Morgana", "W$ MC"], "spotify": ["https://open.spotify.com/intl-pt/album/45LHGt27LMKmg2MYVynkbv", "https://open.spotify.com/intl-pt/album/2J8MLI3bW5WZYyRNFFuw9Q"], "_obs": "Duas versões no Spotify; o stream (2.562) é de uma faixa só." },
-
-    { "titulo": "PLUUGNJAZZ MASTERS", "tipo": "Single", "ano": 2024, "faixas": 2, "selo": "raphh", "liberado": false, "motivo": "selo é o próprio raphh, fora da regra. Confirmar.", "spotify": "https://open.spotify.com/intl-pt/album/2Oi4NjZDaXaCI9W0Yunomf" },
-    { "titulo": "Mentirosa pt. 2", "tipo": "Single", "ano": 2023, "faixas": 1, "selo": "raphh", "liberado": false, "motivo": "selo é o próprio raphh, fora da regra. Confirmar.", "spotify": "https://open.spotify.com/intl-pt/album/5Dk9Gd5B0nfT8B2qLxiXd3" },
-    { "titulo": "Mentiu Na Minha Cara", "tipo": "Single", "ano": 2024, "faixas": 1, "selo": "KMUSIC", "liberado": false, "motivo": "selo de terceiro", "spotify": "https://open.spotify.com/intl-pt/album/2Sr7rR8aznshpy8n5OaFmr" },
-    { "titulo": "Vale Nada", "tipo": "Single", "ano": 2023, "faixas": 1, "selo": "Renan", "liberado": false, "motivo": "selo de terceiro", "streams_publicos": 3614, "spotify": "https://open.spotify.com/intl-pt/album/3AArx8xjFKn8ApINoRxzGm" },
-    { "titulo": "Mentirosa (Speedplug)", "tipo": "Single", "ano": 2022, "faixas": 1, "selo": "rphv", "liberado": false, "motivo": "selo de terceiro", "spotify": "https://open.spotify.com/intl-pt/album/5qgvjK3RVgA2tKZXPEkmLr" },
-    { "titulo": "O Tempo Passa", "tipo": "Single", "ano": 2021, "faixas": 1, "selo": "Steif, raphh, dav", "liberado": false, "motivo": "selo de terceiros", "spotify": "https://open.spotify.com/intl-pt/album/6nYy1EzHeVi3RDcz96T1cl" }
+    {
+      "titulo": "CULPA DA PARTY",
+      "tipo": "EP",
+      "ano": 2026,
+      "faixas": 6,
+      "selo": "nevermind.",
+      "liberado": true,
+      "streams": null,
+      "spotify": "https://open.spotify.com/intl-pt/album/0pAiODicHi9ryrzZBbuwtK"
+    },
+    {
+      "titulo": "strngluv!",
+      "tipo": "EP",
+      "ano": 2025,
+      "faixas": 4,
+      "selo": "nevermind.",
+      "liberado": true,
+      "streams": null,
+      "spotify": "https://open.spotify.com/intl-pt/album/3FVbPjc60ddd46NEhisonm"
+    },
+    {
+      "titulo": "ONDE CÊ TÁ?",
+      "tipo": "Single",
+      "ano": 2025,
+      "faixas": 1,
+      "selo": "nevermind.",
+      "liberado": true,
+      "streams": null,
+      "spotify": "https://open.spotify.com/intl-pt/album/5Ub2ggYey7EQg0upEe15Xp"
+    },
+    {
+      "titulo": "NIN@",
+      "tipo": "Single",
+      "ano": 2024,
+      "faixas": 1,
+      "selo": "REELA Studio",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "Calebb"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/track/6ZnPP2XLeoir65WPKHhFYx",
+      "_obs": "adicionado à mão (raphh, 2026-11-23). ℗ 2024 REELA Studio, © 2024 REELA Music, lançado em 29/04/2024. tipo assumido single.",
+      "data": "2024-04-29"
+    },
+    {
+      "titulo": "REESENHA #3 (Nada Além)",
+      "tipo": "Single",
+      "ano": 2024,
+      "faixas": 1,
+      "selo": "REELA Studio",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "M4relli",
+        "Ramos Bt",
+        "raphh",
+        "Aionn",
+        "Mika Mc"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/52MdfzS09AtxtpDrDcdKnn"
+    },
+    {
+      "titulo": "Te Vejo Longe",
+      "tipo": "Single",
+      "ano": 2023,
+      "faixas": 2,
+      "selo": "REELA Studio",
+      "liberado": true,
+      "streams": 11690,
+      "_streams_obs": "10.591 (Te Vejo Longe) + 1.099 (Speed)",
+      "artistas": [
+        "raphh",
+        "Gringoo"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/16dmZw1zBOZze2DW19LBBK"
+    },
+    {
+      "titulo": "Rolê (Remix)",
+      "tipo": "Single",
+      "ano": 2023,
+      "faixas": 1,
+      "selo": "REELA Studio",
+      "liberado": true,
+      "streams": 1267,
+      "artistas": [
+        "LX",
+        "T'H",
+        "raphh"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/3LqiQz76Z03hpPRt1GjGAO"
+    },
+    {
+      "titulo": "COELHA MÁ (Speed)",
+      "tipo": "Single",
+      "ano": 2023,
+      "faixas": 1,
+      "selo": "REELA Music",
+      "liberado": true,
+      "streams": 22105,
+      "artistas": [
+        "Krys",
+        "REELA Music",
+        "prodbyeros",
+        "Tkd"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/4aIbdXFWu4ipnpJwqynAvk"
+    },
+    {
+      "titulo": "COELHA MÁ",
+      "tipo": "Single",
+      "ano": 2023,
+      "faixas": 1,
+      "selo": "REELA Studio",
+      "liberado": true,
+      "streams": 17152,
+      "artistas": [
+        "Krys",
+        "REELA Music",
+        "prodbyeros",
+        "Tkd"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/7IUN677dFJNlaUXuAPLLz1"
+    },
+    {
+      "titulo": "DE NOVO (Speed)",
+      "tipo": "Single",
+      "ano": 2023,
+      "faixas": 1,
+      "selo": "REELA Studio",
+      "liberado": true,
+      "streams": 1222,
+      "artistas": [
+        "Krys",
+        "raphh",
+        "REELA Music"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/60CN8M7Ov3lz3byw6wuPcM"
+    },
+    {
+      "titulo": "DE NOVO",
+      "tipo": "Single",
+      "ano": 2023,
+      "faixas": 1,
+      "selo": "REELA Studio",
+      "liberado": true,
+      "streams": 15395,
+      "artistas": [
+        "Krys",
+        "raphh",
+        "REELA Music"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/6CRLGAg6tyToSjri0NDSes"
+    },
+    {
+      "titulo": "Wave",
+      "tipo": "Single",
+      "ano": 2022,
+      "faixas": 1,
+      "selo": "REELA Music",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "raphh",
+        "REELA Music",
+        "Cyclop Beats"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/41FYO8UUi04NNQPgfQuJrZ"
+    },
+    {
+      "titulo": "Mentirosa",
+      "tipo": "Single",
+      "ano": 2022,
+      "faixas": 1,
+      "selo": "REELA Music",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "raphh",
+        "REELA Music",
+        "R-ASH Beats"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/6mSbpldBqly0vXtSxMouQ8"
+    },
+    {
+      "titulo": "amor&copos",
+      "tipo": "Single",
+      "ano": 2022,
+      "faixas": 1,
+      "selo": "REELA Music",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "raphh",
+        "Steif"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/3xV8vYWmd7I8I0RIulz4j8"
+    },
+    {
+      "titulo": "Reesenha #1",
+      "tipo": "Single",
+      "ano": 2022,
+      "faixas": 1,
+      "selo": "REELA Music GRAVACAO",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "Vários intérpretes"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/4j4DhTeRwVXwYovm3eMZ34"
+    },
+    {
+      "titulo": "Reesenha, Pt. 2 - Planos",
+      "tipo": "Single",
+      "ano": 2022,
+      "faixas": 1,
+      "selo": "REELA Music / REELA Studio (duas versões)",
+      "liberado": true,
+      "streams": 2562,
+      "artistas": [
+        "REELA Music",
+        "raphh",
+        "Victor Winner",
+        "Taiga",
+        "Astral Oficial",
+        "Morgana",
+        "W$ MC"
+      ],
+      "spotify": [
+        "https://open.spotify.com/intl-pt/album/45LHGt27LMKmg2MYVynkbv",
+        "https://open.spotify.com/intl-pt/album/2J8MLI3bW5WZYyRNFFuw9Q"
+      ],
+      "_obs": "Duas versões no Spotify; o stream (2.562) é de uma faixa só."
+    },
+    {
+      "titulo": "PLUUGNJAZZ MASTERS",
+      "tipo": "Single",
+      "ano": 2024,
+      "faixas": 2,
+      "selo": "raphh",
+      "liberado": false,
+      "motivo": "selo é o próprio raphh, fora da regra. Confirmar.",
+      "spotify": "https://open.spotify.com/intl-pt/album/2Oi4NjZDaXaCI9W0Yunomf"
+    },
+    {
+      "titulo": "Mentirosa pt. 2",
+      "tipo": "Single",
+      "ano": 2023,
+      "faixas": 1,
+      "selo": "raphh",
+      "liberado": false,
+      "motivo": "selo é o próprio raphh, fora da regra. Confirmar.",
+      "spotify": "https://open.spotify.com/intl-pt/album/5Dk9Gd5B0nfT8B2qLxiXd3"
+    },
+    {
+      "titulo": "Mentiu Na Minha Cara",
+      "tipo": "Single",
+      "ano": 2024,
+      "faixas": 1,
+      "selo": "KMUSIC",
+      "liberado": false,
+      "motivo": "selo de terceiro",
+      "spotify": "https://open.spotify.com/intl-pt/album/2Sr7rR8aznshpy8n5OaFmr"
+    },
+    {
+      "titulo": "Vale Nada",
+      "tipo": "Single",
+      "ano": 2023,
+      "faixas": 1,
+      "selo": "Renan",
+      "liberado": false,
+      "motivo": "selo de terceiro",
+      "streams_publicos": 3614,
+      "spotify": "https://open.spotify.com/intl-pt/album/3AArx8xjFKn8ApINoRxzGm"
+    },
+    {
+      "titulo": "Mentirosa (Speedplug)",
+      "tipo": "Single",
+      "ano": 2022,
+      "faixas": 1,
+      "selo": "rphv",
+      "liberado": false,
+      "motivo": "selo de terceiro",
+      "spotify": "https://open.spotify.com/intl-pt/album/5qgvjK3RVgA2tKZXPEkmLr"
+    },
+    {
+      "titulo": "O Tempo Passa",
+      "tipo": "Single",
+      "ano": 2021,
+      "faixas": 1,
+      "selo": "Steif, raphh, dav",
+      "liberado": false,
+      "motivo": "selo de terceiros",
+      "spotify": "https://open.spotify.com/intl-pt/album/6nYy1EzHeVi3RDcz96T1cl"
+    }
   ],
   "faixas_populares_sem_album_confirmado": [
-    { "faixa": "OLHO VERMELHO", "streams": 1013, "artistas": ["raphh", "Gringoo"] },
-    { "faixa": "MALDITA???", "streams": null }
+    {
+      "faixa": "OLHO VERMELHO",
+      "streams": 1013,
+      "artistas": [
+        "raphh",
+        "Gringoo"
+      ]
+    },
+    {
+      "faixa": "MALDITA???",
+      "streams": null
+    }
   ],
   "perfis": {
-    "raphh": { "ouvintes_mensais": 277, "spotify": "https://open.spotify.com/intl-pt/artist/19lC4M6sF80ef0mtU9rwYK" },
-    "REELA Music": { "ouvintes_mensais": 112, "spotify": "https://open.spotify.com/intl-pt/artist/4WwNvUqhjTKKU1KLVLGoa6" }
+    "raphh": {
+      "ouvintes_mensais": 277,
+      "spotify": "https://open.spotify.com/intl-pt/artist/19lC4M6sF80ef0mtU9rwYK"
+    },
+    "REELA Music": {
+      "ouvintes_mensais": 112,
+      "spotify": "https://open.spotify.com/intl-pt/artist/4WwNvUqhjTKKU1KLVLGoa6"
+    }
   }
 }

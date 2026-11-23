@@ -1,9 +1,50 @@
 {
-  "_obs": "trechos do fundo do hero. 'arquivo' = nome em docs/canvas/originais/ (fora do git, vídeos grandes). inicio/duracao em segundos; sem inicio, pega a partir de 30% do vídeo. 'release' = id do lançamento (aparece no crédito do hero). rode `npm run canvas` (precisa do ffmpeg instalado).",
+  "_obs": "trechos do fundo do hero. 'arquivo' = nome em docs/canvas/originais/ (fora do git, vídeos grandes). inicio/duracao em segundos; sem inicio, pega a partir de 30% do vídeo. 'release' = id do lançamento (aparece no crédito do hero). rode `npm run canvas` (precisa do ffmpeg instalado). 'usar': false deixa o trecho fora sem apagar a configuração.",
   "clips": [
-    { "id": "te-vejo-longe", "arquivo": "vidssave.com raphh & Gringoo - Te Vejo Longe 💁_♀️ 720P.mp4", "duracao": 8, "release": "te-vejo-longe" },
-    { "id": "reesenha-3", "arquivo": "vidssave.com REESENHA 3 - Nada Além 💞 _ M4relli, Mika MC, Aionn, raphh & Ramoss 720P.mp4", "duracao": 8, "release": "reesenha-3-nada-alem" },
-    { "id": "role-remix", "arquivo": "vidssave.com lx & T'H feat. raphh - Rolê (Remix) 360P.mp4", "duracao": 8, "release": "role-remix" },
-    { "id": "nina", "arquivo": "vidssave.com CALEBB - NIN@ 🎸 480P.mp4", "duracao": 8, "legenda": "Calebb · NIN@" }
+    {
+      "id": "nin-rua",
+      "arquivo": "vidssave.com CALEBB - NIN@ 🎸 480P.mp4",
+      "inicio": 18,
+      "duracao": 6,
+      "release": "nin"
+    },
+    {
+      "id": "nin-danca",
+      "arquivo": "vidssave.com CALEBB - NIN@ 🎸 480P.mp4",
+      "inicio": 96,
+      "duracao": 7,
+      "release": "nin"
+    },
+    {
+      "id": "nin-close",
+      "arquivo": "vidssave.com CALEBB - NIN@ 🎸 480P.mp4",
+      "inicio": 123,
+      "duracao": 6,
+      "release": "nin"
+    },
+    {
+      "id": "te-vejo-longe",
+      "arquivo": "vidssave.com raphh & Gringoo - Te Vejo Longe 💁_♀️ 720P.mp4",
+      "duracao": 8,
+      "release": "te-vejo-longe",
+      "usar": false,
+      "_por_que": "emoji parado sobre amarelo: quase sem movimento"
+    },
+    {
+      "id": "reesenha-3",
+      "arquivo": "vidssave.com REESENHA 3 - Nada Além 💞 _ M4relli, Mika MC, Aionn, raphh & Ramoss 720P.mp4",
+      "duracao": 8,
+      "release": "reesenha-3-nada-alem",
+      "usar": false,
+      "_por_que": "logo 'Nada Além' parado: briga com o wordmark"
+    },
+    {
+      "id": "role-remix",
+      "arquivo": "vidssave.com lx & T'H feat. raphh - Rolê (Remix) 360P.mp4",
+      "duracao": 8,
+      "release": "role-remix",
+      "usar": false,
+      "_por_que": "letra legendada em quase todo quadro: texto no fundo"
+    }
   ]
 }

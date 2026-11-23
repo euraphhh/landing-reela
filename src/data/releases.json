@@ -29,13 +29,18 @@
     "id": "culpa-da-party",
     "num": "A13",
     "titulo": "CULPA DA PARTY",
-    "artistas": "",
+    "artistas": "raphh",
     "quando": "ep · 2026",
     "ano": "2026",
     "tipo": "EP",
     "faixas": 6,
     "selo": "nevermind.",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat, mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#3a3a3a",
       "#0a0a0a"
@@ -54,7 +59,12 @@
     "tipo": "EP",
     "faixas": 4,
     "selo": "nevermind.",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "mix",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#2b2b2b",
       "#080808"
@@ -73,7 +83,16 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "nevermind.",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "prodbyeros"
+      },
+      {
+        "papel": "mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#474747",
       "#0d0d0d"
@@ -92,7 +111,12 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "REELA Studio",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat, mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#333333",
       "#060606"
@@ -111,7 +135,12 @@
     "tipo": "Single",
     "faixas": 2,
     "selo": "REELA Studio",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "David Tamas, OUHBOY"
+      }
+    ],
     "cor": [
       "#3a3a3a",
       "#0a0a0a"
@@ -130,7 +159,16 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "REELA Studio",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "T'H"
+      },
+      {
+        "papel": "mix",
+        "nome": "T'H, raphh"
+      }
+    ],
     "cor": [
       "#2b2b2b",
       "#080808"
@@ -149,7 +187,16 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "REELA Studio",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "prodbyeros, Tkd"
+      },
+      {
+        "papel": "mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#474747",
       "#0d0d0d"
@@ -174,7 +221,16 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "REELA Studio",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "V-empire"
+      },
+      {
+        "papel": "mix e master",
+        "nome": "raphh, Krys"
+      }
+    ],
     "cor": [
       "#333333",
       "#060606"
@@ -199,7 +255,16 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "REELA Music",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "Cyclop Beats"
+      },
+      {
+        "papel": "mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#3a3a3a",
       "#0a0a0a"
@@ -218,7 +283,16 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "REELA Music",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "R-ASH Beats"
+      },
+      {
+        "papel": "mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#2b2b2b",
       "#080808"
@@ -237,7 +311,16 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "REELA Music",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "acoustc"
+      },
+      {
+        "papel": "mix",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#474747",
       "#0d0d0d"
@@ -256,7 +339,12 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "REELA Music GRAVACAO",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "beat, mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#333333",
       "#060606"
@@ -274,8 +362,13 @@
     "ano": "2022",
     "tipo": "Single",
     "faixas": 1,
-    "selo": "REELA Music / REELA Studio (duas versões)",
-    "creditos": [],
+    "selo": "REELA Music / REELA Studio",
+    "creditos": [
+      {
+        "papel": "beat, mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#3a3a3a",
       "#0a0a0a"

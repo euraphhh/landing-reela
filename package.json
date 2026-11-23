@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
-    "build": "npm run tokens && next build",
+    "build": "npm run tokens && npm run dados && next build",
     "start": "npx serve out",
     "tokens": "node scripts/tokens.mjs",
     "dados": "node scripts/dados.mjs",

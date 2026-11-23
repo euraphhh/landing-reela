@@ -37,7 +37,7 @@
 
 @media (max-width: 860px) {
   .sec { grid-template-columns: 1fr; }
-  .palco { order: -1; min-height: max(68svh, 560px); }
+  .palco { order: -1; min-height: max(56svh, 480px); }
   .info { padding-top: 12px; }
   .dica { bottom: 8px; }
 }

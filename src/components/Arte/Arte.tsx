@@ -5,7 +5,7 @@ import s from "./Arte.module.css";
 type Props = { r: Release; className?: string; ref?: React.Ref<HTMLDivElement> } & React.HTMLAttributes<HTMLDivElement> & { "data-flip-id"?: string };
 
 /**
- * Capa 9:16. Com `capa`, a imagem do artista. Sem ela, o placeholder do protótipo
+ * Capa quadrada (1:1, como no Spotify). Com `capa`, a imagem do artista. Sem ela, o placeholder do protótipo
  * (gradiente da arte). Era nova: o símbolo gigante cortado no canto superior direito
  * e o lockup pequeno no inferior esquerdo, como manda o README da marca.
  */

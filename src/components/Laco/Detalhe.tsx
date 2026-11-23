@@ -111,14 +111,9 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
         <span className="t-credit" data-entra-det>{r.num} · {r.quando}</span>
         <h2 className="t-display" id="d-tit" data-entra-det>{r.titulo}</h2>
         {r.artistas && <p className={s.artistas} data-entra-det>{r.artistas}</p>}
-        <dl className="creditos" data-entra-det>
-          {r.creditos.map((c) => (
-            <div key={c.papel + c.nome} style={{ display: "contents" }}><dt>{c.papel}</dt><dd>{c.nome}</dd></div>
-          ))}
-        </dl>
-        {(r.tipo || r.selo) && (
+        {(r.faixas || r.selo) && (
           <p className="t-caption" data-entra-det style={{ margin: 0 }}>
-            {[r.tipo?.toLowerCase(), r.faixas && r.faixas > 1 ? `${r.faixas} faixas` : null, r.selo ? `℗ ${r.selo}` : null].filter(Boolean).join(" · ")}
+            {[r.faixas && r.faixas > 1 ? `${r.faixas} faixas` : null, r.selo ? `℗ ${r.selo}` : null].filter(Boolean).join(" · ")}
           </p>
         )}
         {/* o player só carrega com o detalhe aberto: nada do Spotify na página antes disso */}
@@ -138,6 +133,16 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
           ))}
         </ul>
       </div>
+      {r.creditos.length > 0 && (
+        <aside className={s.creditos} aria-label="créditos" data-entra-det>
+          <span className="t-credit">créditos</span>
+          <dl>
+            {r.creditos.map((c) => (
+              <div key={c.papel + c.nome}><dt>{c.papel}</dt><dd>{c.nome}</dd></div>
+            ))}
+          </dl>
+        </aside>
+      )}
     </div>
   );
 }

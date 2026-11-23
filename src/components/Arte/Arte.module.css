@@ -1,5 +1,5 @@
 .art {
-  position: relative; aspect-ratio: 9 / 16; overflow: hidden; container-type: inline-size;
+  position: relative; aspect-ratio: 1 / 1; overflow: hidden; container-type: inline-size;
   background: linear-gradient(165deg, var(--a), var(--b)); color: var(--white); isolation: isolate;
 }
 .art::after { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 70% at 30% 110%, rgba(0, 0, 0, 0.55), transparent 60%); z-index: -1; }
@@ -9,11 +9,11 @@
 .art :global(.sym .v-papel) { display: none; }
 .art :global(.sym .v-madrugada) { display: inline; }
 
-.sym { position: absolute; width: 118cqw; height: 118cqw; right: -46cqw; top: -46cqw; }
-.num { position: absolute; left: 8cqw; bottom: 18cqw; font: 300 30cqw / 0.9 var(--f-display); }
+.sym { position: absolute; width: 100cqw; height: 100cqw; right: -38cqw; top: -38cqw; }
+.num { position: absolute; left: 8cqw; bottom: 17cqw; font: 300 26cqw / 0.9 var(--f-display); }
 .lock { position: absolute; left: 8cqw; bottom: 7cqw; display: flex; align-items: center; gap: 1.6cqw; font: 300 7cqw / 1 var(--f-display); }
 .lock :global(.sym) { width: 7cqw; height: 7cqw; }
 .lock i { font-style: normal; color: var(--music); margin-left: 0.28em; }
-.titulo { position: absolute; left: 8cqw; right: 8cqw; top: 9cqw; font: 300 13cqw / 1 var(--f-display); text-wrap: balance; }
+.titulo { position: absolute; left: 8cqw; right: 8cqw; top: 9cqw; font: 300 11cqw / 1 var(--f-display); text-wrap: balance; right: 14cqw; }
 .ano { position: absolute; left: 8cqw; bottom: 8cqw; font: 500 6cqw / 1 var(--f-text); letter-spacing: 0.04em; opacity: 0.8; }
-.forma { position: absolute; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.14); width: 90cqw; height: 90cqw; left: 30cqw; top: 62cqw; filter: blur(2px); }
+.forma { position: absolute; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.14); width: 70cqw; height: 70cqw; left: 42cqw; top: 40cqw; filter: blur(2px); }

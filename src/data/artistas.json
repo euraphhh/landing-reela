@@ -1,97 +1,117 @@
 [
   {
     "nome": "raphh",
-    "papel": "",
-    "faixas": 8
+    "papel": "voz, beat, mix e master",
+    "faixas": 13
   },
   {
     "nome": "Krys",
-    "papel": "",
+    "papel": "voz, mix e master",
     "faixas": 2
   },
   {
+    "nome": "prodbyeros",
+    "papel": "beat",
+    "faixas": 2
+  },
+  {
+    "nome": "acoustc",
+    "papel": "beat",
+    "faixas": 1
+  },
+  {
     "nome": "Aionn",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "Astral Oficial",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "Cyclop Beats",
-    "papel": "",
+    "papel": "beat",
+    "faixas": 1
+  },
+  {
+    "nome": "David Tamas",
+    "papel": "beat",
     "faixas": 1
   },
   {
     "nome": "Gringoo",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "LX",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "M4relli",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "Mika Mc",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "Morgana",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
-    "nome": "prodbyeros",
-    "papel": "",
+    "nome": "OUHBOY",
+    "papel": "beat",
     "faixas": 1
   },
   {
     "nome": "R-ASH Beats",
-    "papel": "",
+    "papel": "beat",
     "faixas": 1
   },
   {
     "nome": "Ramos Bt",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "Steif",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "T'H",
-    "papel": "",
+    "papel": "voz, beat e mix",
     "faixas": 1
   },
   {
     "nome": "Taiga",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "Tkd",
-    "papel": "",
+    "papel": "beat",
+    "faixas": 1
+  },
+  {
+    "nome": "V-empire",
+    "papel": "beat",
     "faixas": 1
   },
   {
     "nome": "Victor Winner",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   },
   {
     "nome": "W$ MC",
-    "papel": "",
+    "papel": "voz",
     "faixas": 1
   }
 ]

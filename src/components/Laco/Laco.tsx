@@ -64,7 +64,7 @@ export function Laco() {
       const layout = () => {
         const W = p.clientWidth, H = p.clientHeight, cel = window.innerWidth < 860;
         const D = cel ? Math.min(W * 0.5, H * 0.36) : Math.min(W * 0.42, H * 0.44);
-        const CW = D * 0.24, CH = (CW * 16) / 9, R = D / 2 + CH * 0.64;
+        const CW = D * 0.25, CH = CW, R = D / 2 + CH * 0.7;
         PX = CW * 1.5;
         // no celular o palco vem primeiro: abre espaço para a barra fixa (≈76px) acima da capa ativa
         const topo = cel ? 84 : H * 0.09;
@@ -116,7 +116,7 @@ export function Laco() {
     () => {
       if (primeiro.current) { primeiro.current = false; return; }
       if (calmo() || !titulo.current) return;
-      const split = new SplitText(titulo.current, { type: "chars", mask: "chars" });
+      const split = new SplitText(titulo.current, { type: "words,chars", mask: "chars" });
       gsap.fromTo(split.chars, { yPercent: 100 }, { yPercent: 0, duration: 0.55, stagger: 0.018, ease: "power3.out" });
       gsap.fromTo("[data-troca]", { opacity: 0 }, { opacity: 1, duration: 0.4, overwrite: true });
       return () => split.revert();

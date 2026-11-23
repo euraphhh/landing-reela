@@ -72,6 +72,30 @@
     }
   },
   {
+    "nome": "Krys",
+    "slug": "krys",
+    "papel": "voz, mix e master",
+    "faixas": 3,
+    "lancamentos": [
+      {
+        "id": "girly",
+        "papel": "voz, mix e master"
+      },
+      {
+        "id": "coelha-ma",
+        "papel": "voz"
+      },
+      {
+        "id": "de-novo",
+        "papel": "voz, mix e master"
+      }
+    ],
+    "plays": {
+      "spotify": 55874,
+      "em": "2026-11-23"
+    }
+  },
+  {
     "nome": "prodbyeros",
     "slug": "prodbyeros",
     "papel": "beat",
@@ -92,26 +116,6 @@
     ],
     "plays": {
       "spotify": 39257,
-      "em": "2026-11-23"
-    }
-  },
-  {
-    "nome": "Krys",
-    "slug": "krys",
-    "papel": "voz, mix e master",
-    "faixas": 2,
-    "lancamentos": [
-      {
-        "id": "coelha-ma",
-        "papel": "voz"
-      },
-      {
-        "id": "de-novo",
-        "papel": "voz, mix e master"
-      }
-    ],
-    "plays": {
-      "spotify": 55874,
       "em": "2026-11-23"
     }
   },
@@ -194,6 +198,18 @@
       "spotify": 11690,
       "em": "2026-11-23"
     }
+  },
+  {
+    "nome": "Deast",
+    "slug": "deast",
+    "papel": "beat",
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "girly",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "ÉoPeaga",

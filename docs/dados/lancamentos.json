@@ -33,6 +33,20 @@
       "spotify": "https://open.spotify.com/intl-pt/album/5Ub2ggYey7EQg0upEe15Xp"
     },
     {
+      "titulo": "GIRLY",
+      "tipo": "Single",
+      "ano": 2025,
+      "faixas": 1,
+      "selo": "nevermind.",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "Krys"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/album/5VkWdYAJREPgP4NRu0vDnw",
+      "_obs": "adicionado à mão (raphh, 2026-11-23). mês de lançamento não informado."
+    },
+    {
       "titulo": "NIN@",
       "tipo": "Single",
       "ano": 2024,

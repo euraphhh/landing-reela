@@ -1,7 +1,7 @@
 [
   {
     "id": "culpa-da-party",
-    "num": "A14",
+    "num": "A15",
     "titulo": "CULPA DA PARTY",
     "artistas": "raphh",
     "quando": "ep · 2026",
@@ -26,7 +26,7 @@
   },
   {
     "id": "strngluv",
-    "num": "A13",
+    "num": "A14",
     "titulo": "strngluv!",
     "artistas": "raphh",
     "quando": "ep · 2025",
@@ -68,7 +68,7 @@
   },
   {
     "id": "onde-ce-ta",
-    "num": "A12",
+    "num": "A13",
     "titulo": "ONDE CÊ TÁ?",
     "artistas": "raphh",
     "quando": "single · 2025",
@@ -96,6 +96,36 @@
     }
   },
   {
+    "id": "girly",
+    "num": "A12",
+    "titulo": "GIRLY",
+    "artistas": "Krys",
+    "quando": "single · 2025",
+    "ano": "2025",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "nevermind.",
+    "creditos": [
+      {
+        "papel": "beat",
+        "nome": "Deast"
+      },
+      {
+        "papel": "mix e master",
+        "nome": "Krys"
+      }
+    ],
+    "cor": [
+      "#333333",
+      "#060606"
+    ],
+    "capa": "/capas/girly.jpg",
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/5VkWdYAJREPgP4NRu0vDnw"
+    },
+    "destaque": true
+  },
+  {
     "id": "nin",
     "num": "A11",
     "titulo": "NIN@",
@@ -116,8 +146,8 @@
       }
     ],
     "cor": [
-      "#333333",
-      "#060606"
+      "#3a3a3a",
+      "#0a0a0a"
     ],
     "capa": "/capas/nin.jpg",
     "links": {
@@ -142,8 +172,8 @@
       }
     ],
     "cor": [
-      "#3a3a3a",
-      "#0a0a0a"
+      "#2b2b2b",
+      "#080808"
     ],
     "capa": "/capas/reesenha-3-nada-alem.jpg",
     "links": {
@@ -172,8 +202,8 @@
       }
     ],
     "cor": [
-      "#2b2b2b",
-      "#080808"
+      "#474747",
+      "#0d0d0d"
     ],
     "capa": "/capas/te-vejo-longe.jpg",
     "links": {
@@ -202,8 +232,8 @@
       }
     ],
     "cor": [
-      "#474747",
-      "#0d0d0d"
+      "#333333",
+      "#060606"
     ],
     "capa": "/capas/role-remix.jpg",
     "links": {
@@ -232,8 +262,8 @@
       }
     ],
     "cor": [
-      "#333333",
-      "#060606"
+      "#3a3a3a",
+      "#0a0a0a"
     ],
     "capa": "/capas/coelha-ma.jpg",
     "links": {
@@ -268,8 +298,8 @@
       }
     ],
     "cor": [
-      "#3a3a3a",
-      "#0a0a0a"
+      "#2b2b2b",
+      "#080808"
     ],
     "capa": "/capas/de-novo.jpg",
     "links": {
@@ -304,8 +334,8 @@
       }
     ],
     "cor": [
-      "#2b2b2b",
-      "#080808"
+      "#474747",
+      "#0d0d0d"
     ],
     "capa": "/capas/wave.jpg",
     "links": {
@@ -333,8 +363,8 @@
       }
     ],
     "cor": [
-      "#474747",
-      "#0d0d0d"
+      "#333333",
+      "#060606"
     ],
     "capa": "/capas/mentirosa.jpg",
     "links": {
@@ -363,8 +393,8 @@
       }
     ],
     "cor": [
-      "#333333",
-      "#060606"
+      "#3a3a3a",
+      "#0a0a0a"
     ],
     "capa": "/capas/amor-copos.jpg",
     "links": {
@@ -388,8 +418,8 @@
       }
     ],
     "cor": [
-      "#3a3a3a",
-      "#0a0a0a"
+      "#2b2b2b",
+      "#080808"
     ],
     "capa": "/capas/reesenha-1.jpg",
     "links": {
@@ -413,8 +443,8 @@
       }
     ],
     "cor": [
-      "#2b2b2b",
-      "#080808"
+      "#474747",
+      "#0d0d0d"
     ],
     "capa": "/capas/reesenha-pt-2-planos.jpg",
     "links": {

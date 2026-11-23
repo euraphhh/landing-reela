@@ -13,6 +13,7 @@ const LINKS = [
   { href: "/#releases", rot: "releases" },
   { href: "/#gente", rot: "quem passou" },
   { href: "/#selo", rot: "o selo" },
+  { href: "/como-funciona/", rot: "como funciona" },
 ];
 
 /** o laço da barra se desenha e o ponto cai no centro */

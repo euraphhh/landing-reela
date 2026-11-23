@@ -1,0 +1,34 @@
+.pagina { padding: 120px var(--gutter) 28px; display: flex; flex-direction: column; gap: 0; }
+.abre { display: flex; flex-direction: column; gap: 20px; padding-bottom: clamp(64px, 12vh, 140px); }
+.abre h1 { max-width: 16ch; }
+.mudo { color: var(--muted); }
+
+.duas { display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2fr); gap: 40px; border-top: 1px solid var(--line); padding: 40px 0 56px; }
+.texto { display: flex; flex-direction: column; gap: 16px; max-width: 60ch; }
+.texto p { margin: 0; }
+
+.servicos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.servicos li { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--ink); padding-top: 16px; }
+.servicos strong { font: 300 clamp(28px, 3.2vw, 44px) / 1 var(--f-display); }
+
+.split { display: flex; height: 132px; border: 1px solid var(--ink); }
+.parte { display: flex; flex-direction: column; justify-content: space-between; padding: 14px 16px; background: var(--ink); color: var(--ground); }
+.parte b { font: 300 clamp(40px, 5vw, 64px) / 0.9 var(--f-display); }
+.parte span { font: var(--t-credit-weight) var(--t-credit-size) / var(--t-credit-lh) var(--f-text); letter-spacing: var(--t-credit-ls); }
+.selo { background: transparent; color: var(--ink); }
+
+.numero { font: 300 clamp(40px, 5vw, 64px) / 1 var(--f-display); }
+
+.passos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.passos li { display: grid; grid-template-columns: 40px 1fr; gap: 6px 12px; padding: 18px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.passos strong { font: 300 22px / 1.2 var(--f-display); }
+.passos .t-caption, .passos li > span:last-child { grid-column: 2; }
+
+.fim { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; border-top: 1px solid var(--line); padding: clamp(64px, 12vh, 140px) 0; }
+.fim h2 { max-width: 14ch; }
+
+@media (max-width: 860px) {
+  .duas { grid-template-columns: 1fr; gap: 20px; }
+  .servicos { grid-template-columns: 1fr; }
+  .passos { grid-template-columns: 1fr; }
+}

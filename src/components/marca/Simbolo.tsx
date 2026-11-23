@@ -13,7 +13,9 @@
  * Nunca feche o anel, nunca remova a cauda ou o ponto, nunca gire o estático.
  */
 type Props = {
-  variante?: "estatico" | "animavel" | "small";
+  /** "anel": só o laço e a cauda, sem o ponto. Uso único: a lista de quem passou,
+   *  onde uma bolinha viaja de um laço para o outro (pedido do raphh, 2026-11-23). */
+  variante?: "estatico" | "animavel" | "small" | "anel";
   className?: string;
   /** texto acessível; sem ele o símbolo é decorativo */
   titulo?: string;
@@ -32,6 +34,21 @@ export function Simbolo({ variante = "estatico", className, titulo }: Props) {
         <path d="M50 0A50 50 0 1 0 100 50H83A33 33 0 1 1 50 17Z" />
         <path d="M48 0H77.5V17H48Z" />
         <path d="M28 50a22 22 0 1 0 44 0a22 22 0 1 0 -44 0Z" />
+      </svg>
+    );
+  }
+
+  if (variante === "anel") {
+    return (
+      <svg className={cls} viewBox="0 0 100 100" {...a11y} fill="currentColor">
+        <g className="v-papel">
+          <path d="M50 0A50 50 0 1 0 100 50H86A36 36 0 1 1 50 14Z" />
+          <path d="M48 0H75V14H48Z" />
+        </g>
+        <g className="v-madrugada">
+          <path d="M50 0A50 50 0 1 0 100 50H87A37 37 0 1 1 50 13Z" />
+          <path d="M48 0H75V13H48Z" />
+        </g>
       </svg>
     );
   }

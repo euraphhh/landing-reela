@@ -21,6 +21,12 @@ type Pendente =
 
 const PLATAFORMAS = STREAMING.filter((p) => p.id !== "tiktok");
 
+/** open.spotify.com/…/album/<id> → player embutido */
+const embed = (url?: string) => {
+  const m = url?.match(/open\.spotify\.com\/(?:intl-[a-z-]+\/)?(album|track)\/([A-Za-z0-9]+)/);
+  return m ? `https://open.spotify.com/embed/${m[1]}/${m[2]}?utm_source=generator&theme=0` : null;
+};
+
 export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
   const caixa = useRef<HTMLDivElement>(null);
   const arte = useRef<HTMLDivElement>(null);
@@ -78,7 +84,7 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
     const tecla = (e: KeyboardEvent) => {
       if (e.key === "Escape") { e.preventDefault(); fechar(); return; }
       if (e.key !== "Tab" || !caixa.current) return;
-      const f = [...caixa.current.querySelectorAll<HTMLElement>("a, button")];
+      const f = [...caixa.current.querySelectorAll<HTMLElement>("a, button, iframe")];
       const [pri, ult] = [f[0], f[f.length - 1]];
       if (e.shiftKey && document.activeElement === pri) { e.preventDefault(); ult.focus(); }
       else if (!e.shiftKey && document.activeElement === ult) { e.preventDefault(); pri.focus(); }
@@ -97,19 +103,38 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
   return (
     <div ref={caixa} className={s.detalhe} hidden={!aberto} role="dialog" aria-modal="true" aria-labelledby="d-tit">
       <button ref={voltar} className={s.voltar} type="button" onClick={fechar}>voltar ao laço</button>
-      <Arte r={r} ref={arte} className={s.arte} data-flip-id={`capa-${r.id}`} />
+      {/* a caixa segura o lugar da capa: durante o Flip a arte fica absolute e o texto não pode escorregar */}
+      <div className={s.lugar}>
+        <Arte r={r} ref={arte} className={s.arte} data-flip-id={`capa-${r.id}`} />
+      </div>
       <div className={s.txt}>
         <span className="t-credit" data-entra-det>{r.num} · {r.quando}</span>
         <h2 className="t-display" id="d-tit" data-entra-det>{r.titulo}</h2>
-        <p className={s.artistas} data-entra-det>{r.artistas}</p>
+        {r.artistas && <p className={s.artistas} data-entra-det>{r.artistas}</p>}
         <dl className="creditos" data-entra-det>
           {r.creditos.map((c) => (
             <div key={c.papel + c.nome} style={{ display: "contents" }}><dt>{c.papel}</dt><dd>{c.nome}</dd></div>
           ))}
         </dl>
+        {(r.tipo || r.selo) && (
+          <p className="t-caption" data-entra-det style={{ margin: 0 }}>
+            {[r.tipo?.toLowerCase(), r.faixas && r.faixas > 1 ? `${r.faixas} faixas` : null, r.selo ? `℗ ${r.selo}` : null].filter(Boolean).join(" · ")}
+          </p>
+        )}
+        {/* o player só carrega com o detalhe aberto: nada do Spotify na página antes disso */}
+        {aberto && embed(r.links?.spotify) && (
+          <iframe
+            className={s.player} data-entra-det title={`ouvir ${r.titulo} no spotify`}
+            src={embed(r.links?.spotify)!} loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          />
+        )}
         <ul className={s.links} aria-label="ouvir este release" data-entra-det>
-          {PLATAFORMAS.map((p) => (
-            <li key={p.id}><LinkDividido texto={p.nome} href={r.links?.[p.id] ?? p.href} className={s.sl} /></li>
+          {PLATAFORMAS.filter((p) => r.links?.[p.id]).map((p) => (
+            <li key={p.id}><LinkDividido texto={p.nome} href={r.links![p.id]!} className={s.sl} /></li>
+          ))}
+          {r.versoes?.filter((v) => v.spotify).map((v) => (
+            <li key={v.nome}><LinkDividido texto={v.nome} href={v.spotify!} className={s.sl} /></li>
           ))}
         </ul>
       </div>

@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { gsap, useGSAP, ScrollTrigger, calmo } from "@/lib/gsap";
 import { Simbolo } from "@/components/marca/Simbolo";
 import { useAncora, useScroll } from "@/components/providers/SmoothScroll";
-import { useSom } from "@/hooks/useSom";
 import { useTema } from "@/hooks/useTema";
 import { usePulso } from "@/hooks/usePulso";
 import { EV, ouvir } from "@/lib/eventos";
@@ -35,7 +34,6 @@ export function Barra() {
   const [naMarca, setNaMarca] = useState(true);
   const ancora = useAncora();
   const { parar, retomar } = useScroll();
-  const som = useSom();
   const { tema, alternar } = useTema();
   usePulso(lockup);
 
@@ -95,13 +93,13 @@ export function Barra() {
           {LINKS.map((l) => (
             <a key={l.href} className={s.lnk} href={l.href} onClick={ancora}>{l.rot}</a>
           ))}
-          <button className={s.pill} type="button" aria-pressed={som.ligado} aria-label="som" onClick={() => som.alternar()}>
-            <span className={s.dot} aria-hidden="true" />
-            <span className={s.longo}>{som.ligado ? "som ligado" : "som desligado"}</span>
-            <span className={s.curto} aria-hidden="true">som</span>
-          </button>
-          <button className={s.pill} type="button" onClick={alternar} aria-label={`tema ${tema}. trocar para ${tema === "papel" ? "madrugada" : "papel"}`}>
-            {tema}
+          <button
+            className={s.toggle} type="button" role="switch"
+            aria-checked={tema === "madrugada"} aria-label="tema escuro"
+            onClick={alternar}
+          >
+            <span className={s.rotulo} aria-hidden="true">{tema === "madrugada" ? "escuro" : "claro"}</span>
+            <span className={s.trilho} aria-hidden="true"><span className={s.bola} /></span>
           </button>
           <button ref={menuBtn} className={s.menuBtn} type="button" aria-expanded={menuAberto} aria-controls="menu" onClick={() => setMenuAberto(true)}>
             menu

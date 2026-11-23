@@ -57,6 +57,7 @@ html[data-tema="madrugada"] .sym .v-madrugada { display: inline; }
 }
 .btn:hover { transform: translateY(-1px); }
 .btn:active { transform: translateY(1px) scale(0.985); }
+.btn:disabled { opacity: 0.45; cursor: default; transform: none; }
 .btn-1 { background: var(--button-bg); color: var(--button-text); }
 .btn-2 { border: 1px solid currentColor; }
 

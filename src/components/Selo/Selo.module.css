@@ -1,0 +1,7 @@
+.selo { padding: clamp(80px, 16vh, 180px) var(--gutter); border-top: 1px solid var(--line); min-height: 100svh; display: grid; grid-template-columns: 1fr minmax(260px, 360px); gap: 48px; align-items: end; }
+.manifesto { margin: 0; font: 300 clamp(30px, 4.6vw, 64px) / 1.12 var(--f-display); max-width: 18ch; }
+.l { display: block; }
+.aside { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.aside p { margin: 0; }
+.mail { font: 500 15px / 22px var(--f-text); }
+@media (max-width: 860px) { .selo { grid-template-columns: 1fr; } }

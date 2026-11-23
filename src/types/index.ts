@@ -23,6 +23,13 @@ export type Release = {
   /** bpm da prévia, para o ponto pulsar no tempo (padrão 90) */
   bpm?: number;
   links?: Partial<Record<Plataforma, string>>;
+  /** "EP", "Single" */
+  tipo?: string;
+  faixas?: number;
+  /** ℗ do lançamento, como no Spotify */
+  selo?: string;
+  /** outras versões (ex.: speed) que não ganham card próprio */
+  versoes?: { nome: string; spotify?: string }[];
 };
 
 export type Artista = {

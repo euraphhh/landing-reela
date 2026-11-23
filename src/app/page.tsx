@@ -4,6 +4,9 @@ import { Barra } from "@/components/Barra/Barra";
 import { Hero } from "@/components/Hero/Hero";
 import { Grao } from "@/components/Grao/Grao";
 import { Laco } from "@/components/Laco/Laco";
+import { QuemPassou } from "@/components/QuemPassou/QuemPassou";
+import { Selo } from "@/components/Selo/Selo";
+import { Replay } from "@/components/Replay/Replay";
 import { MOSTRAR_SELO_PROTOTIPO } from "@/data/links";
 
 export default function Home() {
@@ -16,9 +19,11 @@ export default function Home() {
         <main id="conteudo" tabIndex={-1}>
           <Hero />
           <Laco />
-          {/* etapa 4: QuemPassou, Selo, Replay */}
+          <QuemPassou />
+          <Selo />
+          <Replay />
         </main>
-        {MOSTRAR_SELO_PROTOTIPO && <div className="selo-prot">protótipo · nomes e faixas de exemplo</div>}
+        {MOSTRAR_SELO_PROTOTIPO && <div className="selo-prot">protótipo · dados em revisão</div>}
       </SomProvider>
     </SmoothScroll>
   );

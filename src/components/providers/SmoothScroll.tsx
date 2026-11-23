@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger, calmo } from "@/lib/gsap";
 
 type Alvo = string | HTMLElement | number;
 type Ctx = {
-  ir: (alvo: Alvo, opts?: { duration?: number; easing?: (t: number) => number; onComplete?: () => void }) => void;
+  ir: (alvo: Alvo, opts?: { duration?: number; easing?: (t: number) => number; onComplete?: () => void; /** a rolagem do usuário não interrompe */ lock?: boolean }) => void;
   parar: () => void;
   retomar: () => void;
 };
@@ -37,7 +37,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     const el = typeof alvo === "string" ? document.querySelector<HTMLElement>(alvo) : alvo;
     if (el == null) return;
     if (lenis.current) {
-      lenis.current.scrollTo(el, { duration: opts.duration ?? 1.6, easing: opts.easing, onComplete: () => opts.onComplete?.() });
+      lenis.current.scrollTo(el, { duration: opts.duration ?? 1.6, easing: opts.easing, lock: opts.lock, force: opts.lock, onComplete: () => opts.onComplete?.() });
     } else {
       if (typeof el === "number") window.scrollTo(0, el);
       else el.scrollIntoView();

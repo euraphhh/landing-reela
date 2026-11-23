@@ -141,7 +141,11 @@ export function Laco() {
   };
 
   const r = RELEASES[ativo];
-  const tocandoEste = som.ligado && som.tocando === (r.previa ? r.id : null);
+  const tocandoEste = som.tocando === r.id;
+  // prévia: arquivo local toca aqui; senão, o player do Spotify no detalhe; sem nenhum dos dois, ainda não tem
+  const temOuvir = som.temPrevia(r) || Boolean(r.links?.spotify);
+  const ouvirPrevia = () => (som.temPrevia(r) ? som.alternar(r) : abrir(ativo));
+  const rotOuvir = !temOuvir ? "prévia em breve" : tocandoEste ? "pausar prévia" : "ouvir prévia";
 
   return (
     <section ref={sec} className={s.sec} id="releases" aria-labelledby="rel-h">
@@ -154,7 +158,7 @@ export function Laco() {
           <div className={s.titWrap}>
             <p key={ativo} ref={titulo} className="t-title">{r.titulo}</p>
           </div>
-          <p className={s.artistas} data-troca>{r.artistas}</p>
+          {r.artistas && <p className={s.artistas} data-troca>{r.artistas}</p>}
           <dl className="creditos" data-troca>
             {r.creditos.map((c) => (
               <div key={c.papel + c.nome} style={{ display: "contents" }}><dt>{c.papel}</dt><dd>{c.nome}</dd></div>
@@ -162,9 +166,7 @@ export function Laco() {
           </dl>
         </div>
         <div className={s.acoes}>
-          <button className="btn btn-1" type="button" onClick={() => som.alternar(r)}>
-            {tocandoEste ? "pausar prévia" : "ouvir prévia"}
-          </button>
+          <button className="btn btn-1" type="button" onClick={ouvirPrevia} disabled={!temOuvir}>{rotOuvir}</button>
           <button className="btn btn-2" type="button" onClick={() => abrir(ativo)}>abrir release</button>
         </div>
         <div className={s.passos}>
@@ -194,7 +196,7 @@ export function Laco() {
         onKeyDown={teclas}
       >
         <div ref={anel} className={s.anel} aria-hidden="true"><Simbolo variante="animavel" /></div>
-        <button ref={play} className={s.play} type="button" aria-label={tocandoEste ? "pausar prévia" : "tocar prévia"} onClick={() => som.alternar(r)}>
+        <button ref={play} className={s.play} type="button" aria-label={rotOuvir} onClick={ouvirPrevia} disabled={!temOuvir}>
           <svg viewBox="0 0 10 10" aria-hidden="true">
             <path d={tocandoEste ? "M2 1H4V9H2ZM6 1H8V9H6Z" : "M2 1L9 5L2 9Z"} fill="currentColor" />
           </svg>
@@ -206,7 +208,7 @@ export function Laco() {
                 ref={(el) => { cards.current[i] = el; }}
                 className={s.card} type="button" tabIndex={-1}
                 aria-current={i === ativo}
-                aria-label={`${x.num}, ${x.titulo}, ${x.artistas}`}
+                aria-label={[x.num, x.titulo, x.artistas].filter(Boolean).join(", ")}
                 onClick={() => { if (arrastou.current) return; if (i === ativoRef.current) abrir(i); else ir(i); }}
               >
                 <Arte r={x} ref={(el: HTMLDivElement | null) => { artes.current[i] = el; }} data-flip-id={`capa-${x.id}`} />

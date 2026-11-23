@@ -1,10 +1,287 @@
 [
-  { "id": "001", "num": "001", "nova": true, "titulo": "de novo, até amanhecer", "artistas": "raphh e convidados", "quando": "em breve", "creditos": [{ "papel": "prod.", "nome": "reela" }, { "papel": "mix", "nome": "reela" }, { "papel": "arte", "nome": "reela" }], "cor": ["#5b0f12", "#120304"] },
-  { "id": "a07", "num": "A07", "titulo": "3h17", "artistas": "artista 01", "quando": "arquivo · 2024", "ano": "2024", "creditos": [{ "papel": "prod.", "nome": "artista 04" }, { "papel": "mix", "nome": "reela" }], "cor": ["#1f4f57", "#071214"] },
-  { "id": "a06", "num": "A06", "titulo": "luz de posto", "artistas": "artista 02, artista 03", "quando": "arquivo · 2024", "ano": "2024", "creditos": [{ "papel": "prod.", "nome": "reela" }, { "papel": "mix", "nome": "artista 05" }], "cor": ["#7a5a1c", "#1a1305"] },
-  { "id": "a05", "num": "A05", "titulo": "sem sinal", "artistas": "artista 01", "quando": "arquivo · 2023", "ano": "2023", "creditos": [{ "papel": "prod.", "nome": "artista 04" }, { "papel": "arte", "nome": "artista 06" }], "cor": ["#2b3a2a", "#090d09"] },
-  { "id": "a04", "num": "A04", "titulo": "última ligação", "artistas": "artista 03", "quando": "arquivo · 2023", "ano": "2023", "creditos": [{ "papel": "prod.", "nome": "reela" }], "cor": ["#6b2b3a", "#16070b"] },
-  { "id": "a03", "num": "A03", "titulo": "madrugada fria", "artistas": "artista 02", "quando": "arquivo · 2023", "ano": "2023", "creditos": [{ "papel": "prod.", "nome": "artista 05" }, { "papel": "mix", "nome": "reela" }], "cor": ["#3d4552", "#0b0d10"] },
-  { "id": "a02", "num": "A02", "titulo": "volta", "artistas": "artista 01, artista 04", "quando": "arquivo · 2022", "ano": "2022", "creditos": [{ "papel": "prod.", "nome": "reela" }], "cor": ["#8a3b12", "#1c0b03"] },
-  { "id": "a01", "num": "A01", "titulo": "o primeiro replay", "artistas": "coletivo reela", "quando": "arquivo · 2022", "ano": "2022", "creditos": [{ "papel": "prod.", "nome": "reela" }], "cor": ["#4a4a4a", "#0a0a0a"] }
+  {
+    "id": "001",
+    "num": "001",
+    "nova": true,
+    "titulo": "de novo, até amanhecer",
+    "artistas": "raphh e convidados",
+    "quando": "em breve",
+    "creditos": [
+      {
+        "papel": "prod.",
+        "nome": "reela"
+      },
+      {
+        "papel": "mix",
+        "nome": "reela"
+      },
+      {
+        "papel": "arte",
+        "nome": "reela"
+      }
+    ],
+    "cor": [
+      "#5b0f12",
+      "#120304"
+    ]
+  },
+  {
+    "id": "culpa-da-party",
+    "num": "A13",
+    "titulo": "CULPA DA PARTY",
+    "artistas": "",
+    "quando": "ep · 2026",
+    "ano": "2026",
+    "tipo": "EP",
+    "faixas": 6,
+    "selo": "nevermind.",
+    "creditos": [],
+    "cor": [
+      "#3a3a3a",
+      "#0a0a0a"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/0pAiODicHi9ryrzZBbuwtK"
+    }
+  },
+  {
+    "id": "strngluv",
+    "num": "A12",
+    "titulo": "strngluv!",
+    "artistas": "",
+    "quando": "ep · 2025",
+    "ano": "2025",
+    "tipo": "EP",
+    "faixas": 4,
+    "selo": "nevermind.",
+    "creditos": [],
+    "cor": [
+      "#2b2b2b",
+      "#080808"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/3FVbPjc60ddd46NEhisonm"
+    }
+  },
+  {
+    "id": "onde-ce-ta",
+    "num": "A11",
+    "titulo": "ONDE CÊ TÁ?",
+    "artistas": "",
+    "quando": "single · 2025",
+    "ano": "2025",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "nevermind.",
+    "creditos": [],
+    "cor": [
+      "#474747",
+      "#0d0d0d"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/5Ub2ggYey7EQg0upEe15Xp"
+    }
+  },
+  {
+    "id": "reesenha-3-nada-alem",
+    "num": "A10",
+    "titulo": "REESENHA #3 (Nada Além)",
+    "artistas": "M4relli, Ramos Bt, raphh, Aionn, Mika Mc",
+    "quando": "single · 2024",
+    "ano": "2024",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Studio",
+    "creditos": [],
+    "cor": [
+      "#333333",
+      "#060606"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/52MdfzS09AtxtpDrDcdKnn"
+    }
+  },
+  {
+    "id": "te-vejo-longe",
+    "num": "A09",
+    "titulo": "Te Vejo Longe",
+    "artistas": "raphh, Gringoo",
+    "quando": "single · 2023",
+    "ano": "2023",
+    "tipo": "Single",
+    "faixas": 2,
+    "selo": "REELA Studio",
+    "creditos": [],
+    "cor": [
+      "#3a3a3a",
+      "#0a0a0a"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/16dmZw1zBOZze2DW19LBBK"
+    }
+  },
+  {
+    "id": "role-remix",
+    "num": "A08",
+    "titulo": "Rolê (Remix)",
+    "artistas": "LX, T'H, raphh",
+    "quando": "single · 2023",
+    "ano": "2023",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Studio",
+    "creditos": [],
+    "cor": [
+      "#2b2b2b",
+      "#080808"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/3LqiQz76Z03hpPRt1GjGAO"
+    }
+  },
+  {
+    "id": "coelha-ma",
+    "num": "A07",
+    "titulo": "COELHA MÁ",
+    "artistas": "Krys, prodbyeros, Tkd",
+    "quando": "single · 2023",
+    "ano": "2023",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Studio",
+    "creditos": [],
+    "cor": [
+      "#474747",
+      "#0d0d0d"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/7IUN677dFJNlaUXuAPLLz1"
+    },
+    "versoes": [
+      {
+        "nome": "speed",
+        "spotify": "https://open.spotify.com/intl-pt/album/4aIbdXFWu4ipnpJwqynAvk"
+      }
+    ]
+  },
+  {
+    "id": "de-novo",
+    "num": "A06",
+    "titulo": "DE NOVO",
+    "artistas": "Krys, raphh",
+    "quando": "single · 2023",
+    "ano": "2023",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Studio",
+    "creditos": [],
+    "cor": [
+      "#333333",
+      "#060606"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/6CRLGAg6tyToSjri0NDSes"
+    },
+    "versoes": [
+      {
+        "nome": "speed",
+        "spotify": "https://open.spotify.com/intl-pt/album/60CN8M7Ov3lz3byw6wuPcM"
+      }
+    ]
+  },
+  {
+    "id": "wave",
+    "num": "A05",
+    "titulo": "Wave",
+    "artistas": "raphh, Cyclop Beats",
+    "quando": "single · 2022",
+    "ano": "2022",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Music",
+    "creditos": [],
+    "cor": [
+      "#3a3a3a",
+      "#0a0a0a"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/41FYO8UUi04NNQPgfQuJrZ"
+    }
+  },
+  {
+    "id": "mentirosa",
+    "num": "A04",
+    "titulo": "Mentirosa",
+    "artistas": "raphh, R-ASH Beats",
+    "quando": "single · 2022",
+    "ano": "2022",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Music",
+    "creditos": [],
+    "cor": [
+      "#2b2b2b",
+      "#080808"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/6mSbpldBqly0vXtSxMouQ8"
+    }
+  },
+  {
+    "id": "amor-copos",
+    "num": "A03",
+    "titulo": "amor&copos",
+    "artistas": "raphh, Steif",
+    "quando": "single · 2022",
+    "ano": "2022",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Music",
+    "creditos": [],
+    "cor": [
+      "#474747",
+      "#0d0d0d"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/3xV8vYWmd7I8I0RIulz4j8"
+    }
+  },
+  {
+    "id": "reesenha-1",
+    "num": "A02",
+    "titulo": "Reesenha #1",
+    "artistas": "vários artistas",
+    "quando": "single · 2022",
+    "ano": "2022",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Music GRAVACAO",
+    "creditos": [],
+    "cor": [
+      "#333333",
+      "#060606"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/4j4DhTeRwVXwYovm3eMZ34"
+    }
+  },
+  {
+    "id": "reesenha-pt-2-planos",
+    "num": "A01",
+    "titulo": "Reesenha, Pt. 2 - Planos",
+    "artistas": "raphh, Victor Winner, Taiga, Astral Oficial, Morgana, W$ MC",
+    "quando": "single · 2022",
+    "ano": "2022",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "REELA Music / REELA Studio (duas versões)",
+    "creditos": [],
+    "cor": [
+      "#3a3a3a",
+      "#0a0a0a"
+    ],
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/album/45LHGt27LMKmg2MYVynkbv"
+    }
+  }
 ]

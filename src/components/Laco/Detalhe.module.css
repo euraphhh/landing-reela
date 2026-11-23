@@ -4,16 +4,18 @@
   padding: 80px var(--gutter) 40px; overflow: auto; overscroll-behavior: contain;
 }
 .detalhe[hidden] { display: none; }
-.arte { height: min(78svh, 820px); width: auto; }
+.lugar { height: min(78svh, 820px); aspect-ratio: 9 / 16; }
+.arte { width: 100%; height: 100%; }
 .txt { display: flex; flex-direction: column; gap: 24px; max-width: 560px; }
 .artistas { margin: 0; font-weight: 500; }
 .links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
 .sl { font-size: clamp(24px, 2.6vw, 36px) !important; }
+.player { width: 100%; max-width: 520px; height: 152px; border: 0; border-radius: 12px; background: var(--raised); }
 .voltar {
   position: fixed; top: 14px; right: var(--gutter); z-index: 131; min-height: 44px; padding: 0 14px;
   font-weight: 500; border: 1px solid var(--line); background: var(--ground);
 }
 @media (max-width: 760px) {
   .detalhe { grid-template-columns: 1fr; align-items: start; }
-  .arte { height: auto; width: min(70vw, 320px); }
+  .lugar { height: auto; width: min(70vw, 320px); }
 }

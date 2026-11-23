@@ -1,0 +1,8 @@
+[
+  {
+    "_obs": "lançamentos ainda não publicados. entram no topo do laço. EXEMPLO do protótipo: troque ou apague.",
+    "id": "001", "num": "001", "nova": true, "titulo": "de novo, até amanhecer", "artistas": "raphh e convidados",
+    "quando": "em breve", "creditos": [{ "papel": "prod.", "nome": "reela" }, { "papel": "mix", "nome": "reela" }, { "papel": "arte", "nome": "reela" }],
+    "cor": ["#5b0f12", "#120304"]
+  }
+]

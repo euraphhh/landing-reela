@@ -1,8 +1,97 @@
 [
-  { "nome": "artista 01", "papel": "voz e composição", "faixas": 3 },
-  { "nome": "artista 02", "papel": "voz", "faixas": 2 },
-  { "nome": "artista 03", "papel": "voz", "faixas": 2 },
-  { "nome": "artista 04", "papel": "beat", "faixas": 3 },
-  { "nome": "artista 05", "papel": "beat e mix", "faixas": 2 },
-  { "nome": "artista 06", "papel": "arte", "faixas": 1 }
+  {
+    "nome": "raphh",
+    "papel": "",
+    "faixas": 8
+  },
+  {
+    "nome": "Krys",
+    "papel": "",
+    "faixas": 2
+  },
+  {
+    "nome": "Aionn",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Astral Oficial",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Cyclop Beats",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Gringoo",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "LX",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "M4relli",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Mika Mc",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Morgana",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "prodbyeros",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "R-ASH Beats",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Ramos Bt",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Steif",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "T'H",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Taiga",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Tkd",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "Victor Winner",
+    "papel": "",
+    "faixas": 1
+  },
+  {
+    "nome": "W$ MC",
+    "papel": "",
+    "faixas": 1
+  }
 ]

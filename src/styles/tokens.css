@@ -1,0 +1,63 @@
+/* reela — gerado de docs/marca/tokens.json por scripts/tokens.mjs. não edite. */
+:root,
+html[data-tema="madrugada"] {
+  --ground: #000000;
+  --ink: #FFFFFF;
+  --muted: #A3A3A3;
+  --line: #2E2E2E;
+  --raised: #141414;
+  --black: #000000;
+  --white: #FFFFFF;
+  --accent: var(--ink);
+  --button-bg: #FFFFFF;
+  --button-text: #000000;
+  color-scheme: dark;
+}
+html[data-tema="papel"] {
+  --ground: #FFFFFF;
+  --ink: #000000;
+  --muted: #5C5C5C;
+  --line: #E3E3E3;
+  --raised: #F4F4F4;
+  --button-bg: #000000;
+  --button-text: #FFFFFF;
+  color-scheme: light;
+}
+:root {
+  --f-text-fallback: "Inter Display", system-ui, sans-serif;
+  --f-display-fallback: "Unbounded", "Inter Display", system-ui, sans-serif;
+  --t-display-family: var(--f-display);
+  --t-display-size: 96px;
+  --t-display-lh: 0.92;
+  --t-display-weight: 300;
+  --t-display-ls: 0;
+  --t-title-family: var(--f-display);
+  --t-title-size: 40px;
+  --t-title-lh: 44px;
+  --t-title-weight: 300;
+  --t-title-ls: 0;
+  --t-heading-family: var(--f-text);
+  --t-heading-size: 24px;
+  --t-heading-lh: 30px;
+  --t-heading-weight: 500;
+  --t-body-family: var(--f-text);
+  --t-body-size: 16px;
+  --t-body-lh: 24px;
+  --t-body-weight: 400;
+  --t-caption-family: var(--f-text);
+  --t-caption-size: 13px;
+  --t-caption-lh: 18px;
+  --t-caption-weight: 400;
+  --t-credit-family: var(--f-text);
+  --t-credit-size: 11px;
+  --t-credit-lh: 14px;
+  --t-credit-weight: 500;
+  --t-credit-ls: 0.04em;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 32px;
+  --space-4: 64px;
+  --radius-0: 0px;
+  --radius-icon: 22%;
+  --radius-full: 9999px;
+}

@@ -1,0 +1,28 @@
+import type { Metadata, Viewport } from "next";
+import "@/styles/globals.css";
+import { interDisplay, unbounded } from "./fonts";
+import { temaScript } from "./tema-script";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://reelamusic.com"),
+  title: "reela music",
+  description: "reela music. selo de trap e r&b. de novo, até amanhecer.",
+  openGraph: { title: "reela music", description: "selo de trap e r&b. de novo, até amanhecer.", locale: "pt_BR", type: "website" },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#000000",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="pt-BR" data-tema="madrugada" className={`${unbounded.variable} ${interDisplay.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: temaScript }} />
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}

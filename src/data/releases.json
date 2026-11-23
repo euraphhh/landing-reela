@@ -1,0 +1,10 @@
+[
+  { "id": "001", "num": "001", "nova": true, "titulo": "de novo, até amanhecer", "artistas": "raphh e convidados", "quando": "em breve", "creditos": [{ "papel": "prod.", "nome": "reela" }, { "papel": "mix", "nome": "reela" }, { "papel": "arte", "nome": "reela" }], "cor": ["#5b0f12", "#120304"] },
+  { "id": "a07", "num": "A07", "titulo": "3h17", "artistas": "artista 01", "quando": "arquivo · 2024", "ano": "2024", "creditos": [{ "papel": "prod.", "nome": "artista 04" }, { "papel": "mix", "nome": "reela" }], "cor": ["#1f4f57", "#071214"] },
+  { "id": "a06", "num": "A06", "titulo": "luz de posto", "artistas": "artista 02, artista 03", "quando": "arquivo · 2024", "ano": "2024", "creditos": [{ "papel": "prod.", "nome": "reela" }, { "papel": "mix", "nome": "artista 05" }], "cor": ["#7a5a1c", "#1a1305"] },
+  { "id": "a05", "num": "A05", "titulo": "sem sinal", "artistas": "artista 01", "quando": "arquivo · 2023", "ano": "2023", "creditos": [{ "papel": "prod.", "nome": "artista 04" }, { "papel": "arte", "nome": "artista 06" }], "cor": ["#2b3a2a", "#090d09"] },
+  { "id": "a04", "num": "A04", "titulo": "última ligação", "artistas": "artista 03", "quando": "arquivo · 2023", "ano": "2023", "creditos": [{ "papel": "prod.", "nome": "reela" }], "cor": ["#6b2b3a", "#16070b"] },
+  { "id": "a03", "num": "A03", "titulo": "madrugada fria", "artistas": "artista 02", "quando": "arquivo · 2023", "ano": "2023", "creditos": [{ "papel": "prod.", "nome": "artista 05" }, { "papel": "mix", "nome": "reela" }], "cor": ["#3d4552", "#0b0d10"] },
+  { "id": "a02", "num": "A02", "titulo": "volta", "artistas": "artista 01, artista 04", "quando": "arquivo · 2022", "ano": "2022", "creditos": [{ "papel": "prod.", "nome": "reela" }], "cor": ["#8a3b12", "#1c0b03"] },
+  { "id": "a01", "num": "A01", "titulo": "o primeiro replay", "artistas": "coletivo reela", "quando": "arquivo · 2022", "ano": "2022", "creditos": [{ "papel": "prod.", "nome": "reela" }], "cor": ["#4a4a4a", "#0a0a0a"] }
+]

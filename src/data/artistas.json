@@ -1,0 +1,8 @@
+[
+  { "nome": "artista 01", "papel": "voz e composição", "faixas": 3 },
+  { "nome": "artista 02", "papel": "voz", "faixas": 2 },
+  { "nome": "artista 03", "papel": "voz", "faixas": 2 },
+  { "nome": "artista 04", "papel": "beat", "faixas": 3 },
+  { "nome": "artista 05", "papel": "beat e mix", "faixas": 2 },
+  { "nome": "artista 06", "papel": "arte", "faixas": 1 }
+]

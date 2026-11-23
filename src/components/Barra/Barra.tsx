@@ -9,9 +9,9 @@ import { EV, ouvir } from "@/lib/eventos";
 import s from "./Barra.module.css";
 
 const LINKS = [
-  { href: "#releases", rot: "releases" },
-  { href: "#gente", rot: "quem passou" },
-  { href: "#selo", rot: "o selo" },
+  { href: "/#releases", rot: "releases" },
+  { href: "/#gente", rot: "quem passou" },
+  { href: "/#selo", rot: "o selo" },
 ];
 
 /** o laço da barra se desenha e o ponto cai no centro */
@@ -85,7 +85,7 @@ export function Barra() {
   return (
     <>
       <header ref={barra} className={`${s.barra} ${naMarca ? s.naMarca : ""}`}>
-        <a ref={lockup} className={s.lockup} href="#topo" aria-label="reela music, voltar ao início" onClick={ancora}>
+        <a ref={lockup} className={s.lockup} href="/#topo" aria-label="reela music, voltar ao início" onClick={ancora}>
           <Simbolo variante="animavel" />
         </a>
         <nav className={s.nav} aria-label="principal">
@@ -104,7 +104,7 @@ export function Barra() {
         {LINKS.map((l) => (
           <a key={l.href} href={l.href} onClick={irMenu}>{l.rot}</a>
         ))}
-        <a href="#selo" onClick={irMenu}>contato</a>
+        <a href="/#selo" onClick={irMenu}>contato</a>
       </div>
     </>
   );

@@ -1,33 +1,6 @@
-.detalhe {
-  position: fixed; inset: 0; z-index: 130; background: var(--ground);
-  display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(200px, 280px); gap: clamp(24px, 4vw, 64px); align-items: center;
-  padding: 80px var(--gutter) 40px; overflow: auto; overscroll-behavior: contain;
-}
+.detalhe { position: fixed; inset: 0; z-index: 130; background: var(--ground); padding: 80px var(--gutter) 40px; overflow: auto; overscroll-behavior: contain; }
 .detalhe[hidden] { display: none; }
-.lugar { height: min(64svh, 36vw, 720px); aspect-ratio: 1 / 1; }
-.arte { width: 100%; height: 100%; }
-.txt { display: flex; flex-direction: column; gap: 24px; max-width: 560px; }
-.artistas { margin: 0; font-weight: 500; }
-.links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
-.sl { font-size: clamp(24px, 2.6vw, 36px) !important; }
-.player { width: 100%; max-width: 520px; height: 152px; border: 0; border-radius: 12px; background: var(--raised); }
 .voltar {
   position: fixed; top: 14px; right: var(--gutter); z-index: 131; min-height: 44px; padding: 0 14px;
   font-weight: 500; border: 1px solid var(--line); background: var(--ground);
-}
-/* créditos: a coluna vazia da direita */
-.creditos { align-self: center; display: flex; flex-direction: column; gap: 20px; border-left: 1px solid var(--line); padding-left: 28px; }
-.creditos dl { margin: 0; display: flex; flex-direction: column; gap: 18px; }
-.creditos dt { font: var(--t-credit-weight) var(--t-credit-size) / var(--t-credit-lh) var(--f-text); letter-spacing: var(--t-credit-ls); color: var(--muted); margin-bottom: 4px; }
-.creditos dd { margin: 0; font: 300 22px / 1.2 var(--f-display); }
-
-@media (max-width: 1180px) {
-  .detalhe { grid-template-columns: auto minmax(0, 1fr); }
-  .creditos { grid-column: 2; border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 20px; }
-  .creditos dl { flex-direction: row; flex-wrap: wrap; gap: 18px 40px; }
-}
-@media (max-width: 760px) {
-  .detalhe { grid-template-columns: 1fr; align-items: start; }
-  .creditos { grid-column: auto; }
-  .lugar { height: auto; width: min(70vw, 320px); }
 }

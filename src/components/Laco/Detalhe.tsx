@@ -6,9 +6,8 @@
 import { useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
 import { gsap, Flip, EASE, calmo } from "@/lib/gsap";
 import { RELEASES } from "@/data";
-import { STREAMING } from "@/data/links";
 import { Arte } from "@/components/Arte/Arte";
-import { LinkDividido } from "@/components/LinkDividido/LinkDividido";
+import { ReleaseInfo, grade, lugarCapa } from "@/components/Release/ReleaseInfo";
 import { useScroll } from "@/components/providers/SmoothScroll";
 import s from "./Detalhe.module.css";
 
@@ -18,14 +17,6 @@ type Pendente =
   | { tipo: "abrir"; st: Flip.FlipState; origem: HTMLElement }
   | { tipo: "fechar"; st: Flip.FlipState; origem: HTMLElement }
   | null;
-
-const PLATAFORMAS = STREAMING.filter((p) => p.id !== "tiktok");
-
-/** open.spotify.com/…/album/<id> → player embutido */
-const embed = (url?: string) => {
-  const m = url?.match(/open\.spotify\.com\/(?:intl-[a-z-]+\/)?(album|track)\/([A-Za-z0-9]+)/);
-  return m ? `https://open.spotify.com/embed/${m[1]}/${m[2]}?utm_source=generator&theme=0` : null;
-};
 
 export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
   const caixa = useRef<HTMLDivElement>(null);
@@ -37,6 +28,8 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
   const origem = useRef<HTMLElement | null>(null);
   const devolverFoco = useRef<HTMLElement | null>(null);
   const { parar, retomar } = useScroll();
+  const abertoRef = useRef(false);
+  const tituloAntes = useRef("");
 
   useImperativeHandle(ref, () => ({
     abrir(i, o) {
@@ -44,16 +37,30 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
       devolverFoco.current = document.activeElement as HTMLElement | null;
       origem.current = o;
       pendente.current = { tipo: "abrir", st: Flip.getState(o), origem: o };
+      abertoRef.current = true;
+      // endereço próprio: dá para copiar e compartilhar; o voltar do navegador fecha
+      tituloAntes.current = document.title;
+      history.pushState({ detalhe: RELEASES[i].id }, "", `/releases/${RELEASES[i].id}/`);
+      document.title = `${RELEASES[i].titulo} · reela music`;
       setIdx(i);
       setAberto(true);
     },
   }), [aberto]);
 
-  const fechar = () => {
-    if (!aberto || !arte.current || !origem.current) return;
+  const fechar = (peloNavegador = false) => {
+    if (!abertoRef.current || !arte.current || !origem.current) return;
+    abertoRef.current = false;
     pendente.current = { tipo: "fechar", st: Flip.getState(arte.current), origem: origem.current };
+    document.title = tituloAntes.current;
+    if (!peloNavegador && history.state?.detalhe) history.back();
     setAberto(false);
   };
+
+  useLayoutEffect(() => {
+    const pop = () => { if (abertoRef.current) fechar(true); };
+    window.addEventListener("popstate", pop);
+    return () => window.removeEventListener("popstate", pop);
+  });
 
   // roda depois do DOM mudar e antes da pintura: o lugar certo para o Flip
   useLayoutEffect(() => {
@@ -101,48 +108,14 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
 
   const r = RELEASES[idx];
   return (
-    <div ref={caixa} className={s.detalhe} hidden={!aberto} role="dialog" aria-modal="true" aria-labelledby="d-tit">
-      <button ref={voltar} className={s.voltar} type="button" onClick={fechar}>voltar ao laço</button>
+    <div ref={caixa} className={`${s.detalhe} ${grade}`} hidden={!aberto} role="dialog" aria-modal="true" aria-labelledby="d-tit">
+      <button ref={voltar} className={s.voltar} type="button" onClick={() => fechar()}>voltar ao laço</button>
       {/* a caixa segura o lugar da capa: durante o Flip a arte fica absolute e o texto não pode escorregar */}
-      <div className={s.lugar}>
-        <Arte r={r} ref={arte} className={s.arte} data-flip-id={`capa-${r.id}`} />
+      <div className={lugarCapa}>
+        <Arte r={r} ref={arte} data-flip-id={`capa-${r.id}`} />
       </div>
-      <div className={s.txt}>
-        <span className="t-credit" data-entra-det>{r.num} · {r.quando}</span>
-        <h2 className="t-display" id="d-tit" data-entra-det>{r.titulo}</h2>
-        {r.artistas && <p className={s.artistas} data-entra-det>{r.artistas}</p>}
-        {(r.faixas || r.selo) && (
-          <p className="t-caption" data-entra-det style={{ margin: 0 }}>
-            {[r.faixas && r.faixas > 1 ? `${r.faixas} faixas` : null, r.selo ? `℗ ${r.selo}` : null].filter(Boolean).join(" · ")}
-          </p>
-        )}
-        {/* o player só carrega com o detalhe aberto: nada do Spotify na página antes disso */}
-        {aberto && embed(r.links?.spotify) && (
-          <iframe
-            className={s.player} data-entra-det title={`ouvir ${r.titulo} no spotify`}
-            src={embed(r.links?.spotify)!} loading="lazy"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          />
-        )}
-        <ul className={s.links} aria-label="ouvir este release" data-entra-det>
-          {PLATAFORMAS.filter((p) => r.links?.[p.id]).map((p) => (
-            <li key={p.id}><LinkDividido texto={p.nome} href={r.links![p.id]!} className={s.sl} /></li>
-          ))}
-          {r.versoes?.filter((v) => v.spotify).map((v) => (
-            <li key={v.nome}><LinkDividido texto={v.nome} href={v.spotify!} className={s.sl} /></li>
-          ))}
-        </ul>
-      </div>
-      {r.creditos.length > 0 && (
-        <aside className={s.creditos} aria-label="créditos" data-entra-det>
-          <span className="t-credit">créditos</span>
-          <dl>
-            {r.creditos.map((c) => (
-              <div key={c.papel + c.nome}><dt>{c.papel}</dt><dd>{c.nome}</dd></div>
-            ))}
-          </dl>
-        </aside>
-      )}
+      {/* o player só carrega com o detalhe aberto: nada do Spotify na página antes disso */}
+      <ReleaseInfo r={r} player={aberto} idTitulo="d-tit" entra />
     </div>
   );
 }

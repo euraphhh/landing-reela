@@ -1,0 +1,19 @@
+.pagina { padding: 84px var(--gutter) 28px; display: flex; flex-direction: column; gap: 56px; min-height: 100svh; }
+.volta a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; font-size: 14px; text-decoration: none; }
+.volta a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.release { min-height: calc(100svh - 240px); }
+.vizinhos { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+.vizinho { display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: center; padding: 18px 12px; text-decoration: none; min-height: 72px; transition: background-color 0.35s var(--ease), color 0.35s var(--ease); }
+.vizinho + .vizinho { border-left: 1px solid var(--line); }
+.vizinho:hover, .vizinho:focus-visible { background: var(--ink); color: var(--ground); }
+.vizinho:hover :global(.t-credit), .vizinho:focus-visible :global(.t-credit) { color: inherit; }
+.vizinho > span { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.vizinho strong { font: 300 clamp(18px, 2vw, 26px) / 1.1 var(--f-display); overflow-wrap: anywhere; }
+.mini { width: 72px; }
+.rodape { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+@media (max-width: 640px) {
+  .vizinhos { grid-template-columns: 1fr; }
+  .vizinho + .vizinho { border-left: 0; border-top: 1px solid var(--line); }
+  .mini { width: 56px; }
+  .vizinho { grid-template-columns: 56px 1fr; }
+}

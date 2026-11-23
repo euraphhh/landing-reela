@@ -59,15 +59,16 @@ export function useAncora() {
   return useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, depois?: () => void) => {
       const href = e.currentTarget.getAttribute("href") ?? "";
-      if (!href.startsWith("#") || href.length < 2) return;
-      const el = document.querySelector<HTMLElement>(href);
+      const url = new URL(href, window.location.href);
+      if (url.pathname !== window.location.pathname || url.hash.length < 2) return; // outra página: deixa navegar
+      const el = document.querySelector<HTMLElement>(url.hash);
       if (!el) return;
       e.preventDefault();
       ir(el, {
         onComplete: () => {
           if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");
           el.focus({ preventScroll: true });
-          history.replaceState(null, "", href);
+          history.replaceState(null, "", url.hash);
           depois?.();
         },
       });

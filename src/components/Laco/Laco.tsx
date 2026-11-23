@@ -102,6 +102,14 @@ export function Laco() {
       });
 
       layout();
+      // vindo de /?r=<id> (página do release → "voltar ao laço"): já começa nele, sem animar
+      const q = new URLSearchParams(window.location.search).get("r");
+      const pedido = q ? RELEASES.findIndex((x) => x.id === q) : -1;
+      if (pedido > 0) {
+        gsap.set(proxy, { x: -pedido * PX });
+        aplicar(-pedido * STEP);
+      }
+      if (q) history.replaceState(null, "", `/${window.location.hash}`);
       const ro = new ResizeObserver(layout);
       ro.observe(p);
       const off = ouvir<number>(EV.release, (i) => window.setTimeout(() => ir(i), 100));

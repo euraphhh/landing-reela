@@ -1,0 +1,5 @@
+.wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.toggle { width: 180px; height: 84px; min-height: 44px; }
+.toggle svg { width: 100%; height: 100%; overflow: visible; }
+.trilho { fill: none; stroke: var(--ink); stroke-width: 2; }
+.bola { fill: var(--ink); }

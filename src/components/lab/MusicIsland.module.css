@@ -1,0 +1,18 @@
+.ilha { background: var(--ground); color: var(--ink); border-radius: 32px; overflow: hidden; box-shadow: 0 0 0 1px var(--line); }
+.aberta { border-radius: 28px; width: min(380px, 86vw); }
+.pilula { display: flex; align-items: center; gap: 12px; padding: 8px 18px 8px 8px; min-height: 56px; }
+.mini { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.nome { font: 500 14px / 1 var(--f-text); white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+.eq { display: inline-flex; gap: 3px; align-items: flex-end; height: 16px; }
+.eq i { width: 3px; height: 16px; background: currentColor; transform-origin: bottom; transform: scaleY(0.25); border-radius: 2px; }
+.card { display: flex; flex-direction: column; gap: 16px; padding: 18px; }
+.topo { display: grid; grid-template-columns: 84px 1fr auto; gap: 14px; align-items: center; }
+.capa { width: 84px; height: 84px; border-radius: 14px; object-fit: cover; }
+.info { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.info strong { font: 300 20px / 1.1 var(--f-display); overflow: hidden; text-overflow: ellipsis; }
+.progresso { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.progresso span { display: block; height: 100%; background: var(--ink); transform-origin: left; transform: scaleX(0); }
+.controles { display: flex; align-items: center; gap: 6px; }
+.controles button, .controles a { min-width: 44px; min-height: 44px; display: grid; place-items: center; text-decoration: none; }
+.play { background: var(--ink); color: var(--ground) !important; border-radius: 50%; width: 48px; height: 48px; }
+.fechar { margin-left: auto; font-size: 13px; padding: 0 8px; }

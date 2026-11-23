@@ -1,0 +1,4 @@
+.area { position: absolute; inset: 0; cursor: crosshair; }
+.img { position: absolute; left: 0; top: 0; width: 140px; height: 140px; object-fit: cover; opacity: 0; pointer-events: none; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+.lista { position: relative; z-index: 0; list-style: none; margin: 0; padding: 24px var(--gutter); height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.lista li { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding: 10px 0; font: 300 clamp(24px, 3vw, 40px) / 1.1 var(--f-display); }

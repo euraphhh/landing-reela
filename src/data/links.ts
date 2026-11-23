@@ -4,7 +4,7 @@ import type { Plataforma } from "@/types";
 export const STREAMING: { id: Plataforma; nome: string; href: string }[] = [
   { id: "spotify", nome: "spotify", href: "https://open.spotify.com/intl-pt/artist/4WwNvUqhjTKKU1KLVLGoa6" },
   { id: "apple", nome: "apple music", href: "https://music.apple.com/br/artist/reela-music/1610961189" },
-  { id: "youtube", nome: "youtube", href: "https://www.youtube.com/@nevermindcltv" },
+  { id: "youtube", nome: "youtube", href: "https://www.youtube.com/@reelamusic" },
   { id: "instagram", nome: "instagram", href: "https://www.instagram.com/reelamusic/" },
 ];
 

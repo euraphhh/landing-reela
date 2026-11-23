@@ -7,6 +7,7 @@ import type { Release } from "@/types";
 import { STREAMING } from "@/data/links";
 import { LinkDividido } from "@/components/LinkDividido/LinkDividido";
 import { Nomes } from "./Nomes";
+import { CompartilharStory } from "@/components/Story/CompartilharStory";
 import s from "./ReleaseInfo.module.css";
 
 export const grade = s.grade;
@@ -60,6 +61,7 @@ export function ReleaseInfo({ r, player, idTitulo, nivel = "h2", entra = false }
             <li key={v.nome}><LinkDividido texto={v.nome} href={v.spotify!} className={s.sl} /></li>
           ))}
         </ul>
+        <div {...e}><CompartilharStory r={r} /></div>
       </div>
       {r.creditos.length > 0 && (
         <aside className={s.creditos} aria-label="créditos" {...e}>

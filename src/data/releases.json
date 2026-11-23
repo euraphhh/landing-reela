@@ -337,7 +337,12 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#474747",
       "#0d0d0d"
@@ -358,7 +363,12 @@
     "tipo": "Single",
     "faixas": 1,
     "selo": "",
-    "creditos": [],
+    "creditos": [
+      {
+        "papel": "mix e master",
+        "nome": "raphh"
+      }
+    ],
     "cor": [
       "#333333",
       "#060606"
@@ -367,7 +377,8 @@
     "capaP": "/capas/os-meus-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/track/5KpT5OlTwern0nPKcXbIW6"
-    }
+    },
+    "destaque": true
   },
   {
     "id": "wave",

@@ -3,7 +3,7 @@
     "nome": "raphh",
     "slug": "raphh",
     "papel": "voz, beat, mix e master",
-    "faixas": 13,
+    "faixas": 15,
     "lancamentos": [
       {
         "id": "culpa-da-party",
@@ -36,6 +36,14 @@
       {
         "id": "de-novo",
         "papel": "voz, mix e master"
+      },
+      {
+        "id": "surtada",
+        "papel": "mix e master"
+      },
+      {
+        "id": "os-meus",
+        "papel": "mix e master"
       },
       {
         "id": "wave",

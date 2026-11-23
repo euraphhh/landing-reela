@@ -1,8 +1,0 @@
-.lab { padding: 40px var(--gutter) 120px; display: flex; flex-direction: column; gap: 64px; }
-.cab { display: flex; flex-direction: column; gap: 16px; max-width: 60ch; }
-.cab a { min-height: 44px; display: inline-flex; align-items: center; }
-.teste { display: grid; grid-template-columns: minmax(220px, 320px) 1fr; gap: 40px; border-top: 1px solid var(--line); padding-top: 32px; }
-.legenda { display: flex; flex-direction: column; gap: 12px; }
-.legenda p { margin: 0; }
-.palco { min-height: 420px; position: relative; background: var(--raised); display: grid; place-items: center; overflow: hidden; }
-@media (max-width: 860px) { .teste { grid-template-columns: 1fr; } .palco { min-height: 360px; } }

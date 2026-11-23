@@ -29,5 +29,5 @@ Todo GSAP dentro de `useGSAP({ scope })`; ScrollTrigger, Draggable, SplitText e 
 
 ## Rotas
 
-`/` · `/releases/<id>/` · `/people/` · `/people/<slug>/` · `/how-it-works/` · `/privacy/` · `/links/` · `/lab/` (fora do índice).
+`/` · `/releases/<id>/` · `/people/` · `/people/<slug>/` · `/how-it-works/` · `/privacy/` · `/links/`.
 Os endereços antigos em português (`/gente`, `/como-funciona`, `/privacidade`) redirecionam pelo `vercel.json`.

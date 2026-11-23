@@ -31,7 +31,8 @@ export function Barra() {
   const menuRef = useRef<HTMLDivElement>(null);
   const menuBtn = useRef<HTMLButtonElement>(null);
   const [menuAberto, setMenuAberto] = useState(false);
-  const [naMarca, setNaMarca] = useState(true);
+  // a placa só existe sobre o wordmark gigante; páginas sem ele (release) nunca ligam
+  const [naMarca, setNaMarca] = useState(false);
   const ancora = useAncora();
   const { parar, retomar } = useScroll();
   usePulso(lockup);
@@ -49,10 +50,14 @@ export function Barra() {
           onToggle: (st) => setNaMarca(st.isActive),
           onRefresh: (st) => setNaMarca(st.isActive || window.scrollY < marca.getBoundingClientRect().bottom),
         });
+        setNaMarca(marca.getBoundingClientRect().bottom > b.offsetHeight);
       }
       if (calmo() || !lockup.current) return;
       const el = lockup.current;
-      entrada(el);
+      // a entrada toca uma vez por visita, não a cada página; o replay do fim toca de novo de propósito
+      let jaEntrou = false;
+      try { jaEntrou = sessionStorage.getItem("reela-entrou") === "1"; sessionStorage.setItem("reela-entrou", "1"); } catch {}
+      if (!jaEntrou) entrada(el);
       return ouvir(EV.entrada, () => entrada(el));
     },
     { scope: barra }

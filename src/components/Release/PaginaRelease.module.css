@@ -3,10 +3,14 @@
 .volta a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .release { min-height: calc(100svh - 240px); }
 .vizinhos { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
-.vizinho { display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: center; padding: 18px 12px; text-decoration: none; min-height: 72px; transition: background-color 0.35s var(--ease), color 0.35s var(--ease); }
+.vizinho { display: grid; grid-template-columns: 72px 1fr auto; gap: 16px; align-items: center; padding: 18px 12px; text-decoration: none; min-height: 72px; transition: background-color 0.35s var(--ease); }
 .vizinho + .vizinho { border-left: 1px solid var(--line); }
-.vizinho:hover, .vizinho:focus-visible { background: var(--ink); color: var(--ground); }
-.vizinho:hover :global(.t-credit), .vizinho:focus-visible :global(.t-credit) { color: inherit; }
+/* hover discreto: sem inverter o bloco inteiro (piscava sobre o preto) */
+.vizinho:hover, .vizinho:focus-visible { background: var(--raised); }
+.mini { transition: transform 0.45s var(--ease); }
+.vizinho:hover .mini, .vizinho:focus-visible .mini { transform: scale(1.06); }
+.seta { opacity: 0; transform: translateX(-6px); transition: opacity 0.3s, transform 0.3s var(--ease); font-size: 18px; padding-right: 8px; }
+.vizinho:hover .seta, .vizinho:focus-visible .seta { opacity: 1; transform: none; }
 .vizinho > span { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .vizinho strong { font: 300 clamp(18px, 2vw, 26px) / 1.1 var(--f-display); overflow-wrap: anywhere; }
 .mini { width: 72px; }
@@ -15,5 +19,5 @@
   .vizinhos { grid-template-columns: 1fr; }
   .vizinho + .vizinho { border-left: 0; border-top: 1px solid var(--line); }
   .mini { width: 56px; }
-  .vizinho { grid-template-columns: 56px 1fr; }
+  .vizinho { grid-template-columns: 56px 1fr auto; }
 }

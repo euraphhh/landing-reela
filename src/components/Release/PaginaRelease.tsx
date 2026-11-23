@@ -39,6 +39,7 @@ export function PaginaRelease({ i }: { i: number }) {
                   <span className="t-credit">{rot} · {x.num}</span>
                   <strong>{x.titulo}</strong>
                 </span>
+                <span className={s.seta} aria-hidden="true">{rot === "anterior" ? "←" : "→"}</span>
               </a>
             ))}
           </nav>

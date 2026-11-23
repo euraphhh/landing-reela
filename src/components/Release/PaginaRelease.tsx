@@ -20,7 +20,7 @@ export function PaginaRelease({ i }: { i: number }) {
             <a href={`/?r=${r.id}#releases`}>← voltar ao laço</a>
           </nav>
           <article className={`${grade} ${s.release}`} aria-labelledby="r-tit">
-            <div className={lugarCapa}><Arte r={r} /></div>
+            <div className={lugarCapa}><Arte r={r} sizes="(max-width: 760px) 70vw, 36vw" prioridade /></div>
             <ReleaseInfo r={r} player idTitulo="r-tit" nivel="h1" />
           </article>
           <nav className={s.vizinhos} aria-label="outros lançamentos">

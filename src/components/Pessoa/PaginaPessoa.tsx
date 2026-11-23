@@ -61,7 +61,7 @@ export function PaginaPessoa({ a }: { a: Artista }) {
             <img className={s.foto} src={a.foto} alt={a.nome} />
           ) : (
             <div className={s.mosaico} aria-hidden="true" data-n={Math.min(capas.length, 9)}>
-              {capas.map((r) => <Arte key={r.id} r={r} />)}
+              {capas.map((r) => <Arte key={r.id} r={r} sizes="(max-width: 860px) 33vw, 15vw" />)}
             </div>
           )}
         </header>
@@ -90,7 +90,7 @@ export function PaginaPessoa({ a }: { a: Artista }) {
             {lancs.map(({ r, papel }) => (
               <li key={r.id}>
                 <a href={`/releases/${r.id}/`} className={s.card}>
-                  <Arte r={r} className={s.capa} />
+                  <Arte r={r} className={s.capa} sizes="(max-width: 860px) 45vw, 220px" />
                   <span className="t-credit">{r.num} · {r.quando}</span>
                   <strong>{r.titulo}</strong>
                   <span className="t-caption">{papel}</span>

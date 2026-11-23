@@ -18,6 +18,8 @@ export type Release = {
   cor: [string, string];
   /** caminho em /public, ex.: "/capas/001.jpg" (9:16) */
   capa?: string;
+  /** a mesma capa em 320px (órbita, miniaturas) */
+  capaP?: string;
   /** caminho em /public/audio, ex.: "/audio/001.mp3" */
   previa?: string;
   /** bpm da prévia, para o ponto pulsar no tempo (padrão 90) */

@@ -112,7 +112,7 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
       <button ref={voltar} className={s.voltar} type="button" onClick={() => fechar()}>voltar ao laço</button>
       {/* a caixa segura o lugar da capa: durante o Flip a arte fica absolute e o texto não pode escorregar */}
       <div className={lugarCapa}>
-        <Arte r={r} ref={arte} data-flip-id={`capa-${r.id}`} />
+        <Arte r={r} ref={arte} data-flip-id={`capa-${r.id}`} sizes="(max-width: 760px) 70vw, 36vw" />
       </div>
       {/* o player só carrega com o detalhe aberto: nada do Spotify na página antes disso */}
       <ReleaseInfo r={r} player={aberto} idTitulo="d-tit" entra />

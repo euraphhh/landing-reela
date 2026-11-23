@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { gsap, useGSAP, SplitText, ScrollTrigger, calmo } from "@/lib/gsap";
+import { useGSAP, ScrollTrigger, calmo } from "@/lib/gsap";
 import { RELEASES } from "@/data";
 import { STREAMING } from "@/data/links";
 import { Arte } from "@/components/Arte/Arte";
@@ -15,24 +15,19 @@ const NOVA = RELEASES[0];
 
 export function Hero() {
   const sec = useRef<HTMLElement>(null);
-  const txt = useRef<HTMLSpanElement>(null);
 
   useGSAP(
     () => {
-      const t = txt.current!;
-      let split: SplitText | null = null;
-      const entrar = () => {
+      const sc = sec.current!;
+      // a entrada inteira do hero é CSS (Hero.module.css): começa sem esperar o JS (é o LCP).
+      // primeira visita: html[data-entrada]; replay: reinicia as animações com a classe .subir
+      const replay = () => {
         if (calmo()) return;
-        split ??= new SplitText(t, { type: "chars", mask: "chars" });
-        gsap.timeline({ defaults: { ease: "power3.out" } })
-          .fromTo(split.chars, { yPercent: 110 }, { yPercent: 0, duration: 1.3, stagger: 0.07 }, 0)
-          .fromTo("[data-entra]", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, stagger: 0.08 }, 0.35);
-        liberarEntrada(); // os fromTo já aplicaram o estado inicial: pode tirar o esconderijo sem piscar
+        sc.classList.remove(s.subir); void sc.offsetWidth; sc.classList.add(s.subir);
       };
-      // o tamanho do wordmark é CSS (Hero.module.css); aqui só a entrada, uma vez por visita
-      document.fonts.ready.then(() => { ScrollTrigger.refresh(); if (tocaEntrada()) entrar(); });
-      const off = ouvir(EV.entrada, entrar);
-      return () => { off(); split?.revert(); };
+      if (tocaEntrada()) liberarEntrada();
+      document.fonts.ready.then(() => ScrollTrigger.refresh());
+      return ouvir(EV.entrada, replay);
     },
     { scope: sec }
   );
@@ -42,21 +37,26 @@ export function Hero() {
       <FundoHero className={s.filme} />
       <h1 id="marca" className={s.marca}>
         <span className="sr">reela music, selo de trap e r&amp;b</span>
-        <span ref={txt} aria-hidden="true">reela</span>
+        {/* cada letra numa máscara; a subida é CSS (primeira visita via data-entrada, replay via .subir) */}
+        <span aria-hidden="true" className={s.letras}>
+          {"reela".split("").map((c, i) => (
+            <span key={i} className={s.ch} style={{ "--i": i } as React.CSSProperties}><span>{c}</span></span>
+          ))}
+        </span>
       </h1>
       <div className={s.baixo}>
         <div className={s.txt}>
-          <p className={s.linha} data-entra>
+          <p className={s.linha} data-entra style={{ "--j": 0 } as React.CSSProperties}>
             selo de trap e r&amp;b. <span>a gente faz o beat, a mix e a arte. a faixa é sua.</span>
           </p>
           <ul className={s.links} aria-label="ouvir a reela">
-            {STREAMING.map((p) => (
-              <li key={p.id} data-entra><LinkDividido texto={p.nome} href={p.href} /></li>
+            {STREAMING.map((p, j) => (
+              <li key={p.id} data-entra style={{ "--j": j + 1 } as React.CSSProperties}><LinkDividido texto={p.nome} href={p.href} /></li>
             ))}
           </ul>
         </div>
-        <a className={s.agora} href={`/releases/${NOVA.id}/`} data-entra>
-          <Arte r={NOVA} className={s.agoraArt} />
+        <a className={s.agora} href={`/releases/${NOVA.id}/`} data-entra style={{ "--j": 5 } as React.CSSProperties}>
+          <Arte r={NOVA} className={s.agoraArt} sizes="96px" prioridade />
           <span className={s.rot}>
             <span className="t-credit">{NOVA.num} · {NOVA.quando}</span>
             <strong>{NOVA.titulo}</strong>

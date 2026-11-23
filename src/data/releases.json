@@ -20,6 +20,7 @@
       "#0a0a0a"
     ],
     "capa": "/capas/culpa-da-party.jpg",
+    "capaP": "/capas/culpa-da-party-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/0pAiODicHi9ryrzZBbuwtK"
     }
@@ -61,6 +62,7 @@
       "#080808"
     ],
     "capa": "/capas/strngluv.jpg",
+    "capaP": "/capas/strngluv-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3FVbPjc60ddd46NEhisonm"
     },
@@ -91,6 +93,7 @@
       "#0d0d0d"
     ],
     "capa": "/capas/onde-ce-ta.jpg",
+    "capaP": "/capas/onde-ce-ta-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/5Ub2ggYey7EQg0upEe15Xp"
     }
@@ -120,6 +123,7 @@
       "#060606"
     ],
     "capa": "/capas/girly.jpg",
+    "capaP": "/capas/girly-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/5VkWdYAJREPgP4NRu0vDnw"
     },
@@ -150,6 +154,7 @@
       "#0a0a0a"
     ],
     "capa": "/capas/nin.jpg",
+    "capaP": "/capas/nin-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/track/6ZnPP2XLeoir65WPKHhFYx"
     },
@@ -176,6 +181,7 @@
       "#080808"
     ],
     "capa": "/capas/reesenha-3-nada-alem.jpg",
+    "capaP": "/capas/reesenha-3-nada-alem-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/52MdfzS09AtxtpDrDcdKnn"
     },
@@ -206,6 +212,7 @@
       "#0d0d0d"
     ],
     "capa": "/capas/te-vejo-longe.jpg",
+    "capaP": "/capas/te-vejo-longe-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/16dmZw1zBOZze2DW19LBBK"
     },
@@ -236,6 +243,7 @@
       "#060606"
     ],
     "capa": "/capas/role-remix.jpg",
+    "capaP": "/capas/role-remix-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3LqiQz76Z03hpPRt1GjGAO"
     },
@@ -266,6 +274,7 @@
       "#0a0a0a"
     ],
     "capa": "/capas/coelha-ma.jpg",
+    "capaP": "/capas/coelha-ma-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/7IUN677dFJNlaUXuAPLLz1"
     },
@@ -302,6 +311,7 @@
       "#080808"
     ],
     "capa": "/capas/de-novo.jpg",
+    "capaP": "/capas/de-novo-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/6CRLGAg6tyToSjri0NDSes"
     },
@@ -338,6 +348,7 @@
       "#0d0d0d"
     ],
     "capa": "/capas/wave.jpg",
+    "capaP": "/capas/wave-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/41FYO8UUi04NNQPgfQuJrZ"
     }
@@ -367,6 +378,7 @@
       "#060606"
     ],
     "capa": "/capas/mentirosa.jpg",
+    "capaP": "/capas/mentirosa-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/6mSbpldBqly0vXtSxMouQ8"
     },
@@ -397,6 +409,7 @@
       "#0a0a0a"
     ],
     "capa": "/capas/amor-copos.jpg",
+    "capaP": "/capas/amor-copos-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3xV8vYWmd7I8I0RIulz4j8"
     }
@@ -422,6 +435,7 @@
       "#080808"
     ],
     "capa": "/capas/reesenha-1.jpg",
+    "capaP": "/capas/reesenha-1-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/4j4DhTeRwVXwYovm3eMZ34"
     }
@@ -447,6 +461,7 @@
       "#0d0d0d"
     ],
     "capa": "/capas/reesenha-pt-2-planos.jpg",
+    "capaP": "/capas/reesenha-pt-2-planos-320.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/45LHGt27LMKmg2MYVynkbv"
     },

@@ -223,7 +223,7 @@ export function Laco() {
                 aria-label={[x.num, x.titulo, x.artistas].filter(Boolean).join(", ")}
                 onClick={() => { if (arrastou.current) return; if (i === ativoRef.current) abrir(i); else ir(i); }}
               >
-                <Arte r={x} ref={(el: HTMLDivElement | null) => { artes.current[i] = el; }} data-flip-id={`capa-${x.id}`} />
+                <Arte r={x} ref={(el: HTMLDivElement | null) => { artes.current[i] = el; }} data-flip-id={`capa-${x.id}`} sizes="(max-width: 860px) 90px, 170px" />
               </button>
             </div>
           ))}

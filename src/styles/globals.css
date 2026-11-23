@@ -78,6 +78,4 @@ main:focus { outline: none; }
 .lnk-rodape { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; }
 
 /* primeira página da visita: o que vai animar na entrada começa escondido (ver tema-script.ts) */
-html.entra #topo [data-entra],
-html.entra #marca [aria-hidden],
 html.entra header .sym-anim { visibility: hidden; }

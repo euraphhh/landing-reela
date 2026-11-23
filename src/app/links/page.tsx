@@ -47,7 +47,7 @@ export default function Links() {
 
         <section className={s.novo} aria-labelledby="l-novo">
           <a className={s.release} href={`/releases/${r.id}/`}>
-            <Arte r={r} className={s.capa} />
+            <Arte r={r} className={s.capa} sizes="96px" prioridade />
             <span className={s.info}>
               <span className="t-credit">o mais novo · {r.quando}</span>
               <strong id="l-novo">{r.titulo}</strong>

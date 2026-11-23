@@ -70,6 +70,7 @@ const releases = ordenados.map((l, i) => {
     cor: CINZAS[i % CINZAS.length],
     // capa baixada por scripts/capas.mjs; sem ela, o placeholder
     ...(existsSync(new URL(`../public/capas/${slug(l.titulo)}.jpg`, import.meta.url)) ? { capa: `/capas/${slug(l.titulo)}.jpg` } : {}),
+    ...(existsSync(new URL(`../public/capas/${slug(l.titulo)}-320.jpg`, import.meta.url)) ? { capaP: `/capas/${slug(l.titulo)}-320.jpg` } : {}),
     links: { spotify: primeiroLink(l.spotify) },
     ...(DESTAQUES.has(l.titulo) ? { destaque: true } : {}),
     ...(versoes.length ? { versoes } : {}),

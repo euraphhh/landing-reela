@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Casca, Rodape } from "@/components/Casca/Casca";
+import { Casca } from "@/components/Casca/Casca";
 import { Historia } from "@/components/Historia/Historia";
 
 export const metadata: Metadata = {
@@ -12,8 +12,9 @@ export default function Story() {
   return (
     <Casca>
       <main id="content" tabIndex={-1}>
+        {/* o rodapé fica dentro da história, na paleta do amanhecer */}
         <Historia />
-        <div style={{ padding: "0 var(--gutter) 28px" }}><Rodape /></div>
+
       </main>
     </Casca>
   );

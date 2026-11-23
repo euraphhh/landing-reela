@@ -123,6 +123,7 @@ const artistas = [...gente.entries()]
       // o que fez em cada lançamento, na ordem do laço
       lancamentos: releases.filter((r) => g.titulos.has(r.titulo)).map((r) => ({ id: r.id, papel: lista(ORDEM.filter((p) => g.por.get(r.titulo)?.has(p))) })),
       ...(extra.pagina ? { pagina: true } : {}),
+      ...(extra.agenciado ? { agenciado: true } : {}),
       ...(extra.foto ? { foto: extra.foto } : {}),
       ...(extra.bio ? { bio: extra.bio } : {}),
       ...(extra.titulo ? { titulo: extra.titulo } : {}),

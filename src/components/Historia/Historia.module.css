@@ -1,50 +1,102 @@
-.historia { position: relative; }
+/* a história tem paleta própria: começa madrugada (preto) e amanhece (branco) com a rolagem */
+.historia {
+  --st-bg: #000000; --st-ink: #ffffff; --st-mut: rgba(255, 255, 255, 0.55); --st-line: rgba(255, 255, 255, 0.14);
+  position: relative; background: var(--st-bg); color: var(--st-ink); overflow-x: clip;
+}
+.fato { margin: 0; font: var(--t-credit-weight) 12px / 16px var(--f-text); letter-spacing: var(--t-credit-ls); color: var(--st-mut); }
 
-/* o fio: o laço fixo na lateral direita, desenhando com a rolagem */
-.fio { position: fixed; right: var(--gutter); top: 50%; transform: translateY(-50%); width: 56px; height: 56px; z-index: 5; color: #fff; mix-blend-mode: difference; pointer-events: none; }
+/* HUD: o laço desenhando e o relógio da madrugada */
+.fio { position: fixed; right: var(--gutter); top: 50%; transform: translateY(-50%); width: 52px; height: 52px; z-index: 20; color: #fff; mix-blend-mode: difference; pointer-events: none; }
 .fio :global(.sym) { width: 100%; height: 100%; }
+.relogio {
+  position: fixed; left: var(--gutter); bottom: 24px; z-index: 20; color: #fff; mix-blend-mode: difference; pointer-events: none;
+  display: flex; flex-direction: column; gap: 2px; font-variant-numeric: tabular-nums;
+}
+.relogio span:first-child { font: 300 34px / 1 var(--f-display); }
+.relogio span:last-child { font: 500 11px / 14px var(--f-text); letter-spacing: 0.04em; opacity: 0.7; }
 
-.abertura { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; gap: 24px; padding: 120px var(--gutter) 72px; }
-.abertura h1 { max-width: 16ch; }
-.intro { margin: 0; font: 300 clamp(20px, 2.2vw, 28px) / 1.35 var(--f-display); max-width: 34ch; }
-.desce { margin-top: 24px; }
+/* abertura */
+.abre { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; padding: 96px var(--gutter); position: relative; overflow: hidden; }
+.vlone { margin: 0; font: 300 clamp(96px, 22vw, 340px) / 0.8 var(--f-display); letter-spacing: -0.02em; display: flex; }
+.vlone span { display: inline-block; will-change: transform; }
+.abreTit { margin: 0; font: 300 clamp(26px, 3.4vw, 48px) / 1.1 var(--f-display); max-width: 22ch; }
+.intro { margin: 0; font: 300 clamp(18px, 1.8vw, 24px) / 1.4 var(--f-display); max-width: 40ch; color: var(--st-mut); }
 
-/* capítulo: trava na tela; cabeçalho em cima, capas passando embaixo */
-.capitulo { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; align-content: center; gap: clamp(24px, 5vh, 56px); padding: 96px 0 48px; border-top: 1px solid var(--line); overflow: hidden; background: var(--ground); }
-/* capítulo só de texto (2021): mais baixo, sem vão escuro */
-.soTexto { min-height: 70svh; grid-template-rows: auto; align-content: center; }
-.cabCap { display: grid; grid-template-columns: auto minmax(0, 46ch); gap: clamp(24px, 4vw, 64px); align-items: end; justify-content: start; padding: 0 calc(var(--gutter) + 64px) 0 var(--gutter); }
-.ano { margin: 0; font: 300 clamp(88px, 15vw, 220px) / 0.82 var(--f-display); letter-spacing: -0.01em; }
-.fatos { display: flex; flex-direction: column; gap: 12px; padding-bottom: 12px; max-width: 46ch; }
-.fatos p { margin: 0; }
-.texto { font: 300 clamp(20px, 2vw, 26px) / 1.35 var(--f-display); }
+/* capítulo: o palco trava; o ano é um hodômetro; as capas vêm da profundidade */
+.cap { position: relative; }
+.palco { position: relative; height: 100svh; background: var(--st-bg); overflow: hidden; perspective: 1100px; border-top: 1px solid var(--st-line); }
+.cab { position: absolute; left: var(--gutter); right: calc(var(--gutter) + 72px); top: 96px; display: grid; grid-template-columns: auto minmax(0, 44ch); gap: clamp(20px, 4vw, 64px); align-items: end; z-index: 2; pointer-events: none; }
+.ano { margin: 0; font: 300 clamp(80px, 14vw, 210px) / 1 var(--f-display); }
+.odo { display: inline-flex; }
+.odoCol { display: inline-block; height: 1em; overflow: hidden; }
+.odoFita { display: flex; flex-direction: column; will-change: transform; }
+.odoFita span { height: 1em; line-height: 1; display: block; }
+.textos { display: flex; flex-direction: column; gap: 12px; padding-bottom: 0.6em; }
+.texto { margin: 0; font: 300 clamp(18px, 1.8vw, 24px) / 1.35 var(--f-display); }
 
-.faixa { list-style: none; margin: 0; padding: 0 var(--gutter); display: flex; gap: clamp(16px, 2vw, 28px); will-change: transform; }
-.faixa li { flex: 0 0 min(28vw, 280px); }
-.card { display: flex; flex-direction: column; gap: 8px; text-decoration: none; }
-.card strong { font: 300 clamp(18px, 1.6vw, 22px) / 1.15 var(--f-display); overflow-wrap: anywhere; }
-.card:hover strong { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.profundidade { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; transform-style: preserve-3d; }
+.card { position: absolute; left: 50%; top: 58%; width: min(30vw, 400px); transform-style: preserve-3d; will-change: transform, opacity; }
+.card a { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; }
+.card :global(.art) { box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); }
+.cardTxt { display: flex; flex-direction: column; gap: 4px; }
+.cardTxt strong { font: 300 clamp(18px, 1.8vw, 26px) / 1.1 var(--f-display); }
+.cardTxt span { font-size: 13px; color: var(--st-mut); }
 
-.numeros { padding: clamp(80px, 14vh, 160px) var(--gutter); border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 32px; }
-.numeros h2 { margin: 0; }
+/* 2023: a formação */
+.formacao { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 0 var(--gutter); visibility: hidden; z-index: 3; background: var(--st-bg); }
+.formacao ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.formacao li { font: 300 clamp(48px, 9vw, 140px) / 0.95 var(--f-display); overflow: hidden; }
+
+/* 2025: o renome e o hiato */
+.renome, .hiato { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; padding: 0 var(--gutter); visibility: hidden; z-index: 3; background: var(--st-bg); }
+.palavra { margin: 0; font: 300 clamp(72px, 15vw, 240px) / 0.9 var(--f-display); white-space: nowrap; font-variant-ligatures: none; }
+.renomeNota { margin: 0; font: 300 clamp(18px, 1.8vw, 24px) / 1.35 var(--f-display); color: var(--st-mut); }
+.hiato { font: 300 clamp(28px, 3vw, 44px) / 1 var(--f-display); color: var(--st-mut); }
+.hiato p { margin: 0; display: inline-flex; align-items: center; gap: 14px; }
+.cursor { width: 0.5em; height: 1em; background: var(--st-ink); animation: piscar 1.1s steps(1) infinite; }
+@keyframes piscar { 50% { opacity: 0; } }
+
+/* 2026: a volta, atrás de persianas */
+.volta { position: relative; height: 100svh; overflow: hidden; }
+.voltaCapa { position: absolute; inset: 0; }
+.voltaCapa :global(.art) { width: 100%; height: 100%; aspect-ratio: auto; }
+.voltaCapa::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 55%); }
+.persianas { position: absolute; inset: 0; display: flex; flex-direction: column; z-index: 2; }
+.persianas span { flex: 1; background: var(--st-bg); transform-origin: 50% 50%; }
+.voltaTxt { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 128px; z-index: 3; color: #fff; display: flex; flex-direction: column; gap: 14px; }
+.voltaTxt .fato { color: rgba(255, 255, 255, 0.75); }
+.voltaTit { margin: 0; font: 300 clamp(56px, 10vw, 160px) / 0.9 var(--f-display); }
+
+/* números e fim (já amanheceu) */
+.numeros { padding: clamp(80px, 14vh, 160px) var(--gutter); border-top: 1px solid var(--st-line); display: flex; flex-direction: column; gap: 32px; }
 .numeros dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; }
 .numeros dl > div { display: flex; flex-direction: column; gap: 10px; }
-.numeros dt { order: 2; font: var(--t-credit-weight) var(--t-credit-size) / var(--t-credit-lh) var(--f-text); letter-spacing: var(--t-credit-ls); color: var(--muted); }
+.numeros dt { order: 2; font: 500 11px / 14px var(--f-text); letter-spacing: 0.04em; color: var(--st-mut); }
 .numeros dd { margin: 0; font: 300 clamp(56px, 8vw, 120px) / 0.9 var(--f-display); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.numeros p { margin: 0; }
 
-.fim { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 24px; padding: 96px var(--gutter); border-top: 1px solid var(--line); }
-.fim p { margin: 0; }
+.fim { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding: 96px var(--gutter); border-top: 1px solid var(--st-line); }
+.fimTit { margin: 0; font: 300 clamp(56px, 9vw, 140px) / 0.9 var(--f-display); padding-right: 88px; }
 .acoes { display: flex; gap: 10px; flex-wrap: wrap; }
+.botao { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; font-weight: 500; font-size: 15px; text-decoration: none; background: var(--st-ink); color: var(--st-bg); border: 1px solid var(--st-ink); }
+.botao2 { background: transparent; color: var(--st-ink); }
+.rodape { padding: 0 var(--gutter) 28px; }
+.rodape :global(.t-credit), .rodape a { color: var(--st-mut); }
 
 @media (max-width: 860px) {
-  .cabCap { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-right: var(--gutter); }
-  .fatos { max-width: none; min-width: 0; }
-  .faixa li { flex-basis: 62vw; }
-  .fio { width: 40px; height: 40px; top: auto; bottom: 20px; transform: none; }
+  .cab { grid-template-columns: 1fr; right: var(--gutter); top: 84px; gap: 10px; }
+  .card { width: 64vw; top: 62%; }
+  .fio { width: 38px; height: 38px; top: auto; bottom: 22px; transform: none; }
+  .relogio span:first-child { font-size: 26px; }
 }
 
-/* reduced motion: nada trava nem desliza; as capas quebram linha */
-.parado .capitulo { min-height: 0; overflow: visible; }
-.parado .faixa { flex-wrap: wrap; }
-.parado .faixa li { flex-basis: min(42vw, 240px); }
+/* reduced motion: nada trava; tudo empilhado e legível; sem relógio nem laço fixos por cima do texto */
+.parado .relogio, .parado .fio { display: none; }
+.parado .palco { height: auto; overflow: visible; perspective: none; padding: 96px 0 48px; }
+.parado .cab { position: static; padding: 0 var(--gutter); }
+.parado .profundidade { position: static; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px; padding: 32px var(--gutter) 0; }
+.parado .card { position: static; width: auto; }
+.parado .formacao, .parado .renome, .parado .hiato { position: static; visibility: visible; background: none; padding: 32px var(--gutter) 0; }
+.parado .volta { height: auto; }
+.parado .voltaCapa { position: relative; height: 60svh; }
+.parado .persianas { display: none; }
+.parado .voltaTxt { position: absolute; }

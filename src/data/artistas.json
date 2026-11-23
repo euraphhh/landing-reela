@@ -59,6 +59,7 @@
       }
     ],
     "pagina": true,
+    "agenciado": true,
     "foto": "/fotos/raphh.jpg",
     "bio": "um dos fundadores da reela. canta, produz e fecha a mix e a master: está na mix de todos os lançamentos do selo, do primeiro reesenha ao culpa da party.",
     "titulo": "um dos fundadores da reela",
@@ -90,6 +91,7 @@
         "papel": "voz, mix e master"
       }
     ],
+    "agenciado": true,
     "plays": {
       "spotify": 55874,
       "em": "2026-11-23"
@@ -133,7 +135,8 @@
         "id": "os-meus",
         "papel": "voz"
       }
-    ]
+    ],
+    "agenciado": true
   },
   {
     "nome": "Luwih",
@@ -149,7 +152,8 @@
         "id": "os-meus",
         "papel": "voz"
       }
-    ]
+    ],
+    "agenciado": true
   },
   {
     "nome": "acoustc",
@@ -201,7 +205,8 @@
         "id": "nin",
         "papel": "voz"
       }
-    ]
+    ],
+    "agenciado": true
   },
   {
     "nome": "Cyclop Beats",
@@ -266,6 +271,7 @@
         "papel": "voz"
       }
     ],
+    "agenciado": true,
     "plays": {
       "spotify": 11690,
       "em": "2026-11-23"

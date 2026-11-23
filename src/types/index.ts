@@ -45,6 +45,8 @@ export type Artista = {
   faixas: number;
   /** o que a pessoa fez em cada lançamento (id do release) */
   lancamentos: { id: string; papel: string }[];
+  /** artista agenciado pela reela (não só colaborador) */
+  agenciado?: boolean;
   /** tem página própria em /people/<slug>/ */
   pagina?: boolean;
   foto?: string;

@@ -7,6 +7,7 @@ import { SITE_URL as BASE } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${BASE}/`, changeFrequency: "weekly", priority: 1 },
+    { url: `${BASE}/gente/`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/links/`, changeFrequency: "weekly", priority: 0.5 },
     { url: `${BASE}/como-funciona/`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/privacidade/`, changeFrequency: "yearly", priority: 0.2 },

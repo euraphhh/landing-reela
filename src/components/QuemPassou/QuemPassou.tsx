@@ -19,7 +19,16 @@ const primeiroDe = (nome: string) => {
 
 const rotulo = (n: number) => `${n} ${n > 1 ? "lançamentos" : "lançamento"}`;
 
-export function QuemPassou() {
+type Props = {
+  /** na home mostra só os primeiros (os que mais passaram) e um botão para /gente/ */
+  limite?: number;
+  /** página /gente/: o título vira h1 e quem não tem página abre o release (não há laço lá) */
+  completa?: boolean;
+};
+
+export function QuemPassou({ limite, completa = false }: Props) {
+  const lista = limite ? ARTISTAS.slice(0, limite) : ARTISTAS;
+  const Titulo = completa ? "h1" : "h2";
   const sec = useRef<HTMLElement>(null);
   const rol = useRef<HTMLUListElement>(null);
   const bola = useRef<HTMLSpanElement>(null);
@@ -77,15 +86,15 @@ export function QuemPassou() {
   return (
     <section ref={sec} className={s.gente} id="gente" aria-labelledby="gente-h">
       <div className={s.cab}>
-        <h2 className="t-display" id="gente-h">quem passou<br />por aqui.</h2>
+        <Titulo className="t-display" id="gente-h">quem passou<br />por aqui.</Titulo>
         <p>gente que gravou, cantou ou produziu com a reela. do coletivo até agora.</p>
       </div>
       <ul ref={rol} className={s.rol} onPointerLeave={() => api.current.soltar()}>
-        {ARTISTAS.map((a, idx) => {
+        {lista.map((a, idx) => {
           const r = primeiroDe(a.nome);
           // página própria > gira o laço até um destaque > página do release
-          const href = a.pagina ? `/gente/${a.slug}/` : r?.destaque ? "#releases" : `/releases/${r?.id}/`;
-          const noLaco = !a.pagina && r?.destaque;
+          const noLaco = !completa && !a.pagina && r?.destaque;
+          const href = a.pagina ? `/gente/${a.slug}/` : noLaco ? "#releases" : `/releases/${r?.id}/`;
           return (
             <li key={a.nome}>
               <a
@@ -106,6 +115,9 @@ export function QuemPassou() {
         })}
         <span ref={bola} className={s.bola} aria-hidden="true" />
       </ul>
+      {limite && ARTISTAS.length > limite && (
+        <a className={`btn btn-2 ${s.todos}`} href="/gente/">ver todo mundo ({ARTISTAS.length}) <span aria-hidden="true">→</span></a>
+      )}
     </section>
   );
 }

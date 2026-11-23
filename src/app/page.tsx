@@ -19,7 +19,7 @@ export default function Home() {
         <main id="conteudo" tabIndex={-1}>
           <Hero />
           <Laco />
-          <QuemPassou />
+          <QuemPassou limite={12} />
           <Selo />
           <Replay />
         </main>

@@ -27,3 +27,5 @@
   background: var(--ink); opacity: 0; transition: background-color 0.35s var(--ease);
 }
 .bolaInvertida { background: var(--ground); }
+
+.todos { align-self: flex-start; }

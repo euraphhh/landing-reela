@@ -28,7 +28,8 @@ export function LiquidToggle({ className, rotulo = true }: { className?: string;
   useEffect(() => () => { gsap.killTweensOf([ponto.current, gota.current]); }, []);
 
   return (
-    <button className={[s.toggle, className].filter(Boolean).join(" ")} type="button" role="switch" aria-checked={ligado} aria-label="tema escuro" onClick={alternar}>
+    <button className={[s.toggle, className].filter(Boolean).join(" ")} type="button" role="switch" aria-checked={ligado} aria-label="tema escuro"
+      onClick={(e) => { const r = e.currentTarget.getBoundingClientRect(); alternar({ x: r.left + r.width / 2, y: r.top + r.height / 2 }); }}>
       {rotulo && <span className={s.rotulo} aria-hidden="true">{ligado ? "escuro" : "claro"}</span>}
       <svg className={s.svg} viewBox="0 0 120 56" aria-hidden="true">
         <defs>

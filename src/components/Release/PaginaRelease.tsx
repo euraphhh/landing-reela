@@ -3,11 +3,7 @@
  * com endereço para compartilhar e para o Google. Navega para o anterior/próximo e volta ao laço.
  */
 import { RELEASES } from "@/data";
-import { MOSTRAR_SELO_PROTOTIPO } from "@/data/links";
-import { SmoothScroll } from "@/components/providers/SmoothScroll";
-import { SomProvider } from "@/hooks/useSom";
-import { Barra } from "@/components/Barra/Barra";
-import { Grao } from "@/components/Grao/Grao";
+import { Casca, Rodape } from "@/components/Casca/Casca";
 import { Arte } from "@/components/Arte/Arte";
 import { ReleaseInfo, grade, lugarCapa } from "./ReleaseInfo";
 import s from "./PaginaRelease.module.css";
@@ -18,11 +14,7 @@ export function PaginaRelease({ i }: { i: number }) {
   const prox = RELEASES[(i + 1) % RELEASES.length];
 
   return (
-    <SmoothScroll>
-      <SomProvider>
-        <a className="skip" href="#conteudo">pular para o conteúdo</a>
-        <Grao />
-        <Barra />
+    <Casca>
         <main id="conteudo" tabIndex={-1} className={s.pagina}>
           <nav className={s.volta} aria-label="navegação do release">
             <a href={`/?r=${r.id}#releases`}>← voltar ao laço</a>
@@ -43,13 +35,8 @@ export function PaginaRelease({ i }: { i: number }) {
               </a>
             ))}
           </nav>
-          <footer className={s.rodape}>
-            <span className="t-credit">© {new Date().getFullYear()} reela music · distribuição symphonic</span>
-            <span className="t-credit">são josé dos campos, sp</span>
-          </footer>
+          <Rodape />
         </main>
-        {MOSTRAR_SELO_PROTOTIPO && <div className="selo-prot">protótipo · dados em revisão</div>}
-      </SomProvider>
-    </SmoothScroll>
+    </Casca>
   );
 }

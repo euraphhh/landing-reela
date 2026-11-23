@@ -1,0 +1,6 @@
+.pagina { min-height: 100svh; display: grid; grid-template-rows: 1fr auto; padding: 96px var(--gutter) 28px; }
+.centro { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center; }
+.centro p { margin: 0; }
+.sym { width: min(42vw, 240px); height: min(42vw, 240px); margin-bottom: 12px; }
+.sym :global(.sym) { width: 100%; height: 100%; }
+.acoes { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }

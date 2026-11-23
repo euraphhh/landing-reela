@@ -83,7 +83,10 @@ export function Replay() {
       </div>
       <footer className={s.rodape}>
         <span className="t-credit">© {new Date().getFullYear()} reela music · distribuição symphonic</span>
-        <span className="t-credit">são josé dos campos, sp</span>
+        <span className="t-credit" style={{ display: "flex", gap: 16, alignItems: "center" }}>
+          <a href="/privacidade/" className="lnk-rodape">privacidade</a>
+          são josé dos campos, sp
+        </span>
       </footer>
     </section>
   );

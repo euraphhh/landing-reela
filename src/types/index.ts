@@ -1,4 +1,4 @@
-export type Plataforma = "spotify" | "apple" | "youtube" | "tiktok";
+export type Plataforma = "spotify" | "apple" | "youtube" | "instagram";
 
 export type Credito = { papel: string; nome: string };
 

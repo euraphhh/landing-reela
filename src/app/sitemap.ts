@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { ARTISTAS, RELEASES } from "@/data";
 
 export const dynamic = "force-static";
-const BASE = "https://reelamusic.com";
+import { SITE_URL as BASE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

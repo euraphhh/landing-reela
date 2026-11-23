@@ -2,9 +2,10 @@ import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 import { interDisplay, unbounded } from "./fonts";
 import { temaScript } from "./tema-script";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://reelamusic.com"),
+  metadataBase: new URL(SITE_URL),
   title: "reela music",
   description: "reela music. selo de trap e r&b. de novo, até amanhecer.",
   openGraph: { title: "reela music", description: "selo de trap e r&b. de novo, até amanhecer.", locale: "pt_BR", type: "website", images: [{ url: "/og.png", width: 1200, height: 630, alt: "reela music" }] },

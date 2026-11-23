@@ -12,7 +12,7 @@ import s from "./ReleaseInfo.module.css";
 export const grade = s.grade;
 export const lugarCapa = s.lugar;
 
-const PLATAFORMAS = STREAMING.filter((p) => p.id !== "tiktok");
+const PLATAFORMAS = STREAMING.filter((p) => p.id !== "instagram"); // instagram é perfil, não plataforma de faixa
 
 /** open.spotify.com/…/album/<id> → player embutido */
 export const embed = (url?: string) => {

@@ -2,7 +2,8 @@
 .filme { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
 .hero > *:not(.filme) { position: relative; z-index: 1; }
 
-.marca { margin: 0; font: 300 24vw / 0.78 var(--f-display); white-space: nowrap; transform: translateY(-18%); user-select: none; pointer-events: none; }
+/* "reela" em Unbounded Light mede 2,884 × o font-size: 112vw / 2,884 = 38,835vw, vazando 6vw de cada lado */
+.marca { margin: 0 0 0 calc(-1 * var(--gutter) - 6vw); font: 300 38.835vw / 0.78 var(--f-display); white-space: nowrap; transform: translateY(-18%); user-select: none; pointer-events: none; }
 
 .baixo { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 32px; }
 .txt { display: flex; flex-direction: column; gap: 20px; }

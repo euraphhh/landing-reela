@@ -14,6 +14,9 @@
 
 .nav { display: flex; align-items: center; gap: 4px; padding: 4px; background: transparent; transition: background-color 0.45s var(--ease); }
 .naMarca .lockup, .naMarca .nav { background: var(--ground); }
+/* antes do JS: em página com o wordmark gigante, a placa já começa ligada (evita o primeiro quadro sem ela) */
+:global(body:has(#marca)) .barra:not([data-placa]) .lockup,
+:global(body:has(#marca)) .barra:not([data-placa]) .nav { background: var(--ground); transition: none; }
 
 .nav a, .nav button {
   min-height: 44px; padding: 0 12px; display: inline-flex; align-items: center;

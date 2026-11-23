@@ -6,6 +6,7 @@ import { useAncora, useScroll } from "@/components/providers/SmoothScroll";
 import { LiquidToggle } from "@/components/LiquidToggle/LiquidToggle";
 import { usePulso } from "@/hooks/usePulso";
 import { EV, ouvir } from "@/lib/eventos";
+import { tocaEntrada, liberarEntrada } from "@/lib/entrada";
 import s from "./Barra.module.css";
 
 const LINKS = [
@@ -33,6 +34,7 @@ export function Barra() {
   const [menuAberto, setMenuAberto] = useState(false);
   // a placa só existe sobre o wordmark gigante; páginas sem ele (release) nunca ligam
   const [naMarca, setNaMarca] = useState(false);
+  const [pronta, setPronta] = useState(false);
   const ancora = useAncora();
   const { parar, retomar } = useScroll();
   usePulso(lockup);
@@ -52,12 +54,11 @@ export function Barra() {
         });
         setNaMarca(marca.getBoundingClientRect().bottom > b.offsetHeight);
       }
+      setPronta(true);
       if (calmo() || !lockup.current) return;
       const el = lockup.current;
       // a entrada toca uma vez por visita, não a cada página; o replay do fim toca de novo de propósito
-      let jaEntrou = false;
-      try { jaEntrou = sessionStorage.getItem("reela-entrou") === "1"; sessionStorage.setItem("reela-entrou", "1"); } catch {}
-      if (!jaEntrou) entrada(el);
+      if (tocaEntrada()) { entrada(el); if (!document.getElementById("topo")) liberarEntrada(); }
       return ouvir(EV.entrada, () => entrada(el));
     },
     { scope: barra }
@@ -89,7 +90,7 @@ export function Barra() {
 
   return (
     <>
-      <header ref={barra} className={`${s.barra} ${naMarca ? s.naMarca : ""}`}>
+      <header ref={barra} className={`${s.barra} ${naMarca ? s.naMarca : ""}`} data-placa={pronta ? (naMarca ? "on" : "off") : undefined}>
         <a ref={lockup} className={s.lockup} href="/#topo" aria-label="reela music, voltar ao início" onClick={ancora}>
           <Simbolo variante="animavel" />
         </a>

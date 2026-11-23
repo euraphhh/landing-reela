@@ -5,13 +5,13 @@
     "faixas": 13
   },
   {
-    "nome": "Krys",
-    "papel": "voz, mix e master",
-    "faixas": 2
-  },
-  {
     "nome": "prodbyeros",
     "papel": "beat",
+    "faixas": 3
+  },
+  {
+    "nome": "Krys",
+    "papel": "voz, mix e master",
     "faixas": 2
   },
   {
@@ -36,6 +36,11 @@
   },
   {
     "nome": "David Tamas",
+    "papel": "beat",
+    "faixas": 1
+  },
+  {
+    "nome": "ÉoPeaga",
     "papel": "beat",
     "faixas": 1
   },
@@ -65,6 +70,11 @@
     "faixas": 1
   },
   {
+    "nome": "Ninez",
+    "papel": "beat",
+    "faixas": 1
+  },
+  {
     "nome": "OUHBOY",
     "papel": "beat",
     "faixas": 1
@@ -77,6 +87,11 @@
   {
     "nome": "Ramos Bt",
     "papel": "voz",
+    "faixas": 1
+  },
+  {
+    "nome": "SilentSyndicate",
+    "papel": "beat",
     "faixas": 1
   },
   {

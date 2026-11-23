@@ -53,7 +53,7 @@
     "id": "strngluv",
     "num": "A12",
     "titulo": "strngluv!",
-    "artistas": "",
+    "artistas": "raphh",
     "quando": "ep · 2025",
     "ano": "2025",
     "tipo": "EP",
@@ -61,7 +61,23 @@
     "selo": "nevermind.",
     "creditos": [
       {
-        "papel": "mix",
+        "papel": "beat · VÔO",
+        "nome": "Ninez"
+      },
+      {
+        "papel": "beat · pq q eu fui me apegar?",
+        "nome": "SilentSyndicate"
+      },
+      {
+        "papel": "beat · Mentirosa, pt. 3",
+        "nome": "ÉoPeaga"
+      },
+      {
+        "papel": "beat · ONDE CÊ TÁ?",
+        "nome": "prodbyeros"
+      },
+      {
+        "papel": "mix e master",
         "nome": "raphh"
       }
     ],

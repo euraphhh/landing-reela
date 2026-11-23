@@ -28,7 +28,12 @@ function juntarCreditos(c = {}) {
     const chave = c[p].join("|");
     grupos.set(chave, [...(grupos.get(chave) ?? []), p]);
   }
-  return [...grupos.entries()].map(([nomes, papeis]) => ({ papel: lista(papeis), nome: nomes.split("|").join(", ") }));
+  const gerais = [...grupos.entries()].map(([nomes, papeis]) => ({ papel: lista(papeis), nome: nomes.split("|").join(", ") }));
+  // créditos por faixa (EP): "beat · VOO: Ninez"
+  const porFaixa = (c.faixas ?? []).flatMap((f) =>
+    PAPEIS.filter((p) => f[p]?.length).map((p) => ({ papel: `${p} · ${f.titulo}`, nome: f[p].join(", ") }))
+  );
+  return [...porFaixa, ...gerais];
 }
 
 const liberados = lancamentos.filter((l) => l.liberado);
@@ -75,6 +80,7 @@ const marcar = (nome, papel, titulo) => {
 for (const l of base) {
   const c = creditos[l.titulo] ?? {};
   for (const p of PAPEIS) for (const n of c[p] ?? []) marcar(n, p, l.titulo);
+  for (const f of c.faixas ?? []) for (const p of PAPEIS) for (const n of f[p] ?? []) marcar(n, p, l.titulo);
   // aparece como artista sem ser só o beatmaker da faixa → voz
   for (const n of artistasDe(l)) if (!(c.beat ?? []).includes(n) || (c.artistas ?? []).includes(n) || n === "T'H") marcar(n, "voz", l.titulo);
   for (const n of artistasDe(l)) gente.get(n)?.titulos.add(l.titulo);

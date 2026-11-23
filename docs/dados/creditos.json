@@ -1,16 +1,168 @@
 {
-  "_obs": "créditos por lançamento, chave = título como no levantamento. papéis: beat, mix, master, arte. 'artistas' aqui sobrescreve o levantamento quando ele veio vazio. fonte: raphh, 2026-11-23.",
-  "DE NOVO": { "beat": ["V-empire"], "mix": ["raphh", "Krys"], "master": ["raphh", "Krys"] },
-  "COELHA MÁ": { "beat": ["prodbyeros", "Tkd"], "mix": ["raphh"], "master": ["raphh"] },
-  "Te Vejo Longe": { "beat": ["David Tamas", "OUHBOY"] },
-  "Rolê (Remix)": { "beat": ["T'H"], "mix": ["T'H", "raphh"] },
-  "amor&copos": { "beat": ["acoustc"], "mix": ["raphh"] },
-  "Wave": { "beat": ["Cyclop Beats"], "mix": ["raphh"], "master": ["raphh"] },
-  "Mentirosa": { "beat": ["R-ASH Beats"], "mix": ["raphh"], "master": ["raphh"] },
-  "Reesenha #1": { "beat": ["raphh"], "mix": ["raphh"], "master": ["raphh"] },
-  "Reesenha, Pt. 2 - Planos": { "beat": ["raphh"], "mix": ["raphh"], "master": ["raphh"] },
-  "REESENHA #3 (Nada Além)": { "beat": ["raphh"], "mix": ["raphh"], "master": ["raphh"] },
-  "CULPA DA PARTY": { "artistas": ["raphh"], "beat": ["raphh"], "mix": ["raphh"], "master": ["raphh"] },
-  "strngluv!": { "mix": ["raphh"] },
-  "ONDE CÊ TÁ?": { "beat": ["prodbyeros"], "mix": ["raphh"], "master": ["raphh"] }
+  "_obs": "créditos por lançamento, chave = título como no levantamento. papéis: beat, mix, master, arte. 'artistas' aqui sobrescreve o levantamento quando ele veio vazio. fonte: raphh, 2026-11-23. 'faixas' = créditos que mudam por faixa (EP): viram 'beat · VOO: Ninez'.",
+  "DE NOVO": {
+    "beat": [
+      "V-empire"
+    ],
+    "mix": [
+      "raphh",
+      "Krys"
+    ],
+    "master": [
+      "raphh",
+      "Krys"
+    ]
+  },
+  "COELHA MÁ": {
+    "beat": [
+      "prodbyeros",
+      "Tkd"
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ]
+  },
+  "Te Vejo Longe": {
+    "beat": [
+      "David Tamas",
+      "OUHBOY"
+    ]
+  },
+  "Rolê (Remix)": {
+    "beat": [
+      "T'H"
+    ],
+    "mix": [
+      "T'H",
+      "raphh"
+    ]
+  },
+  "amor&copos": {
+    "beat": [
+      "acoustc"
+    ],
+    "mix": [
+      "raphh"
+    ]
+  },
+  "Wave": {
+    "beat": [
+      "Cyclop Beats"
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ]
+  },
+  "Mentirosa": {
+    "beat": [
+      "R-ASH Beats"
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ]
+  },
+  "Reesenha #1": {
+    "beat": [
+      "raphh"
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ]
+  },
+  "Reesenha, Pt. 2 - Planos": {
+    "beat": [
+      "raphh"
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ]
+  },
+  "REESENHA #3 (Nada Além)": {
+    "beat": [
+      "raphh"
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ]
+  },
+  "CULPA DA PARTY": {
+    "artistas": [
+      "raphh"
+    ],
+    "beat": [
+      "raphh"
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ]
+  },
+  "strngluv!": {
+    "faixas": [
+      {
+        "titulo": "VÔO",
+        "beat": [
+          "Ninez"
+        ]
+      },
+      {
+        "titulo": "pq q eu fui me apegar?",
+        "beat": [
+          "SilentSyndicate"
+        ]
+      },
+      {
+        "titulo": "Mentirosa, pt. 3",
+        "beat": [
+          "ÉoPeaga"
+        ]
+      },
+      {
+        "titulo": "ONDE CÊ TÁ?",
+        "beat": [
+          "prodbyeros"
+        ]
+      }
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ],
+    "artistas": [
+      "raphh"
+    ]
+  },
+  "ONDE CÊ TÁ?": {
+    "beat": [
+      "prodbyeros"
+    ],
+    "mix": [
+      "raphh"
+    ],
+    "master": [
+      "raphh"
+    ]
+  }
 }

@@ -26,3 +26,8 @@ Vitrine da reela music. Next.js (App Router, export estático) + GSAP + Lenis. D
 Dois momentos ligados ao scroll (manifesto e laço do fim), mais a bolinha de quem passou.
 Curvas suaves, sem back/elastic/bounce, com uma exceção aprovada: a gota do toggle claro/escuro (elastic). Título do release no laço entra com blur (vindo do /lab). Com `prefers-reduced-motion`: sem Lenis, sem animação, nada escondido.
 Todo GSAP dentro de `useGSAP({ scope })`; ScrollTrigger, Draggable, SplitText e Lenis limpos no unmount.
+
+## Rotas
+
+`/` · `/releases/<id>/` · `/people/` · `/people/<slug>/` · `/how-it-works/` · `/privacy/` · `/links/` · `/lab/` (fora do índice).
+Os endereços antigos em português (`/gente`, `/como-funciona`, `/privacidade`) redirecionam pelo `vercel.json`.

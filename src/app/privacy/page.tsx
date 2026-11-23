@@ -6,7 +6,7 @@ import s from "./privacidade.module.css";
 export const metadata: Metadata = {
   title: "privacidade · reela music",
   description: "o que o site da reela guarda e o que o player do Spotify carrega.",
-  alternates: { canonical: "/privacidade/" },
+  alternates: { canonical: "/privacy/" },
 };
 
 const ATUALIZADO = "23 de novembro de 2026";
@@ -14,7 +14,7 @@ const ATUALIZADO = "23 de novembro de 2026";
 export default function Privacidade() {
   return (
     <Casca>
-      <main id="conteudo" tabIndex={-1} className={s.pagina}>
+      <main id="content" tabIndex={-1} className={s.pagina}>
         <header className={s.cab}>
           <span className="t-credit">atualizado em {ATUALIZADO}</span>
           <h1 className="t-display">privacidade.</h1>

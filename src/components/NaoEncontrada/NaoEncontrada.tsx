@@ -22,7 +22,7 @@ export function NaoEncontrada() {
 
   return (
     <Casca>
-      <main id="conteudo" tabIndex={-1} className={s.pagina}>
+      <main id="content" tabIndex={-1} className={s.pagina}>
         <div ref={sym} className={s.centro}>
           <div className={s.sym}><Simbolo variante="animavel" /></div>
           <span className="t-credit" data-entra>404</span>

@@ -33,7 +33,7 @@ export function Hero() {
   );
 
   return (
-    <section ref={sec} className={s.hero} id="topo" aria-label="reela music">
+    <section ref={sec} className={s.hero} id="top" aria-label="reela music">
       <FundoHero className={s.filme} />
       <h1 id="marca" className={s.marca}>
         <span className="sr">reela music, selo de trap e r&amp;b</span>

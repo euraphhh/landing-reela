@@ -10,7 +10,7 @@ export function Casca({ children }: { children: React.ReactNode }) {
   return (
     <SmoothScroll>
       <SomProvider>
-        <a className="skip" href="#conteudo">pular para o conteúdo</a>
+        <a className="skip" href="#content">pular para o conteúdo</a>
         <Grao />
         <Barra />
         {children}
@@ -29,7 +29,7 @@ export function Rodape({ className }: { className?: string }) {
         <span className="t-credit">© {new Date().getFullYear()} reela music</span>
       </span>
       <span className="t-credit" style={{ display: "flex", gap: 16, alignItems: "center" }}>
-        <a href="/privacidade/" className="lnk-rodape">privacidade</a>
+        <a href="/privacy/" className="lnk-rodape">privacidade</a>
         são josé dos campos, sp
       </span>
     </footer>

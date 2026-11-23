@@ -1,5 +1,5 @@
 /**
- * Página de uma pessoa (/gente/<slug>/): quem é, o que faz, os links e cada lançamento com a reela
+ * Página de uma pessoa (/people/<slug>/): quem é, o que faz, os links e cada lançamento com a reela
  * com o papel dela ali. Sem foto, o retrato é o mosaico das capas.
  */
 import type { Artista } from "@/types";
@@ -40,8 +40,8 @@ export function PaginaPessoa({ a }: { a: Artista }) {
 
   return (
     <Casca>
-      <main id="conteudo" tabIndex={-1} className={s.pagina}>
-        <nav aria-label="navegação"><a className={s.volta} href="/#gente">← quem passou</a></nav>
+      <main id="content" tabIndex={-1} className={s.pagina}>
+        <nav aria-label="navegação"><a className={s.volta} href="/#people">← quem passou</a></nav>
 
         <header className={s.topo}>
           <div className={s.quem}>

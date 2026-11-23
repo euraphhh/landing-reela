@@ -3,7 +3,7 @@ import { ARTISTAS } from "@/data";
 
 const COM_PAGINA = new Map(ARTISTAS.filter((a) => a.pagina).map((a) => [a.nome, a.slug]));
 
-/** "raphh, Krys" → nomes com página própria viram link para /gente/<slug>/ */
+/** "raphh, Krys" → nomes com página própria viram link para /people/<slug>/ */
 export function Nomes({ texto }: { texto: string }) {
   const nomes = texto.split(", ");
   return (
@@ -13,7 +13,7 @@ export function Nomes({ texto }: { texto: string }) {
         return (
           <Fragment key={n + i}>
             {i > 0 && ", "}
-            {slug ? <a href={`/gente/${slug}/`} style={{ textUnderlineOffset: 3 }}>{n}</a> : n}
+            {slug ? <a href={`/people/${slug}/`} style={{ textUnderlineOffset: 3 }}>{n}</a> : n}
           </Fragment>
         );
       })}

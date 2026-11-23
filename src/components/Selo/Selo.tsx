@@ -31,7 +31,7 @@ export function Selo() {
   );
 
   return (
-    <section ref={sec} className={s.selo} id="selo" aria-labelledby="selo-h">
+    <section ref={sec} className={s.selo} id="label" aria-labelledby="selo-h">
       <h2 className="sr" id="selo-h">o selo</h2>
       <p ref={man} className={s.manifesto}>
         {LINHAS.map((l) => <span key={l} data-l className={s.l}>{l}</span>)}
@@ -41,7 +41,7 @@ export function Selo() {
         <p className="t-caption">manda o link do pré-mix ou da demo. a gente ouve tudo, responde em até uma semana.</p>
         <a className="btn btn-1" href={EMAIL_HREF} onClick={EMAIL_HREF === "#" ? (e) => e.preventDefault() : undefined}>mandar faixa</a>
         <span className={s.mail}>{EMAIL}</span>
-        <a className="lnk-rodape" href="/como-funciona/">como funciona o acordo →</a>
+        <a className="lnk-rodape" href="/how-it-works/">como funciona o acordo →</a>
       </aside>
     </section>
   );

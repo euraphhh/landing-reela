@@ -1,4 +1,4 @@
-// /gente/<slug>/og.png: preview da pessoa com a foto
+// /people/<slug>/og.png: preview da pessoa com a foto
 import { ARTISTAS } from "@/data";
 import { cardOG, imagem } from "@/lib/og";
 

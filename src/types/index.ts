@@ -43,7 +43,7 @@ export type Artista = {
   faixas: number;
   /** o que a pessoa fez em cada lançamento (id do release) */
   lancamentos: { id: string; papel: string }[];
-  /** tem página própria em /gente/<slug>/ */
+  /** tem página própria em /people/<slug>/ */
   pagina?: boolean;
   foto?: string;
   bio?: string;

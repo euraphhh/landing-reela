@@ -7,11 +7,11 @@ import { SITE_URL as BASE } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${BASE}/`, changeFrequency: "weekly", priority: 1 },
-    { url: `${BASE}/gente/`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/people/`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/links/`, changeFrequency: "weekly", priority: 0.5 },
-    { url: `${BASE}/como-funciona/`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/privacidade/`, changeFrequency: "yearly", priority: 0.2 },
-    ...ARTISTAS.filter((a) => a.pagina).map((a) => ({ url: `${BASE}/gente/${a.slug}/`, changeFrequency: "monthly" as const, priority: 0.7 })),
+    { url: `${BASE}/how-it-works/`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/privacy/`, changeFrequency: "yearly", priority: 0.2 },
+    ...ARTISTAS.filter((a) => a.pagina).map((a) => ({ url: `${BASE}/people/${a.slug}/`, changeFrequency: "monthly" as const, priority: 0.7 })),
     ...RELEASES.map((r) => ({ url: `${BASE}/releases/${r.id}/`, changeFrequency: "monthly" as const, priority: 0.8 })),
   ];
 }

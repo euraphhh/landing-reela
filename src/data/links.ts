@@ -28,4 +28,4 @@ const CORPO = [
 export const EMAIL_HREF = `mailto:${EMAIL}?subject=${encodeURIComponent(ASSUNTO)}&body=${encodeURIComponent(CORPO)}`;
 
 /** selo "protótipo · dados em revisão". desligue quando os dados reais entrarem. */
-export const MOSTRAR_SELO_PROTOTIPO = true;
+export const MOSTRAR_SELO_PROTOTIPO = false;

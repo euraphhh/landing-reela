@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/gente", "destination": "/people/", "permanent": true },
+    { "source": "/gente/:slug*", "destination": "/people/:slug*", "permanent": true },
+    { "source": "/como-funciona", "destination": "/how-it-works/", "permanent": true },
+    { "source": "/como-funciona/", "destination": "/how-it-works/", "permanent": true },
+    { "source": "/privacidade", "destination": "/privacy/", "permanent": true },
+    { "source": "/privacidade/", "destination": "/privacy/", "permanent": true }
+  ]
+}

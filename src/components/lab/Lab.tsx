@@ -17,7 +17,7 @@ const TESTES = [
 export function Lab() {
   return (
     <SomProvider>
-      <main className={s.lab} id="conteudo">
+      <main className={s.lab} id="content">
         <header className={s.cab}>
           <a href="/" className="t-caption">← voltar ao site</a>
           <h1 className="t-display">lab.</h1>

@@ -39,7 +39,7 @@ export function Replay() {
     const fim = () => {
       voltando.current = false;
       gsap.set(puxa.current, { scaleX: 0 });
-      document.getElementById("topo")?.focus({ preventScroll: true });
+      document.getElementById("top")?.focus({ preventScroll: true });
       emitir(EV.entrada);
     };
     if (calmo()) { window.scrollTo(0, 0); fim(); return; }
@@ -88,7 +88,7 @@ export function Replay() {
           <span className="t-credit">© {new Date().getFullYear()} reela music</span>
         </span>
         <span className="t-credit" style={{ display: "flex", gap: 16, alignItems: "center" }}>
-          <a href="/privacidade/" className="lnk-rodape">privacidade</a>
+          <a href="/privacy/" className="lnk-rodape">privacidade</a>
           são josé dos campos, sp
         </span>
       </footer>

@@ -11,9 +11,9 @@ import s from "./Barra.module.css";
 
 const LINKS = [
   { href: "/#releases", rot: "destaques" },
-  { href: "/#gente", rot: "quem passou" },
-  { href: "/#selo", rot: "o selo" },
-  { href: "/como-funciona/", rot: "como funciona" },
+  { href: "/#people", rot: "quem passou" },
+  { href: "/#label", rot: "o selo" },
+  { href: "/how-it-works/", rot: "como funciona" },
 ];
 
 /** o laço da barra se desenha e o ponto cai no centro */
@@ -59,7 +59,7 @@ export function Barra() {
       if (calmo() || !lockup.current) return;
       const el = lockup.current;
       // a entrada toca uma vez por visita, não a cada página; o replay do fim toca de novo de propósito
-      if (tocaEntrada()) { entrada(el); if (!document.getElementById("topo")) liberarEntrada(); }
+      if (tocaEntrada()) { entrada(el); if (!document.getElementById("top")) liberarEntrada(); }
       return ouvir(EV.entrada, () => entrada(el));
     },
     { scope: barra }
@@ -92,7 +92,7 @@ export function Barra() {
   return (
     <>
       <header ref={barra} className={`${s.barra} ${naMarca ? s.naMarca : ""}`} data-placa={pronta ? (naMarca ? "on" : "off") : undefined}>
-        <a ref={lockup} className={s.lockup} href="/#topo" aria-label="reela music, voltar ao início" onClick={ancora}>
+        <a ref={lockup} className={s.lockup} href="/#top" aria-label="reela music, voltar ao início" onClick={ancora}>
           <Simbolo variante="animavel" />
         </a>
         <nav className={s.nav} aria-label="principal">
@@ -111,7 +111,7 @@ export function Barra() {
         {LINKS.map((l) => (
           <a key={l.href} href={l.href} onClick={irMenu}>{l.rot}</a>
         ))}
-        <a href="/#selo" onClick={irMenu}>contato</a>
+        <a href="/#label" onClick={irMenu}>contato</a>
       </div>
     </>
   );

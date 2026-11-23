@@ -15,7 +15,7 @@ export function PaginaRelease({ i }: { i: number }) {
 
   return (
     <Casca>
-        <main id="conteudo" tabIndex={-1} className={s.pagina}>
+        <main id="content" tabIndex={-1} className={s.pagina}>
           <nav className={s.volta} aria-label="navegação do release">
             <a href={`/?r=${r.id}#releases`}>← voltar ao laço</a>
           </nav>

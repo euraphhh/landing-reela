@@ -30,15 +30,15 @@ export default function Links() {
   const player = embed(r.links?.spotify);
   const caminhos = [
     { rot: "destaques", href: "/#releases" },
-    { rot: "como funciona", href: "/como-funciona/" },
-    { rot: "quem passou por aqui", href: "/#gente" },
+    { rot: "como funciona", href: "/how-it-works/" },
+    { rot: "quem passou por aqui", href: "/#people" },
   ];
   const redes = STREAMING.filter((p) => real(p.href));
 
   return (
     <>
       <Grao />
-      <main id="conteudo" className={s.pagina}>
+      <main id="content" className={s.pagina}>
         <header className={s.topo}>
           <LacoTopo className={s.sym} />
           <h1 className={s.nome}>reela<i>music</i></h1>
@@ -78,7 +78,7 @@ export default function Links() {
 
         <footer className={s.rodape}>
           <Parceiro />
-          <span className="t-credit">© {new Date().getFullYear()} reela music · <a href="/privacidade/" className="lnk-rodape">privacidade</a></span>
+          <span className="t-credit">© {new Date().getFullYear()} reela music · <a href="/privacy/" className="lnk-rodape">privacidade</a></span>
         </footer>
       </main>
     </>

@@ -7,7 +7,7 @@ import s from "./como-funciona.module.css";
 export const metadata: Metadata = {
   title: "como funciona · reela music",
   description: "selo de trap e r&b. a gente entra com beat, mix e master; você entra com a voz. split 60/40 para o artista, lançado pela reela.",
-  alternates: { canonical: "/como-funciona/" },
+  alternates: { canonical: "/how-it-works/" },
 };
 
 const SERVICOS = [
@@ -28,7 +28,7 @@ const PASSOS = [
 export default function ComoFunciona() {
   return (
     <Casca>
-      <main id="conteudo" tabIndex={-1} className={s.pagina}>
+      <main id="content" tabIndex={-1} className={s.pagina}>
         <header className={s.abre}>
           <span className="t-credit">como funciona</span>
           <h1 className="t-display">a gente entra com beat, mix e master.<br /><span className={s.mudo}>você entra com a voz.</span></h1>

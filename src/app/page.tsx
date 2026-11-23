@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <SmoothScroll>
       <SomProvider>
-        <a className="skip" href="#conteudo">pular para o conteúdo</a>
+        <a className="skip" href="#content">pular para o conteúdo</a>
         <Grao />
         <Barra />
-        <main id="conteudo" tabIndex={-1}>
+        <main id="content" tabIndex={-1}>
           <Hero />
           <Laco />
           <QuemPassou limite={12} />

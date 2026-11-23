@@ -188,6 +188,7 @@ export function Laco() {
           <button className={s.verLista} type="button" aria-expanded={listaAberta} aria-controls="lista" onClick={() => setListaAberta((v) => !v)}>
             {listaAberta ? "fechar lista" : "ver em lista"}
           </button>
+          <a className={s.verLista} href="/releases/" style={{ marginLeft: 16, display: "inline-flex", alignItems: "center" }}>todos os lançamentos</a>
         </div>
         <ul id="lista" className={s.lista} hidden={!listaAberta}>
           {RELEASES.map((x, i) => (

@@ -30,6 +30,7 @@ export default function Links() {
   const player = embed(r.links?.spotify);
   const caminhos = [
     { rot: "destaques", href: "/#releases" },
+    { rot: "todos os lançamentos", href: "/releases/" },
     { rot: "como funciona", href: "/how-it-works/" },
     { rot: "quem passou por aqui", href: "/#people" },
   ];

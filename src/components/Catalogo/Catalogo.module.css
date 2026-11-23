@@ -1,0 +1,23 @@
+.cab { display: flex; flex-direction: column; gap: 22px; }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; }
+.filtro { min-height: 44px; padding: 0 16px; border: 1px solid var(--line); font-weight: 500; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s, background-color 0.25s var(--ease), color 0.25s var(--ease); }
+.filtro:hover { border-color: var(--ink); }
+.filtro[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+.n { font-size: 12px; opacity: 0.6; font-variant-numeric: tabular-nums; }
+
+.anos { display: flex; flex-direction: column; gap: 56px; }
+.ano { display: grid; grid-template-columns: minmax(120px, 1fr) minmax(0, 4fr); gap: 32px; border-top: 1px solid var(--line); padding-top: 28px; }
+.anoTit { margin: 0; font: 300 clamp(40px, 6vw, 88px) / 0.9 var(--f-display); position: sticky; top: 96px; align-self: start; }
+.grade { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 32px 24px; }
+.card { display: flex; flex-direction: column; gap: 8px; text-decoration: none; }
+.capa { transition: transform 0.45s var(--ease); }
+.card:hover .capa, .card:focus-visible .capa { transform: scale(1.03); }
+.card strong { font: 300 21px / 1.15 var(--f-display); overflow-wrap: anywhere; }
+.card:hover strong { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+@media (max-width: 860px) {
+  .ano { grid-template-columns: 1fr; gap: 16px; }
+  .anoTit { position: static; }
+  .grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+  .card strong { font-size: 17px; }
+}

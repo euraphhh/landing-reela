@@ -1,31 +1,5 @@
 [
   {
-    "id": "001",
-    "num": "001",
-    "nova": true,
-    "titulo": "de novo, até amanhecer",
-    "artistas": "raphh e convidados",
-    "quando": "em breve",
-    "creditos": [
-      {
-        "papel": "prod.",
-        "nome": "reela"
-      },
-      {
-        "papel": "mix",
-        "nome": "reela"
-      },
-      {
-        "papel": "arte",
-        "nome": "reela"
-      }
-    ],
-    "cor": [
-      "#5b0f12",
-      "#120304"
-    ]
-  },
-  {
     "id": "culpa-da-party",
     "num": "A13",
     "titulo": "CULPA DA PARTY",
@@ -45,6 +19,7 @@
       "#3a3a3a",
       "#0a0a0a"
     ],
+    "capa": "/capas/culpa-da-party.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/0pAiODicHi9ryrzZBbuwtK"
     }
@@ -85,6 +60,7 @@
       "#2b2b2b",
       "#080808"
     ],
+    "capa": "/capas/strngluv.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3FVbPjc60ddd46NEhisonm"
     }
@@ -113,6 +89,7 @@
       "#474747",
       "#0d0d0d"
     ],
+    "capa": "/capas/onde-ce-ta.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/5Ub2ggYey7EQg0upEe15Xp"
     }
@@ -137,6 +114,7 @@
       "#333333",
       "#060606"
     ],
+    "capa": "/capas/reesenha-3-nada-alem.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/52MdfzS09AtxtpDrDcdKnn"
     }
@@ -155,12 +133,17 @@
       {
         "papel": "beat",
         "nome": "David Tamas, OUHBOY"
+      },
+      {
+        "papel": "mix e master",
+        "nome": "raphh"
       }
     ],
     "cor": [
       "#3a3a3a",
       "#0a0a0a"
     ],
+    "capa": "/capas/te-vejo-longe.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/16dmZw1zBOZze2DW19LBBK"
     }
@@ -189,6 +172,7 @@
       "#2b2b2b",
       "#080808"
     ],
+    "capa": "/capas/role-remix.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3LqiQz76Z03hpPRt1GjGAO"
     }
@@ -217,6 +201,7 @@
       "#474747",
       "#0d0d0d"
     ],
+    "capa": "/capas/coelha-ma.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/7IUN677dFJNlaUXuAPLLz1"
     },
@@ -251,6 +236,7 @@
       "#333333",
       "#060606"
     ],
+    "capa": "/capas/de-novo.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/6CRLGAg6tyToSjri0NDSes"
     },
@@ -285,6 +271,7 @@
       "#3a3a3a",
       "#0a0a0a"
     ],
+    "capa": "/capas/wave.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/41FYO8UUi04NNQPgfQuJrZ"
     }
@@ -313,6 +300,7 @@
       "#2b2b2b",
       "#080808"
     ],
+    "capa": "/capas/mentirosa.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/6mSbpldBqly0vXtSxMouQ8"
     }
@@ -341,6 +329,7 @@
       "#474747",
       "#0d0d0d"
     ],
+    "capa": "/capas/amor-copos.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3xV8vYWmd7I8I0RIulz4j8"
     }
@@ -365,6 +354,7 @@
       "#333333",
       "#060606"
     ],
+    "capa": "/capas/reesenha-1.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/4j4DhTeRwVXwYovm3eMZ34"
     }
@@ -389,6 +379,7 @@
       "#3a3a3a",
       "#0a0a0a"
     ],
+    "capa": "/capas/reesenha-pt-2-planos.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/45LHGt27LMKmg2MYVynkbv"
     }

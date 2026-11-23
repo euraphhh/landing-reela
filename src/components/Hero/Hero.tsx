@@ -10,6 +10,7 @@ import { EV, emitir, ouvir } from "@/lib/eventos";
 import { Filme } from "./Filme";
 import s from "./Hero.module.css";
 
+/** o lançamento mais recente (o primeiro do laço) */
 const NOVA = RELEASES[0];
 
 export function Hero() {
@@ -76,8 +77,8 @@ export function Hero() {
           <Arte r={NOVA} className={s.agoraArt} />
           <span className={s.rot}>
             <span className="t-credit">{NOVA.num} · {NOVA.quando}</span>
-            <strong>a primeira da era nova.</strong>
-            <span className="t-caption">abre no laço →</span>
+            <strong>{NOVA.titulo}</strong>
+            <span className="t-caption">o mais novo. abre no laço →</span>
           </span>
         </a>
       </div>

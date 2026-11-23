@@ -7,7 +7,7 @@
 // - versão "(Speed)" vira versão do original (mesmo título), não um card à parte
 // - sem capa ainda: placeholder em cinza (a cor de cada release vem só da arte)
 // - "REELA Music" não conta como artista; quem passou = artistas + créditos
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
 const ler = (p) => JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), "utf8"));
 const { lancamentos } = ler("docs/dados/lancamentos.json");
@@ -65,6 +65,8 @@ const releases = ordenados.map((l, i) => {
     selo: l.selo.replace(/\s*\(.*\)\s*$/, ""),
     creditos: juntarCreditos(creditos[l.titulo]),
     cor: CINZAS[i % CINZAS.length],
+    // capa baixada por scripts/capas.mjs; sem ela, o placeholder
+    ...(existsSync(new URL(`../public/capas/${slug(l.titulo)}.jpg`, import.meta.url)) ? { capa: `/capas/${slug(l.titulo)}.jpg` } : {}),
     links: { spotify: primeiroLink(l.spotify) },
     ...(versoes.length ? { versoes } : {}),
   };

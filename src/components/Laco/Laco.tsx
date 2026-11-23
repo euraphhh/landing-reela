@@ -6,7 +6,7 @@
  */
 import { useCallback, useEffect, useRef, useState } from "react";
 import { gsap, useGSAP, Draggable, ScrollTrigger, SplitText, EASE, calmo } from "@/lib/gsap";
-import { RELEASES } from "@/data";
+import { LACO as RELEASES } from "@/data"; // o laço mostra só os destaques (docs/dados/destaques.json)
 import { Arte } from "@/components/Arte/Arte";
 import { Simbolo } from "@/components/marca/Simbolo";
 import { useSom } from "@/hooks/useSom";
@@ -64,7 +64,7 @@ export function Laco() {
       const layout = () => {
         const W = p.clientWidth, H = p.clientHeight, cel = window.innerWidth < 860;
         const D = cel ? Math.min(W * 0.5, H * 0.36) : Math.min(W * 0.42, H * 0.44);
-        const CW = D * 0.25, CH = CW, R = D / 2 + CH * 0.7;
+        const CW = D * (N <= 9 ? 0.3 : 0.25), CH = CW, R = D / 2 + CH * 0.7;
         PX = CW * 1.5;
         // no celular o palco vem primeiro: abre espaço para a barra fixa (≈76px) acima da capa ativa
         const topo = cel ? 84 : H * 0.09;
@@ -112,7 +112,11 @@ export function Laco() {
       if (q) history.replaceState(null, "", `/${window.location.hash}`);
       const ro = new ResizeObserver(layout);
       ro.observe(p);
-      const off = ouvir<number>(EV.release, (i) => window.setTimeout(() => ir(i), 100));
+      // pedido de outro lugar da página (quem passou): pelo id; fora dos destaques, ignora
+      const off = ouvir<string>(EV.release, (id) => {
+        const i = RELEASES.findIndex((x) => x.id === id);
+        if (i >= 0) window.setTimeout(() => ir(i), 100);
+      });
 
       return () => { ro.disconnect(); off(); drag.kill(); gsap.killTweensOf(proxy); irRef.current = () => {}; };
     },
@@ -158,7 +162,7 @@ export function Laco() {
   return (
     <section ref={sec} className={s.sec} id="releases" aria-labelledby="rel-h">
       <div className={s.info}>
-        <h2 className="sr" id="rel-h">releases</h2>
+        <h2 className={`${s.secao} t-credit`} id="rel-h">destaques</h2>
         <div aria-live="polite" className={s.vivo}>
           <div className={`${s.kick} t-credit`} data-troca>
             <span className={s.num}>{r.num}</span><span>{r.quando}</span>

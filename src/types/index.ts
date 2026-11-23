@@ -28,6 +28,8 @@ export type Release = {
   faixas?: number;
   /** ℗ do lançamento, como no Spotify */
   selo?: string;
+  /** aparece no laço da home (docs/dados/destaques.json) */
+  destaque?: boolean;
   /** outras versões (ex.: speed) que não ganham card próprio */
   versoes?: { nome: string; spotify?: string }[];
 };

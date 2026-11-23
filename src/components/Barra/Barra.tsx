@@ -10,7 +10,7 @@ import { tocaEntrada, liberarEntrada } from "@/lib/entrada";
 import s from "./Barra.module.css";
 
 const LINKS = [
-  { href: "/#releases", rot: "releases" },
+  { href: "/#releases", rot: "destaques" },
   { href: "/#gente", rot: "quem passou" },
   { href: "/#selo", rot: "o selo" },
   { href: "/como-funciona/", rot: "como funciona" },

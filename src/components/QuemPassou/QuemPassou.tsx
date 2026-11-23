@@ -11,9 +11,11 @@ import { useAncora } from "@/components/providers/SmoothScroll";
 import { EV, emitir } from "@/lib/eventos";
 import s from "./QuemPassou.module.css";
 
-/** índice do lançamento mais recente com esse nome (artista ou crédito) */
-const primeiroDe = (nome: string) =>
-  Math.max(0, RELEASES.findIndex((r) => r.artistas.split(", ").includes(nome) || r.creditos.some((c) => c.nome.split(", ").includes(nome))));
+/** o lançamento mais recente com esse nome (artista ou crédito), de preferência um destaque do laço */
+const primeiroDe = (nome: string) => {
+  const dele = RELEASES.filter((r) => r.artistas.split(", ").includes(nome) || r.creditos.some((c) => c.nome.split(", ").includes(nome)));
+  return dele.find((r) => r.destaque) ?? dele[0];
+};
 
 const rotulo = (n: number) => `${n} ${n > 1 ? "lançamentos" : "lançamento"}`;
 
@@ -80,16 +82,19 @@ export function QuemPassou() {
       </div>
       <ul ref={rol} className={s.rol} onPointerLeave={() => api.current.soltar()}>
         {ARTISTAS.map((a, idx) => {
-          const i = primeiroDe(a.nome);
+          const r = primeiroDe(a.nome);
+          // página própria > gira o laço até um destaque > página do release
+          const href = a.pagina ? `/gente/${a.slug}/` : r?.destaque ? "#releases" : `/releases/${r?.id}/`;
+          const noLaco = !a.pagina && r?.destaque;
           return (
             <li key={a.nome}>
               <a
-                href={a.pagina ? `/gente/${a.slug}/` : "#releases"}
+                href={href}
                 onPointerEnter={() => api.current.mirar(idx, true)}
                 onFocus={() => api.current.mirar(idx, true)}
                 onBlur={() => api.current.soltar()}
-                onClick={a.pagina ? undefined : (e) => ancora(e, () => emitir(EV.release, i))}
-                aria-label={`${a.nome}${a.papel ? `, ${a.papel}` : ""}, ${rotulo(a.faixas)}. ${a.pagina ? "ver página" : "ver no laço"}`}
+                onClick={noLaco ? (e) => ancora(e, () => emitir(EV.release, r!.id)) : undefined}
+                aria-label={`${a.nome}${a.papel ? `, ${a.papel}` : ""}, ${rotulo(a.faixas)}. ${a.pagina ? "ver página" : noLaco ? "ver no laço" : "ver lançamento"}`}
               >
                 <Simbolo variante="anel" className={s.mini} />
                 <span className={s.nome}>{a.nome}</span>

@@ -1,6 +1,7 @@
 .sec { position: relative; min-height: 100svh; display: grid; grid-template-columns: minmax(280px, 38%) 1fr; overflow: hidden; border-top: 1px solid var(--line); }
 
 .info { padding: calc(80px + 6vh) var(--gutter) 40px; display: flex; flex-direction: column; gap: 22px; z-index: 2; }
+.secao { margin: 0; color: var(--ink); }
 .vivo { display: flex; flex-direction: column; gap: 22px; }
 .kick { display: flex; gap: 12px; align-items: center; }
 .num { color: var(--ink); }

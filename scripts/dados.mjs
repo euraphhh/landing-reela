@@ -15,6 +15,7 @@ const DATA_STREAMS = (_fonte.match(/\d{4}-\d{2}-\d{2}/) ?? [""])[0];
 const { _obs, ...creditos } = ler("docs/dados/creditos.json");
 const proximos = ler("docs/dados/proximos.json").map(({ _obs, ...r }) => r);
 const { _obs: _o2, ...pessoas } = ler("docs/dados/pessoas.json");
+const DESTAQUES = new Set(ler("docs/dados/destaques.json").titulos);
 
 const slug = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const CINZAS = [["#3a3a3a", "#0a0a0a"], ["#2b2b2b", "#080808"], ["#474747", "#0d0d0d"], ["#333333", "#060606"]];
@@ -70,6 +71,7 @@ const releases = ordenados.map((l, i) => {
     // capa baixada por scripts/capas.mjs; sem ela, o placeholder
     ...(existsSync(new URL(`../public/capas/${slug(l.titulo)}.jpg`, import.meta.url)) ? { capa: `/capas/${slug(l.titulo)}.jpg` } : {}),
     links: { spotify: primeiroLink(l.spotify) },
+    ...(DESTAQUES.has(l.titulo) ? { destaque: true } : {}),
     ...(versoes.length ? { versoes } : {}),
   };
 });
@@ -130,4 +132,6 @@ const artistas = [...gente.entries()]
 
 writeFileSync(new URL("../src/data/releases.json", import.meta.url), JSON.stringify([...proximos, ...releases], null, 2) + "\n");
 writeFileSync(new URL("../src/data/artistas.json", import.meta.url), JSON.stringify(artistas, null, 2) + "\n");
-console.log(`${proximos.length} próximos + ${releases.length} lançamentos, ${artistas.length} pessoas`);
+const faltando = [...DESTAQUES].filter((t) => !releases.some((r) => r.titulo === t));
+if (faltando.length) console.warn(`! destaques sem lançamento: ${faltando.join(", ")}`);
+console.log(`${proximos.length} próximos + ${releases.length} lançamentos (${releases.filter((r) => r.destaque).length} no laço), ${artistas.length} pessoas`);

@@ -63,7 +63,8 @@
     "capa": "/capas/strngluv.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3FVbPjc60ddd46NEhisonm"
-    }
+    },
+    "destaque": true
   },
   {
     "id": "onde-ce-ta",
@@ -121,7 +122,8 @@
     "capa": "/capas/nin.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/track/6ZnPP2XLeoir65WPKHhFYx"
-    }
+    },
+    "destaque": true
   },
   {
     "id": "reesenha-3-nada-alem",
@@ -146,7 +148,8 @@
     "capa": "/capas/reesenha-3-nada-alem.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/52MdfzS09AtxtpDrDcdKnn"
-    }
+    },
+    "destaque": true
   },
   {
     "id": "te-vejo-longe",
@@ -175,7 +178,8 @@
     "capa": "/capas/te-vejo-longe.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/16dmZw1zBOZze2DW19LBBK"
-    }
+    },
+    "destaque": true
   },
   {
     "id": "role-remix",
@@ -204,7 +208,8 @@
     "capa": "/capas/role-remix.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3LqiQz76Z03hpPRt1GjGAO"
-    }
+    },
+    "destaque": true
   },
   {
     "id": "coelha-ma",
@@ -234,6 +239,7 @@
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/7IUN677dFJNlaUXuAPLLz1"
     },
+    "destaque": true,
     "versoes": [
       {
         "nome": "speed",
@@ -269,6 +275,7 @@
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/6CRLGAg6tyToSjri0NDSes"
     },
+    "destaque": true,
     "versoes": [
       {
         "nome": "speed",
@@ -332,7 +339,8 @@
     "capa": "/capas/mentirosa.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/6mSbpldBqly0vXtSxMouQ8"
-    }
+    },
+    "destaque": true
   },
   {
     "id": "amor-copos",
@@ -411,6 +419,7 @@
     "capa": "/capas/reesenha-pt-2-planos.jpg",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/45LHGt27LMKmg2MYVynkbv"
-    }
+    },
+    "destaque": true
   }
 ]

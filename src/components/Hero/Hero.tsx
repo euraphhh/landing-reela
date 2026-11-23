@@ -5,8 +5,7 @@ import { RELEASES } from "@/data";
 import { STREAMING } from "@/data/links";
 import { Arte } from "@/components/Arte/Arte";
 import { LinkDividido } from "@/components/LinkDividido/LinkDividido";
-import { useAncora } from "@/components/providers/SmoothScroll";
-import { EV, emitir, ouvir } from "@/lib/eventos";
+import { EV, ouvir } from "@/lib/eventos";
 import { tocaEntrada, liberarEntrada } from "@/lib/entrada";
 import { FundoHero } from "./FundoHero";
 import s from "./Hero.module.css";
@@ -17,7 +16,6 @@ const NOVA = RELEASES[0];
 export function Hero() {
   const sec = useRef<HTMLElement>(null);
   const txt = useRef<HTMLSpanElement>(null);
-  const ancora = useAncora();
 
   useGSAP(
     () => {
@@ -57,12 +55,12 @@ export function Hero() {
             ))}
           </ul>
         </div>
-        <a className={s.agora} href="#releases" data-entra onClick={(e) => ancora(e, () => emitir(EV.release, 0))}>
+        <a className={s.agora} href={`/releases/${NOVA.id}/`} data-entra>
           <Arte r={NOVA} className={s.agoraArt} />
           <span className={s.rot}>
             <span className="t-credit">{NOVA.num} · {NOVA.quando}</span>
             <strong>{NOVA.titulo}</strong>
-            <span className="t-caption">o mais novo. abre no laço →</span>
+            <span className="t-caption">o mais novo. ouvir →</span>
           </span>
         </a>
       </div>

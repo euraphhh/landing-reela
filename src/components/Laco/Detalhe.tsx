@@ -5,7 +5,7 @@
  */
 import { useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
 import { gsap, Flip, EASE, calmo } from "@/lib/gsap";
-import { RELEASES } from "@/data";
+import { LACO as RELEASES } from "@/data"; // mesmos índices do laço
 import { Arte } from "@/components/Arte/Arte";
 import { ReleaseInfo, grade, lugarCapa } from "@/components/Release/ReleaseInfo";
 import { useScroll } from "@/components/providers/SmoothScroll";

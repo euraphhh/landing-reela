@@ -29,7 +29,7 @@ export default function Links() {
   const r = ULTIMO;
   const player = embed(r.links?.spotify);
   const caminhos = [
-    { rot: "todos os lançamentos", href: "/#releases" },
+    { rot: "destaques", href: "/#releases" },
     { rot: "como funciona", href: "/como-funciona/" },
     { rot: "quem passou por aqui", href: "/#gente" },
   ];

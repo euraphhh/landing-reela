@@ -13,6 +13,7 @@ const LINKS = [
   { href: "/#releases", rot: "destaques" },
   { href: "/#people", rot: "quem passou" },
   { href: "/#label", rot: "o selo" },
+  { href: "/story/", rot: "história" },
   { href: "/how-it-works/", rot: "como funciona" },
 ];
 

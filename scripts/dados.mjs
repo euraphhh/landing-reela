@@ -73,6 +73,8 @@ const releases = ordenados.map((l, i) => {
     ...(existsSync(new URL(`../public/capas/${slug(l.titulo)}-320.jpg`, import.meta.url)) ? { capaP: `/capas/${slug(l.titulo)}-320.jpg` } : {}),
     links: { spotify: primeiroLink(l.spotify) },
     ...(DESTAQUES.has(l.titulo) ? { destaque: true } : {}),
+    // plays públicos (faixas populares) somando as versões speed; é piso, não total
+    ...((() => { const t = [l, ...speeds.filter((x) => x.titulo.replace(speed, "").toLowerCase() === l.titulo.toLowerCase())].reduce((n, x) => n + (typeof x.streams === "number" ? x.streams : 0), 0); return t ? { plays: t } : {}; })()),
     ...(versoes.length ? { versoes } : {}),
   };
 });

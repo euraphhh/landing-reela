@@ -1,0 +1,48 @@
+.historia { position: relative; }
+
+/* o fio: o laço fixo na lateral direita, desenhando com a rolagem */
+.fio { position: fixed; right: var(--gutter); top: 50%; transform: translateY(-50%); width: 56px; height: 56px; z-index: 5; color: #fff; mix-blend-mode: difference; pointer-events: none; }
+.fio :global(.sym) { width: 100%; height: 100%; }
+
+.abertura { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; gap: 24px; padding: 120px var(--gutter) 72px; }
+.abertura h1 { max-width: 16ch; }
+.intro { margin: 0; font: 300 clamp(20px, 2.2vw, 28px) / 1.35 var(--f-display); max-width: 34ch; }
+.desce { margin-top: 24px; }
+
+/* capítulo: trava na tela; cabeçalho em cima, capas passando embaixo */
+.capitulo { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; align-content: center; gap: clamp(24px, 5vh, 56px); padding: 96px 0 48px; border-top: 1px solid var(--line); overflow: hidden; background: var(--ground); }
+.cabCap { display: grid; grid-template-columns: auto minmax(0, 46ch); gap: clamp(24px, 4vw, 64px); align-items: end; justify-content: start; padding: 0 calc(var(--gutter) + 64px) 0 var(--gutter); }
+.ano { margin: 0; font: 300 clamp(88px, 15vw, 220px) / 0.82 var(--f-display); letter-spacing: -0.01em; }
+.fatos { display: flex; flex-direction: column; gap: 12px; padding-bottom: 12px; max-width: 46ch; }
+.fatos p { margin: 0; }
+.texto { font: 300 clamp(20px, 2vw, 26px) / 1.35 var(--f-display); }
+
+.faixa { list-style: none; margin: 0; padding: 0 var(--gutter); display: flex; gap: clamp(16px, 2vw, 28px); will-change: transform; }
+.faixa li { flex: 0 0 min(28vw, 280px); }
+.card { display: flex; flex-direction: column; gap: 8px; text-decoration: none; }
+.card strong { font: 300 clamp(18px, 1.6vw, 22px) / 1.15 var(--f-display); overflow-wrap: anywhere; }
+.card:hover strong { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+.numeros { padding: clamp(80px, 14vh, 160px) var(--gutter); border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 32px; }
+.numeros h2 { margin: 0; }
+.numeros dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; }
+.numeros dl > div { display: flex; flex-direction: column; gap: 10px; }
+.numeros dt { order: 2; font: var(--t-credit-weight) var(--t-credit-size) / var(--t-credit-lh) var(--f-text); letter-spacing: var(--t-credit-ls); color: var(--muted); }
+.numeros dd { margin: 0; font: 300 clamp(56px, 8vw, 120px) / 0.9 var(--f-display); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.numeros p { margin: 0; }
+
+.fim { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 24px; padding: 96px var(--gutter); border-top: 1px solid var(--line); }
+.fim p { margin: 0; }
+.acoes { display: flex; gap: 10px; flex-wrap: wrap; }
+
+@media (max-width: 860px) {
+  .cabCap { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-right: var(--gutter); }
+  .fatos { max-width: none; min-width: 0; }
+  .faixa li { flex-basis: 62vw; }
+  .fio { width: 40px; height: 40px; top: auto; bottom: 20px; transform: none; }
+}
+
+/* reduced motion: nada trava nem desliza; as capas quebram linha */
+.parado .capitulo { min-height: 0; overflow: visible; }
+.parado .faixa { flex-wrap: wrap; }
+.parado .faixa li { flex-basis: min(42vw, 240px); }

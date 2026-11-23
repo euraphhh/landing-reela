@@ -31,6 +31,7 @@ export default function Links() {
   const caminhos = [
     { rot: "destaques", href: "/#releases" },
     { rot: "todos os lançamentos", href: "/releases/" },
+    { rot: "a história da reela", href: "/story/" },
     { rot: "como funciona", href: "/how-it-works/" },
     { rot: "quem passou por aqui", href: "/#people" },
   ];

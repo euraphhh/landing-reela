@@ -216,7 +216,8 @@
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/16dmZw1zBOZze2DW19LBBK"
     },
-    "destaque": true
+    "destaque": true,
+    "plays": 11690
   },
   {
     "id": "role-remix",
@@ -247,7 +248,8 @@
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/3LqiQz76Z03hpPRt1GjGAO"
     },
-    "destaque": true
+    "destaque": true,
+    "plays": 1267
   },
   {
     "id": "coelha-ma",
@@ -279,6 +281,7 @@
       "spotify": "https://open.spotify.com/intl-pt/album/7IUN677dFJNlaUXuAPLLz1"
     },
     "destaque": true,
+    "plays": 39257,
     "versoes": [
       {
         "nome": "speed",
@@ -316,6 +319,7 @@
       "spotify": "https://open.spotify.com/intl-pt/album/6CRLGAg6tyToSjri0NDSes"
     },
     "destaque": true,
+    "plays": 16617,
     "versoes": [
       {
         "nome": "speed",
@@ -465,6 +469,7 @@
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/album/45LHGt27LMKmg2MYVynkbv"
     },
-    "destaque": true
+    "destaque": true,
+    "plays": 2562
   }
 ]

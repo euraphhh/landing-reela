@@ -6,3 +6,6 @@ next-env.d.ts
 .DS_Store
 .vercel
 .env*
+
+# vídeos originais do hero (grandes; os trechos processados ficam em public/canvas)
+docs/canvas/originais/

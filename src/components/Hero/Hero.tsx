@@ -8,7 +8,7 @@ import { LinkDividido } from "@/components/LinkDividido/LinkDividido";
 import { useAncora } from "@/components/providers/SmoothScroll";
 import { EV, emitir, ouvir } from "@/lib/eventos";
 import { tocaEntrada, liberarEntrada } from "@/lib/entrada";
-import { Filme } from "./Filme";
+import { FundoHero } from "./FundoHero";
 import s from "./Hero.module.css";
 
 /** o lançamento mais recente (o primeiro do laço) */
@@ -41,7 +41,7 @@ export function Hero() {
 
   return (
     <section ref={sec} className={s.hero} id="topo" aria-label="reela music">
-      <Filme className={s.filme} />
+      <FundoHero className={s.filme} />
       <h1 id="marca" className={s.marca}>
         <span className="sr">reela music, selo de trap e r&amp;b</span>
         <span ref={txt} aria-hidden="true">reela</span>

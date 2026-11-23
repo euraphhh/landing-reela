@@ -1,0 +1,18 @@
+.fundo { overflow: hidden; }
+.midia { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; filter: grayscale(1); }
+img.midia { opacity: 1; }
+/* madrugada: vídeo escuro sob o branco; papel: o vídeo vira tinta clara sob o preto */
+:global(html[data-tema="madrugada"]) .fundo .midia { --forca: 0.55; }
+:global(html[data-tema="papel"]) .fundo { mix-blend-mode: multiply; }
+:global(html[data-tema="papel"]) .fundo .midia { filter: grayscale(1) contrast(0.85) brightness(1.25); }
+.fundo { opacity: 0.6; }
+:global(html[data-tema="papel"]) .fundo { opacity: 0.35; }
+/* véu: o fundo some nas bordas e embaixo, para o wordmark e os links lerem sempre */
+.veu {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 90% at 50% 40%, transparent 30%, var(--ground) 100%),
+    linear-gradient(to top, var(--ground) 0%, transparent 45%);
+}
+.credito { position: absolute; right: var(--gutter); top: 50%; writing-mode: vertical-rl; transform: rotate(180deg); opacity: 0.8; }
+@media (max-width: 760px) { .credito { display: none; } }

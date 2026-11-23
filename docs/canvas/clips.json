@@ -1,0 +1,9 @@
+{
+  "_obs": "trechos do fundo do hero. 'arquivo' = nome em docs/canvas/originais/ (fora do git, vídeos grandes). inicio/duracao em segundos; sem inicio, pega a partir de 30% do vídeo. 'release' = id do lançamento (aparece no crédito do hero). rode `npm run canvas` (precisa do ffmpeg instalado).",
+  "clips": [
+    { "id": "te-vejo-longe", "arquivo": "vidssave.com raphh & Gringoo - Te Vejo Longe 💁_♀️ 720P.mp4", "duracao": 8, "release": "te-vejo-longe" },
+    { "id": "reesenha-3", "arquivo": "vidssave.com REESENHA 3 - Nada Além 💞 _ M4relli, Mika MC, Aionn, raphh & Ramoss 720P.mp4", "duracao": 8, "release": "reesenha-3-nada-alem" },
+    { "id": "role-remix", "arquivo": "vidssave.com lx & T'H feat. raphh - Rolê (Remix) 360P.mp4", "duracao": 8, "release": "role-remix" },
+    { "id": "nina", "arquivo": "vidssave.com CALEBB - NIN@ 🎸 480P.mp4", "duracao": 8, "legenda": "Calebb · NIN@" }
+  ]
+}

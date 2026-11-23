@@ -9,6 +9,7 @@
     "tokens": "node scripts/tokens.mjs",
     "dados": "node scripts/dados.mjs",
     "capas": "node scripts/capas.mjs && node scripts/dados.mjs",
+    "canvas": "node scripts/canvas.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

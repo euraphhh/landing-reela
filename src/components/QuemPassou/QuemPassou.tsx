@@ -84,12 +84,12 @@ export function QuemPassou() {
           return (
             <li key={a.nome}>
               <a
-                href="#releases"
+                href={a.pagina ? `/gente/${a.slug}/` : "#releases"}
                 onPointerEnter={() => api.current.mirar(idx, true)}
                 onFocus={() => api.current.mirar(idx, true)}
                 onBlur={() => api.current.soltar()}
-                onClick={(e) => ancora(e, () => emitir(EV.release, i))}
-                aria-label={`${a.nome}${a.papel ? `, ${a.papel}` : ""}, ${rotulo(a.faixas)}. ver no laço`}
+                onClick={a.pagina ? undefined : (e) => ancora(e, () => emitir(EV.release, i))}
+                aria-label={`${a.nome}${a.papel ? `, ${a.papel}` : ""}, ${rotulo(a.faixas)}. ${a.pagina ? "ver página" : "ver no laço"}`}
               >
                 <Simbolo variante="anel" className={s.mini} />
                 <span className={s.nome}>{a.nome}</span>

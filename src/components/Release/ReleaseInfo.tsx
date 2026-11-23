@@ -6,6 +6,7 @@
 import type { Release } from "@/types";
 import { STREAMING } from "@/data/links";
 import { LinkDividido } from "@/components/LinkDividido/LinkDividido";
+import { Nomes } from "./Nomes";
 import s from "./ReleaseInfo.module.css";
 
 export const grade = s.grade;
@@ -39,7 +40,7 @@ export function ReleaseInfo({ r, player, idTitulo, nivel = "h2", entra = false }
       <div className={s.txt}>
         <span className="t-credit" {...e}>{r.num} · {r.quando}</span>
         <Titulo className="t-display" id={idTitulo} {...e}>{r.titulo}</Titulo>
-        {r.artistas && <p className={s.artistas} {...e}>{r.artistas}</p>}
+        {r.artistas && <p className={s.artistas} {...e}><Nomes texto={r.artistas} /></p>}
         {(r.faixas || r.selo) && (
           <p className="t-caption" {...e} style={{ margin: 0 }}>
             {[r.faixas && r.faixas > 1 ? `${r.faixas} faixas` : null, r.selo ? `℗ ${r.selo}` : null].filter(Boolean).join(" · ")}
@@ -65,7 +66,7 @@ export function ReleaseInfo({ r, player, idTitulo, nivel = "h2", entra = false }
           <span className="t-credit">créditos</span>
           <dl>
             {r.creditos.map((c) => (
-              <div key={c.papel + c.nome}><dt>{c.papel}</dt><dd>{c.nome}</dd></div>
+              <div key={c.papel + c.nome}><dt>{c.papel}</dt><dd><Nomes texto={c.nome} /></dd></div>
             ))}
           </dl>
         </aside>

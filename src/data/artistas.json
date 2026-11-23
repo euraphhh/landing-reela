@@ -1,132 +1,378 @@
 [
   {
     "nome": "raphh",
+    "slug": "raphh",
     "papel": "voz, beat, mix e master",
-    "faixas": 13
+    "faixas": 13,
+    "lancamentos": [
+      {
+        "id": "culpa-da-party",
+        "papel": "voz, beat, mix e master"
+      },
+      {
+        "id": "strngluv",
+        "papel": "voz, mix e master"
+      },
+      {
+        "id": "onde-ce-ta",
+        "papel": "voz, mix e master"
+      },
+      {
+        "id": "reesenha-3-nada-alem",
+        "papel": "voz, beat, mix e master"
+      },
+      {
+        "id": "te-vejo-longe",
+        "papel": "voz, mix e master"
+      },
+      {
+        "id": "role-remix",
+        "papel": "voz e mix"
+      },
+      {
+        "id": "coelha-ma",
+        "papel": "mix e master"
+      },
+      {
+        "id": "de-novo",
+        "papel": "voz, mix e master"
+      },
+      {
+        "id": "wave",
+        "papel": "voz, mix e master"
+      },
+      {
+        "id": "mentirosa",
+        "papel": "voz, mix e master"
+      },
+      {
+        "id": "amor-copos",
+        "papel": "voz e mix"
+      },
+      {
+        "id": "reesenha-1",
+        "papel": "beat, mix e master"
+      },
+      {
+        "id": "reesenha-pt-2-planos",
+        "papel": "voz, beat, mix e master"
+      }
+    ],
+    "pagina": true,
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/artist/19lC4M6sF80ef0mtU9rwYK"
+    }
   },
   {
     "nome": "prodbyeros",
+    "slug": "prodbyeros",
     "papel": "beat",
-    "faixas": 3
+    "faixas": 3,
+    "lancamentos": [
+      {
+        "id": "strngluv",
+        "papel": "beat"
+      },
+      {
+        "id": "onde-ce-ta",
+        "papel": "beat"
+      },
+      {
+        "id": "coelha-ma",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "Krys",
+    "slug": "krys",
     "papel": "voz, mix e master",
-    "faixas": 2
+    "faixas": 2,
+    "lancamentos": [
+      {
+        "id": "coelha-ma",
+        "papel": "voz"
+      },
+      {
+        "id": "de-novo",
+        "papel": "voz, mix e master"
+      }
+    ]
   },
   {
     "nome": "acoustc",
+    "slug": "acoustc",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "amor-copos",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "Aionn",
+    "slug": "aionn",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-3-nada-alem",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "Astral Oficial",
+    "slug": "astral-oficial",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-pt-2-planos",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "Cyclop Beats",
+    "slug": "cyclop-beats",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "wave",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "David Tamas",
+    "slug": "david-tamas",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "te-vejo-longe",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "ÉoPeaga",
+    "slug": "eopeaga",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "strngluv",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "Gringoo",
+    "slug": "gringoo",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "te-vejo-longe",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "LX",
+    "slug": "lx",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "role-remix",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "M4relli",
+    "slug": "m4relli",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-3-nada-alem",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "Mika Mc",
+    "slug": "mika-mc",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-3-nada-alem",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "Morgana",
+    "slug": "morgana",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-pt-2-planos",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "Ninez",
+    "slug": "ninez",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "strngluv",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "OUHBOY",
+    "slug": "ouhboy",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "te-vejo-longe",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "R-ASH Beats",
+    "slug": "r-ash-beats",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "mentirosa",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "Ramos Bt",
+    "slug": "ramos-bt",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-3-nada-alem",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "SilentSyndicate",
+    "slug": "silentsyndicate",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "strngluv",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "Steif",
+    "slug": "steif",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "amor-copos",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "T'H",
+    "slug": "t-h",
     "papel": "voz, beat e mix",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "role-remix",
+        "papel": "voz, beat e mix"
+      }
+    ]
   },
   {
     "nome": "Taiga",
+    "slug": "taiga",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-pt-2-planos",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "Tkd",
+    "slug": "tkd",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "coelha-ma",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "V-empire",
+    "slug": "v-empire",
     "papel": "beat",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "de-novo",
+        "papel": "beat"
+      }
+    ]
   },
   {
     "nome": "Victor Winner",
+    "slug": "victor-winner",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-pt-2-planos",
+        "papel": "voz"
+      }
+    ]
   },
   {
     "nome": "W$ MC",
+    "slug": "w-mc",
     "papel": "voz",
-    "faixas": 1
+    "faixas": 1,
+    "lancamentos": [
+      {
+        "id": "reesenha-pt-2-planos",
+        "papel": "voz"
+      }
+    ]
   }
 ]

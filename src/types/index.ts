@@ -34,8 +34,16 @@ export type Release = {
 
 export type Artista = {
   nome: string;
+  slug: string;
   papel: string;
   faixas: number;
+  /** o que a pessoa fez em cada lançamento (id do release) */
+  lancamentos: { id: string; papel: string }[];
+  /** tem página própria em /gente/<slug>/ */
+  pagina?: boolean;
+  foto?: string;
+  bio?: string;
+  links?: Partial<Record<"spotify" | "instagram" | "tiktok" | "youtube", string>>;
 };
 
 export type Tema = "madrugada" | "papel";

@@ -1,0 +1,14 @@
+{
+  "_obs": "dados extras por pessoa (nome igual ao dos créditos). só quem tem pagina: true ganha /gente/<slug>/. foto: caminho em /public (quadrada); sem foto, a página usa o mosaico das capas. bio: texto curto da própria pessoa.",
+  "raphh": {
+    "pagina": true,
+    "foto": "",
+    "bio": "",
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/artist/19lC4M6sF80ef0mtU9rwYK",
+      "instagram": "",
+      "tiktok": "",
+      "youtube": ""
+    }
+  }
+}

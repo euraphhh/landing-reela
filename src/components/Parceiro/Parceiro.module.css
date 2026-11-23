@@ -1,0 +1,10 @@
+.parceiro { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; min-height: 44px; }
+.txt { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; font: var(--t-credit-weight) var(--t-credit-size) / var(--t-credit-lh) var(--f-text); letter-spacing: var(--t-credit-ls); }
+.mudo { color: var(--muted); }
+.logo {
+  display: block; height: 40px; aspect-ratio: 650 / 805; background: currentColor;
+  -webkit-mask: url("/marca/symphonic.png") center / contain no-repeat;
+  mask: url("/marca/symphonic.png") center / contain no-repeat;
+}
+.grande .logo { height: 72px; }
+.grande .txt { font-size: 13px; line-height: 18px; }

@@ -6,6 +6,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { gsap, useGSAP, calmo } from "@/lib/gsap";
 import { Simbolo } from "@/components/marca/Simbolo";
+import { Parceiro } from "@/components/Parceiro/Parceiro";
 import { useScroll } from "@/components/providers/SmoothScroll";
 import { EV, emitir } from "@/lib/eventos";
 import s from "./Replay.module.css";
@@ -82,7 +83,10 @@ export function Replay() {
         <span className="t-caption" aria-hidden="true">ou continua descendo.</span>
       </div>
       <footer className={s.rodape}>
-        <span className="t-credit">© {new Date().getFullYear()} reela music · distribuição symphonic</span>
+        <span style={{ display: "flex", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
+          <Parceiro />
+          <span className="t-credit">© {new Date().getFullYear()} reela music</span>
+        </span>
         <span className="t-credit" style={{ display: "flex", gap: 16, alignItems: "center" }}>
           <a href="/privacidade/" className="lnk-rodape">privacidade</a>
           são josé dos campos, sp

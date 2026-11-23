@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Casca, Rodape } from "@/components/Casca/Casca";
 import { EMAIL_HREF } from "@/data/links";
+import { Parceiro } from "@/components/Parceiro/Parceiro";
 import s from "./como-funciona.module.css";
 
 export const metadata: Metadata = {
@@ -67,6 +68,7 @@ export default function ComoFunciona() {
             </div>
             <p>na maioria das vezes é split de royalties: 60% pra você, 40% pra reela. o combinado fica no contrato antes do primeiro play.</p>
             <p>a faixa sai pela reela, com distribuição da symphonic. não tem lançamento por conta própria: a gente cuida da entrega e você cuida da música.</p>
+            <Parceiro grande />
           </div>
         </section>
 

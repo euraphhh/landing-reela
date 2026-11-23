@@ -13,6 +13,7 @@ const ler = (p) => JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), 
 const { lancamentos } = ler("docs/dados/lancamentos.json");
 const { _obs, ...creditos } = ler("docs/dados/creditos.json");
 const proximos = ler("docs/dados/proximos.json").map(({ _obs, ...r }) => r);
+const { _obs: _o2, ...pessoas } = ler("docs/dados/pessoas.json");
 
 const slug = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const CINZAS = [["#3a3a3a", "#0a0a0a"], ["#2b2b2b", "#080808"], ["#474747", "#0d0d0d"], ["#333333", "#060606"]];
@@ -73,23 +74,47 @@ const releases = ordenados.map((l, i) => {
 });
 
 // quem passou: cada pessoa, com os papéis que teve e em quantos lançamentos
+// 1ª passada: quem canta em algum lançamento (artista ali sem ser o beatmaker, ou artista declarado nos créditos)
+const cantores = new Set();
+for (const l of base) {
+  const c = creditos[l.titulo] ?? {};
+  for (const n of artistasDe(l)) if (!(c.beat ?? []).includes(n) || (c.artistas ?? []).includes(n)) cantores.add(n);
+}
+cantores.add("T'H"); // canta no Rolê (Remix), além de produzir (raphh, 2026-11-23)
 const gente = new Map();
 const marcar = (nome, papel, titulo) => {
   if (["REELA Music", "Vários intérpretes", "vários artistas"].includes(nome)) return;
-  const g = gente.get(nome) ?? { papeis: new Set(), titulos: new Set() };
-  g.papeis.add(papel); g.titulos.add(titulo); gente.set(nome, g);
+  const g = gente.get(nome) ?? { papeis: new Set(), titulos: new Set(), por: new Map() };
+  g.papeis.add(papel); g.titulos.add(titulo);
+  g.por.set(titulo, (g.por.get(titulo) ?? new Set()).add(papel));
+  gente.set(nome, g);
 };
 for (const l of base) {
   const c = creditos[l.titulo] ?? {};
   for (const p of PAPEIS) for (const n of c[p] ?? []) marcar(n, p, l.titulo);
   for (const f of c.faixas ?? []) for (const p of PAPEIS) for (const n of f[p] ?? []) marcar(n, p, l.titulo);
-  // aparece como artista sem ser só o beatmaker da faixa → voz
-  for (const n of artistasDe(l)) if (!(c.beat ?? []).includes(n) || (c.artistas ?? []).includes(n) || n === "T'H") marcar(n, "voz", l.titulo);
+  // aparece como artista sem ser o beatmaker da faixa → voz (ou se já canta em outro lançamento: ver abaixo)
+  for (const n of artistasDe(l)) if (!(c.beat ?? []).includes(n) || (c.artistas ?? []).includes(n) || cantores.has(n)) marcar(n, "voz", l.titulo);
   for (const n of artistasDe(l)) gente.get(n)?.titulos.add(l.titulo);
 }
 const ORDEM = ["voz", ...PAPEIS];
 const artistas = [...gente.entries()]
-  .map(([nome, g]) => ({ nome, papel: lista(ORDEM.filter((p) => g.papeis.has(p))), faixas: g.titulos.size }))
+  .map(([nome, g]) => {
+    const extra = pessoas[nome] ?? {};
+    const links = Object.fromEntries(Object.entries(extra.links ?? {}).filter(([, v]) => v));
+    return {
+      nome,
+      slug: slug(nome),
+      papel: lista(ORDEM.filter((p) => g.papeis.has(p))),
+      faixas: g.titulos.size,
+      // o que fez em cada lançamento, na ordem do laço
+      lancamentos: releases.filter((r) => g.titulos.has(r.titulo)).map((r) => ({ id: r.id, papel: lista(ORDEM.filter((p) => g.por.get(r.titulo)?.has(p))) })),
+      ...(extra.pagina ? { pagina: true } : {}),
+      ...(extra.foto ? { foto: extra.foto } : {}),
+      ...(extra.bio ? { bio: extra.bio } : {}),
+      ...(Object.keys(links).length ? { links } : {}),
+    };
+  })
   .sort((a, b) => b.faixas - a.faixas || a.nome.localeCompare(b.nome, "pt"));
 
 writeFileSync(new URL("../src/data/releases.json", import.meta.url), JSON.stringify([...proximos, ...releases], null, 2) + "\n");

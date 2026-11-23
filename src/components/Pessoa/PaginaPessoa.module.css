@@ -1,0 +1,33 @@
+.pagina { padding: 84px var(--gutter) 28px; display: flex; flex-direction: column; gap: 72px; }
+.volta { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; font-size: 14px; text-decoration: none; }
+.volta:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+.topo { display: grid; grid-template-columns: minmax(0, 1fr) min(44vw, 620px); gap: clamp(32px, 5vw, 80px); align-items: end; }
+.quem { display: flex; flex-direction: column; gap: 22px; }
+.nome { margin: 0; font: 300 clamp(72px, 13vw, 200px) / 0.86 var(--f-display); overflow-wrap: anywhere; }
+.papel { margin: 0; font: 300 clamp(22px, 2.4vw, 32px) / 1.2 var(--f-display); color: var(--muted); }
+.bio { margin: 0; max-width: 52ch; }
+.redes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+
+/* sem foto: o retrato é o mosaico das capas */
+.mosaico { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; aspect-ratio: 1 / 1; overflow: hidden; }
+.mosaico[data-n="1"] { grid-template-columns: 1fr; }
+.mosaico[data-n="2"], .mosaico[data-n="3"], .mosaico[data-n="4"] { grid-template-columns: repeat(2, 1fr); }
+.foto { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+.bloco { display: flex; flex-direction: column; gap: 28px; border-top: 1px solid var(--line); padding-top: 32px; }
+.player { width: 100%; max-width: 720px; height: 352px; border: 0; border-radius: 12px; background: var(--raised); }
+
+.grade { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 32px 24px; }
+.card { display: flex; flex-direction: column; gap: 8px; text-decoration: none; }
+.capa { transition: transform 0.45s var(--ease); }
+.card:hover .capa, .card:focus-visible .capa { transform: scale(1.03); }
+.card strong { font: 300 22px / 1.15 var(--f-display); overflow-wrap: anywhere; }
+.card:hover strong { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+@media (max-width: 860px) {
+  .topo { grid-template-columns: 1fr; }
+  .mosaico, .foto { width: min(100%, 420px); }
+  .grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+  .card strong { font-size: 18px; }
+}

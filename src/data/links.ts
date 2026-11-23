@@ -8,10 +8,24 @@ export const STREAMING: { id: Plataforma; nome: string; href: string }[] = [
   { id: "tiktok", nome: "tiktok", href: "#" },
 ];
 
-/** endereço assumido: depende do domínio reelamusic.com */
+/**
+ * ATENÇÃO: endereço ainda NÃO existe (sem domínio em 2026-11-23). Até o domínio e a caixa
+ * existirem, quem mandar vai receber erro de entrega. Troque aqui quando o endereço for criado.
+ */
 export const EMAIL = "contato@reelamusic.com";
-/** troque por `mailto:${EMAIL}` quando o endereço existir */
-export const EMAIL_HREF = "#";
+
+const ASSUNTO = "faixa pra reela";
+const CORPO = [
+  "nome artístico:",
+  "link da demo ou do pré-mix:",
+  "@ (instagram / tiktok):",
+  "o que você precisa (beat, mix, master, arte):",
+  "",
+  "conta um pouco da faixa:",
+].join("\n");
+
+/** abre o e-mail já com assunto e roteiro */
+export const EMAIL_HREF = `mailto:${EMAIL}?subject=${encodeURIComponent(ASSUNTO)}&body=${encodeURIComponent(CORPO)}`;
 
 /** selo "protótipo · dados em revisão". desligue quando os dados reais entrarem. */
 export const MOSTRAR_SELO_PROTOTIPO = true;

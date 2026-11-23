@@ -1,7 +1,7 @@
 .barra {
   position: fixed; inset: 0 0 auto 0; z-index: 90;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  padding: 14px var(--gutter); color: var(--ink); pointer-events: none;
+  padding: 14px var(--gutter); pointer-events: none;
 }
 .barra > * { pointer-events: auto; }
 
@@ -12,11 +12,9 @@
 .lockup :global(.sym) { width: 34px; height: 34px; }
 
 .nav { display: flex; align-items: center; gap: 4px; padding: 4px; }
-/* sobre o wordmark gigante: a barra continua transparente e inverte onde encosta nas letras
-   (branco + difference = cor do fundo sobre as letras, cor da tinta sobre o fundo, nos dois temas) */
-.naMarca { color: #fff; mix-blend-mode: difference; }
-/* antes do JS, em página com o wordmark: já começa invertendo */
-:global(body:has(#marca)) .barra:not([data-placa]) { color: #fff; mix-blend-mode: difference; }
+/* a barra é sempre transparente e inverte onde encosta em qualquer coisa: o wordmark, um título, uma capa.
+   branco + difference = cor da tinta sobre o fundo e a cor contrária sobre o conteúdo, nos dois temas. */
+.barra { color: #fff; mix-blend-mode: difference; }
 
 .nav a, .nav button {
   min-height: 44px; padding: 0 12px; display: inline-flex; align-items: center;

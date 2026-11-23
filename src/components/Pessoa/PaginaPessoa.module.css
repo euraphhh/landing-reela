@@ -13,8 +13,14 @@
 .mosaico { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; aspect-ratio: 1 / 1; overflow: hidden; }
 .mosaico[data-n="1"] { grid-template-columns: 1fr; }
 .mosaico[data-n="2"], .mosaico[data-n="3"], .mosaico[data-n="4"] { grid-template-columns: repeat(2, 1fr); }
-.foto { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.foto { width: 100%; aspect-ratio: 549 / 640; object-fit: cover; object-position: 50% 30%; }
 
+.numeros { display: flex; flex-direction: column; gap: 16px; border-top: 1px solid var(--line); padding-top: 32px; }
+.numeros dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; }
+.numeros dt { font: var(--t-credit-weight) var(--t-credit-size) / var(--t-credit-lh) var(--f-text); letter-spacing: var(--t-credit-ls); color: var(--muted); order: 2; }
+.numeros dl > div { display: flex; flex-direction: column; gap: 8px; }
+.numeros dd { margin: 0; font: 300 clamp(32px, 3.6vw, 52px) / 1 var(--f-display); white-space: nowrap; }
+.numeros p { margin: 0; }
 .bloco { display: flex; flex-direction: column; gap: 28px; border-top: 1px solid var(--line); padding-top: 32px; }
 .player { width: 100%; max-width: 720px; height: 352px; border: 0; border-radius: 12px; background: var(--raised); }
 
@@ -28,6 +34,7 @@
 @media (max-width: 860px) {
   .topo { grid-template-columns: 1fr; }
   .mosaico, .foto { width: min(100%, 420px); }
+  .numeros dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
   .card strong { font-size: 18px; }
 }

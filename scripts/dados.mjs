@@ -10,7 +10,8 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
 const ler = (p) => JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), "utf8"));
-const { lancamentos } = ler("docs/dados/lancamentos.json");
+const { lancamentos, _fonte } = ler("docs/dados/lancamentos.json");
+const DATA_STREAMS = (_fonte.match(/\d{4}-\d{2}-\d{2}/) ?? [""])[0];
 const { _obs, ...creditos } = ler("docs/dados/creditos.json");
 const proximos = ler("docs/dados/proximos.json").map(({ _obs, ...r }) => r);
 const { _obs: _o2, ...pessoas } = ler("docs/dados/pessoas.json");
@@ -101,6 +102,13 @@ const ORDEM = ["voz", ...PAPEIS];
 const artistas = [...gente.entries()]
   .map(([nome, g]) => {
     const extra = pessoas[nome] ?? {};
+    // plays públicos no Spotify: soma das faixas "populares" (piso, não total) em que a pessoa está
+    const plays = liberados.reduce((t, l) => {
+      if (typeof l.streams !== "number") return t;
+      const c = creditos[l.titulo.replace(speed, "")] ?? creditos[l.titulo] ?? {};
+      const nomes = new Set([...(l.artistas ?? []), ...(c.artistas ?? []), ...PAPEIS.flatMap((p) => c[p] ?? []), ...(c.faixas ?? []).flatMap((f) => PAPEIS.flatMap((p) => f[p] ?? []))]);
+      return nomes.has(nome) ? t + l.streams : t;
+    }, 0); // só lançamentos liberados da reela; faixas soltas sem álbum confirmado ficam fora
     const links = Object.fromEntries(Object.entries(extra.links ?? {}).filter(([, v]) => v));
     return {
       nome,
@@ -112,6 +120,9 @@ const artistas = [...gente.entries()]
       ...(extra.pagina ? { pagina: true } : {}),
       ...(extra.foto ? { foto: extra.foto } : {}),
       ...(extra.bio ? { bio: extra.bio } : {}),
+      ...(extra.titulo ? { titulo: extra.titulo } : {}),
+      ...(extra.funcoes ? { funcoes: extra.funcoes } : {}),
+      ...(plays ? { plays: { spotify: plays, em: DATA_STREAMS } } : {}),
       ...(Object.keys(links).length ? { links } : {}),
     };
   })

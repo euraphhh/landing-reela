@@ -59,6 +59,14 @@
       }
     ],
     "pagina": true,
+    "foto": "/gente/raphh.jpg",
+    "bio": "um dos fundadores da reela. canta, produz e fecha a mix e a master: está na mix de todos os lançamentos do selo, do primeiro reesenha ao culpa da party.",
+    "titulo": "um dos fundadores da reela",
+    "funcoes": "artista, produtor e engenheiro de mixagem",
+    "plays": {
+      "spotify": 71393,
+      "em": "2026-11-23"
+    },
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/artist/19lC4M6sF80ef0mtU9rwYK"
     }
@@ -81,7 +89,11 @@
         "id": "coelha-ma",
         "papel": "beat"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 39257,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "Krys",
@@ -97,7 +109,11 @@
         "id": "de-novo",
         "papel": "voz, mix e master"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 55874,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "acoustc",
@@ -133,7 +149,11 @@
         "id": "reesenha-pt-2-planos",
         "papel": "voz"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 2562,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "Cyclop Beats",
@@ -157,7 +177,11 @@
         "id": "te-vejo-longe",
         "papel": "beat"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 11690,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "ÉoPeaga",
@@ -181,7 +205,11 @@
         "id": "te-vejo-longe",
         "papel": "voz"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 11690,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "LX",
@@ -193,7 +221,11 @@
         "id": "role-remix",
         "papel": "voz"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 1267,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "M4relli",
@@ -229,7 +261,11 @@
         "id": "reesenha-pt-2-planos",
         "papel": "voz"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 2562,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "Ninez",
@@ -253,7 +289,11 @@
         "id": "te-vejo-longe",
         "papel": "beat"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 11690,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "R-ASH Beats",
@@ -313,7 +353,11 @@
         "id": "role-remix",
         "papel": "voz, beat e mix"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 1267,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "Taiga",
@@ -325,7 +369,11 @@
         "id": "reesenha-pt-2-planos",
         "papel": "voz"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 2562,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "Tkd",
@@ -337,7 +385,11 @@
         "id": "coelha-ma",
         "papel": "beat"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 39257,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "V-empire",
@@ -349,7 +401,11 @@
         "id": "de-novo",
         "papel": "beat"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 16617,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "Victor Winner",
@@ -361,7 +417,11 @@
         "id": "reesenha-pt-2-planos",
         "papel": "voz"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 2562,
+      "em": "2026-11-23"
+    }
   },
   {
     "nome": "W$ MC",
@@ -373,6 +433,10 @@
         "id": "reesenha-pt-2-planos",
         "papel": "voz"
       }
-    ]
+    ],
+    "plays": {
+      "spotify": 2562,
+      "em": "2026-11-23"
+    }
   }
 ]

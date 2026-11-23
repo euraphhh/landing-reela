@@ -29,6 +29,14 @@ export function PaginaPessoa({ a }: { a: Artista }) {
   const capas = lancs.map((l) => l.r).filter((r) => r.capa).slice(0, 9);
   const player = embedArtista(a.links?.spotify);
   const n = a.faixas;
+  // quantos lançamentos com cada função (a partir dos créditos)
+  const em = (p: string) => lancs.filter((l) => l.papel.split(/, | e /).includes(p)).length;
+  const numeros = [
+    { v: String(n), rot: n > 1 ? "lançamentos com a reela" : "lançamento com a reela" },
+    ...(a.plays ? [{ v: `${Math.floor(a.plays.spotify / 1000)} mil+`, rot: "plays no spotify*" }] : []),
+    ...["voz", "beat", "mix", "master"].map((p) => ({ v: String(em(p)), rot: `com ${p}` })).filter((x) => x.v !== "0"),
+  ];
+  const dataPlays = a.plays?.em.split("-").reverse().join("/");
 
   return (
     <Casca>
@@ -37,9 +45,9 @@ export function PaginaPessoa({ a }: { a: Artista }) {
 
         <header className={s.topo}>
           <div className={s.quem}>
-            <span className="t-credit">quem passou · {n} {n > 1 ? "lançamentos" : "lançamento"} com a reela</span>
+            <span className="t-credit">{a.titulo ?? "quem passou"}</span>
             <h1 className={s.nome}>{a.nome}</h1>
-            <p className={s.papel}>{a.papel}</p>
+            <p className={s.papel}>{a.funcoes ?? a.papel}</p>
             {a.bio && <p className={s.bio}>{a.bio}</p>}
             {a.links && (
               <ul className={s.redes} aria-label={`${a.nome} nas plataformas`}>
@@ -57,6 +65,17 @@ export function PaginaPessoa({ a }: { a: Artista }) {
             </div>
           )}
         </header>
+
+        <section className={s.numeros} aria-label="em números">
+          <dl>
+            {numeros.map((x) => (
+              <div key={x.rot}><dt>{x.rot}</dt><dd>{x.v}</dd></div>
+            ))}
+          </dl>
+          {a.plays && (
+            <p className="t-caption">* soma das faixas populares no Spotify em {dataPlays}, só lançamentos da reela. é um piso: o total real é maior.</p>
+          )}
+        </section>
 
         {player && (
           <section className={s.bloco} aria-labelledby="p-ouvir">

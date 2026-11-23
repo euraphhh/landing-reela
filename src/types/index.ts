@@ -43,6 +43,12 @@ export type Artista = {
   pagina?: boolean;
   foto?: string;
   bio?: string;
+  /** "um dos fundadores da reela" */
+  titulo?: string;
+  /** texto livre das funções; sem ele, vem dos créditos */
+  funcoes?: string;
+  /** soma pública das faixas populares no Spotify (piso) e a data da contagem */
+  plays?: { spotify: number; em: string };
   links?: Partial<Record<"spotify" | "instagram" | "tiktok" | "youtube", string>>;
 };
 

@@ -1,14 +1,17 @@
 {
-  "_obs": "dados extras por pessoa (nome igual ao dos créditos). só quem tem pagina: true ganha /gente/<slug>/. foto: caminho em /public (quadrada); sem foto, a página usa o mosaico das capas. bio: texto curto da própria pessoa.",
+  "_obs": "dados extras por pessoa (nome igual ao dos créditos). só quem tem pagina: true ganha /gente/<slug>/. foto: caminho em /public (quadrada); sem foto, a página usa o mosaico das capas. bio: texto curto da própria pessoa. titulo e funcoes: o que aparece no topo da página (sem eles, as funções vêm dos créditos).",
   "raphh": {
     "pagina": true,
-    "foto": "",
-    "bio": "",
+    "foto": "/gente/raphh.jpg",
+    "bio": "um dos fundadores da reela. canta, produz e fecha a mix e a master: está na mix de todos os lançamentos do selo, do primeiro reesenha ao culpa da party.",
     "links": {
       "spotify": "https://open.spotify.com/intl-pt/artist/19lC4M6sF80ef0mtU9rwYK",
       "instagram": "",
       "tiktok": "",
       "youtube": ""
-    }
+    },
+    "_foto_fonte": "foto do perfil de artista no Spotify (oEmbed), 640px, baixada em 2026-11-23",
+    "titulo": "um dos fundadores da reela",
+    "funcoes": "artista, produtor e engenheiro de mixagem"
   }
 }

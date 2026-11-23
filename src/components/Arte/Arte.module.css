@@ -14,6 +14,6 @@
 .lock { position: absolute; left: 8cqw; bottom: 7cqw; display: flex; align-items: center; gap: 1.6cqw; font: 300 7cqw / 1 var(--f-display); }
 .lock :global(.sym) { width: 7cqw; height: 7cqw; }
 .lock i { font-style: normal; color: var(--music); margin-left: 0.28em; }
-.titulo { position: absolute; left: 8cqw; right: 8cqw; top: 9cqw; font: 300 15cqw / 1 var(--f-display); text-wrap: balance; }
+.titulo { position: absolute; left: 8cqw; right: 8cqw; top: 9cqw; font: 300 13cqw / 1 var(--f-display); text-wrap: balance; }
 .ano { position: absolute; left: 8cqw; bottom: 8cqw; font: 500 6cqw / 1 var(--f-text); letter-spacing: 0.04em; opacity: 0.8; }
 .forma { position: absolute; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.14); width: 90cqw; height: 90cqw; left: 30cqw; top: 62cqw; filter: blur(2px); }

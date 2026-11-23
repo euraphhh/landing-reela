@@ -1,0 +1,19 @@
+.detalhe {
+  position: fixed; inset: 0; z-index: 130; background: var(--ground);
+  display: grid; grid-template-columns: auto 1fr; gap: clamp(24px, 5vw, 80px); align-items: center;
+  padding: 80px var(--gutter) 40px; overflow: auto; overscroll-behavior: contain;
+}
+.detalhe[hidden] { display: none; }
+.arte { height: min(78svh, 820px); width: auto; }
+.txt { display: flex; flex-direction: column; gap: 24px; max-width: 560px; }
+.artistas { margin: 0; font-weight: 500; }
+.links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.sl { font-size: clamp(24px, 2.6vw, 36px) !important; }
+.voltar {
+  position: fixed; top: 14px; right: var(--gutter); z-index: 131; min-height: 44px; padding: 0 14px;
+  font-weight: 500; border: 1px solid var(--line); background: var(--ground);
+}
+@media (max-width: 760px) {
+  .detalhe { grid-template-columns: 1fr; align-items: start; }
+  .arte { height: auto; width: min(70vw, 320px); }
+}

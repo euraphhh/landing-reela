@@ -120,6 +120,38 @@
     }
   },
   {
+    "nome": "Espon",
+    "slug": "espon",
+    "papel": "voz",
+    "faixas": 2,
+    "lancamentos": [
+      {
+        "id": "surtada",
+        "papel": "voz"
+      },
+      {
+        "id": "os-meus",
+        "papel": "voz"
+      }
+    ]
+  },
+  {
+    "nome": "Luwih",
+    "slug": "luwih",
+    "papel": "voz",
+    "faixas": 2,
+    "lancamentos": [
+      {
+        "id": "surtada",
+        "papel": "voz"
+      },
+      {
+        "id": "os-meus",
+        "papel": "voz"
+      }
+    ]
+  },
+  {
     "nome": "acoustc",
     "slug": "acoustc",
     "papel": "beat",

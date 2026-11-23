@@ -1,7 +1,7 @@
 [
   {
     "id": "culpa-da-party",
-    "num": "A15",
+    "num": "A17",
     "titulo": "CULPA DA PARTY",
     "artistas": "raphh",
     "quando": "ep · 2026",
@@ -27,7 +27,7 @@
   },
   {
     "id": "strngluv",
-    "num": "A14",
+    "num": "A16",
     "titulo": "strngluv!",
     "artistas": "raphh",
     "quando": "ep · 2025",
@@ -70,7 +70,7 @@
   },
   {
     "id": "onde-ce-ta",
-    "num": "A13",
+    "num": "A15",
     "titulo": "ONDE CÊ TÁ?",
     "artistas": "raphh",
     "quando": "single · 2025",
@@ -100,7 +100,7 @@
   },
   {
     "id": "girly",
-    "num": "A12",
+    "num": "A14",
     "titulo": "GIRLY",
     "artistas": "Krys",
     "quando": "single · 2025",
@@ -131,7 +131,7 @@
   },
   {
     "id": "nin",
-    "num": "A11",
+    "num": "A13",
     "titulo": "NIN@",
     "artistas": "Calebb",
     "quando": "single · 2024",
@@ -162,7 +162,7 @@
   },
   {
     "id": "reesenha-3-nada-alem",
-    "num": "A10",
+    "num": "A12",
     "titulo": "REESENHA #3 (Nada Além)",
     "artistas": "M4relli, Ramos Bt, raphh, Aionn, Mika Mc",
     "quando": "single · 2024",
@@ -189,7 +189,7 @@
   },
   {
     "id": "te-vejo-longe",
-    "num": "A09",
+    "num": "A11",
     "titulo": "Te Vejo Longe",
     "artistas": "raphh, Gringoo",
     "quando": "single · 2023",
@@ -221,7 +221,7 @@
   },
   {
     "id": "role-remix",
-    "num": "A08",
+    "num": "A10",
     "titulo": "Rolê (Remix)",
     "artistas": "LX, T'H, raphh",
     "quando": "single · 2023",
@@ -253,7 +253,7 @@
   },
   {
     "id": "coelha-ma",
-    "num": "A07",
+    "num": "A09",
     "titulo": "COELHA MÁ",
     "artistas": "Krys, prodbyeros, Tkd",
     "quando": "single · 2023",
@@ -291,7 +291,7 @@
   },
   {
     "id": "de-novo",
-    "num": "A06",
+    "num": "A08",
     "titulo": "DE NOVO",
     "artistas": "Krys, raphh",
     "quando": "single · 2023",
@@ -328,6 +328,48 @@
     ]
   },
   {
+    "id": "surtada",
+    "num": "A07",
+    "titulo": "Surtada",
+    "artistas": "Luwih, Espon",
+    "quando": "single · 2023",
+    "ano": "2023",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "",
+    "creditos": [],
+    "cor": [
+      "#474747",
+      "#0d0d0d"
+    ],
+    "capa": "/capas/surtada.jpg",
+    "capaP": "/capas/surtada-320.jpg",
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/track/5opCvBuYyqiOE8ww8PYzO9"
+    }
+  },
+  {
+    "id": "os-meus",
+    "num": "A06",
+    "titulo": "Os Meus",
+    "artistas": "Espon, Luwih",
+    "quando": "single · 2023",
+    "ano": "2023",
+    "tipo": "Single",
+    "faixas": 1,
+    "selo": "",
+    "creditos": [],
+    "cor": [
+      "#333333",
+      "#060606"
+    ],
+    "capa": "/capas/os-meus.jpg",
+    "capaP": "/capas/os-meus-320.jpg",
+    "links": {
+      "spotify": "https://open.spotify.com/intl-pt/track/5KpT5OlTwern0nPKcXbIW6"
+    }
+  },
+  {
     "id": "wave",
     "num": "A05",
     "titulo": "Wave",
@@ -348,8 +390,8 @@
       }
     ],
     "cor": [
-      "#474747",
-      "#0d0d0d"
+      "#3a3a3a",
+      "#0a0a0a"
     ],
     "capa": "/capas/wave.jpg",
     "capaP": "/capas/wave-320.jpg",
@@ -378,8 +420,8 @@
       }
     ],
     "cor": [
-      "#333333",
-      "#060606"
+      "#2b2b2b",
+      "#080808"
     ],
     "capa": "/capas/mentirosa.jpg",
     "capaP": "/capas/mentirosa-320.jpg",
@@ -409,8 +451,8 @@
       }
     ],
     "cor": [
-      "#3a3a3a",
-      "#0a0a0a"
+      "#474747",
+      "#0d0d0d"
     ],
     "capa": "/capas/amor-copos.jpg",
     "capaP": "/capas/amor-copos-320.jpg",
@@ -435,8 +477,8 @@
       }
     ],
     "cor": [
-      "#2b2b2b",
-      "#080808"
+      "#333333",
+      "#060606"
     ],
     "capa": "/capas/reesenha-1.jpg",
     "capaP": "/capas/reesenha-1-320.jpg",
@@ -461,8 +503,8 @@
       }
     ],
     "cor": [
-      "#474747",
-      "#0d0d0d"
+      "#3a3a3a",
+      "#0a0a0a"
     ],
     "capa": "/capas/reesenha-pt-2-planos.jpg",
     "capaP": "/capas/reesenha-pt-2-planos-320.jpg",

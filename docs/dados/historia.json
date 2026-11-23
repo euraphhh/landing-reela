@@ -1,12 +1,14 @@
 {
   "_obs": "texto da página /story/. o que ficar vazio não aparece (a página mostra só os fatos que vêm dos dados). escreva no tom da marca: caixa baixa, frases curtas, madrugada.",
-  "intro": "",
+  "intro": "começou numa madrugada de novembro de 2021, com uma música postada. a ideia era agenciar um grupo de artistas que ainda nem existia.",
   "anos": {
-    "2022": "",
-    "2023": "",
-    "2024": "",
-    "2025": "",
-    "2026": ""
+    "2021": "30 de novembro. o raphh posta VLONE, a primeira. pouco depois, o Cauã entra como sócio. o grupo ainda não existia: a ideia era montar um.",
+    "2022": "as primeiras gravações viram lançamento. os reesenhas colocam muita gente na mesma faixa, e o coletivo começa a ganhar forma.",
+    "2023": "o ano que mais saiu música. a formação: raphh, Krys, Gringoo, Luwih e Espon.",
+    "2024": "algumas saídas no grupo. ainda assim, a faixa continuou saindo.",
+    "2025": "ainda sai coisa nova. depois, um hiato.",
+    "2026": "a reela volta repaginada, do jeito que precisava voltar."
   },
-  "fim": ""
+  "fim": "começou com uma música postada de madrugada. volta do mesmo jeito: uma faixa de cada vez.",
+  "_fonte": "história contada pelo raphh em 2026-11-23."
 }

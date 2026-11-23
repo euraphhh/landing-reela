@@ -171,6 +171,38 @@
       "spotify": "https://open.spotify.com/intl-pt/album/6CRLGAg6tyToSjri0NDSes"
     },
     {
+      "titulo": "Surtada",
+      "tipo": "Single",
+      "ano": 2023,
+      "data": "2023-04-20",
+      "faixas": 1,
+      "selo": "",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "Luwih",
+        "Espon"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/track/5opCvBuYyqiOE8ww8PYzO9",
+      "_obs": "adicionado à mão (raphh, 2026-11-23). ℗ e créditos a confirmar."
+    },
+    {
+      "titulo": "Os Meus",
+      "tipo": "Single",
+      "ano": 2023,
+      "data": "2023-02-23",
+      "faixas": 1,
+      "selo": "",
+      "liberado": true,
+      "streams": null,
+      "artistas": [
+        "Espon",
+        "Luwih"
+      ],
+      "spotify": "https://open.spotify.com/intl-pt/track/5KpT5OlTwern0nPKcXbIW6",
+      "_obs": "adicionado à mão (raphh, 2026-11-23). ℗ e créditos a confirmar."
+    },
+    {
       "titulo": "Wave",
       "tipo": "Single",
       "ano": 2022,

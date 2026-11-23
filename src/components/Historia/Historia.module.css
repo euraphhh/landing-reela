@@ -11,6 +11,8 @@
 
 /* capítulo: trava na tela; cabeçalho em cima, capas passando embaixo */
 .capitulo { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; align-content: center; gap: clamp(24px, 5vh, 56px); padding: 96px 0 48px; border-top: 1px solid var(--line); overflow: hidden; background: var(--ground); }
+/* capítulo só de texto (2021): mais baixo, sem vão escuro */
+.soTexto { min-height: 70svh; grid-template-rows: auto; align-content: center; }
 .cabCap { display: grid; grid-template-columns: auto minmax(0, 46ch); gap: clamp(24px, 4vw, 64px); align-items: end; justify-content: start; padding: 0 calc(var(--gutter) + 64px) 0 var(--gutter); }
 .ano { margin: 0; font: 300 clamp(88px, 15vw, 220px) / 0.82 var(--f-display); letter-spacing: -0.01em; }
 .fatos { display: flex; flex-direction: column; gap: 12px; padding-bottom: 12px; max-width: 46ch; }

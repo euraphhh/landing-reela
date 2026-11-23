@@ -19,19 +19,21 @@ import s from "./Historia.module.css";
 const lista = (xs: string[]) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} e ${xs.at(-1)}`);
 const anoDe = (id: string) => RELEASES.find((r) => r.id === id)?.ano ?? "9999";
 
-const ANOS = [...new Set(RELEASES.map((r) => r.ano!).filter(Boolean))].sort();
+// anos com lançamento + anos que só têm texto na história (2021: a vlone, antes do catálogo)
+const textos = historia.anos as Record<string, string>;
+const ANOS = [...new Set([...RELEASES.map((r) => r.ano!).filter(Boolean), ...Object.keys(textos).filter((k) => textos[k])])].sort();
 const CAPITULOS = ANOS.map((ano) => {
   const rels = RELEASES.filter((r) => r.ano === ano).reverse(); // dentro do ano, do mais antigo pro mais novo
   const novos = ARTISTAS.filter((a) => a.lancamentos.map((l) => anoDe(l.id)).sort()[0] === ano).map((a) => a.nome);
   // "REELA Music / REELA Studio" e "REELA Music GRAVACAO" viram nomes limpos, sem repetir
   const selos = [...new Set(rels.flatMap((r) => (r.selo ?? "").split(" / ")).map((x) => x.replace(/\s+GRAVA[CÇ][AÃ]O$/i, "").trim()).filter(Boolean))];
   const n = rels.length;
-  const fatos = [
+  const fatos = !n ? [] : [
     `${n} ${n > 1 ? "lançamentos" : "lançamento"}${selos.length ? `, com ℗ ${lista(selos)}` : ""}.`.replace(/\.\.$/, "."), // "nevermind." já termina em ponto
     // até 6 nomes; passando disso, "a, b, c, d, e, f e mais 3" (sem "e" repetido)
     novos.length ? `${novos.length > 1 ? "chegam" : "chega"} ${novos.length > 6 ? `${novos.slice(0, 6).join(", ")} e mais ${novos.length - 6}` : lista(novos)}.` : "",
   ].filter(Boolean);
-  const texto = (historia.anos as Record<string, string>)[ano] ?? "";
+  const texto = textos[ano] ?? "";
   return { ano, rels, fatos, texto };
 });
 const PLAYS = RELEASES.reduce((t, r) => t + (r.plays ?? 0), 0);
@@ -69,7 +71,13 @@ export function Historia() {
 
       // capítulos: trava, ano entra, texto acende, capas passam
       el.querySelectorAll<HTMLElement>("[data-capitulo]").forEach((cap) => {
-        const faixa = cap.querySelector<HTMLElement>("[data-faixa]")!;
+        const faixa = cap.querySelector<HTMLElement>("[data-faixa]");
+        if (!faixa) { // capítulo só de texto (2021)
+          gsap.timeline({ scrollTrigger: { trigger: cap, start: "top 80%", end: "top 25%", scrub: 0.6 } })
+            .from(cap.querySelector("[data-ano]"), { yPercent: 40, opacity: 0, duration: 0.5, ease: "power3.out" })
+            .from(cap.querySelectorAll("[data-fato]"), { y: 24, opacity: 0, duration: 0.4, stagger: 0.1, ease: "power2.out" }, "-=0.3");
+          return;
+        }
         const dist = () => Math.max(0, faixa.scrollWidth - faixa.clientWidth);
         // entra assim que o capítulo aparece (sem vão escuro antes da trava)
         gsap.timeline({ scrollTrigger: { trigger: cap, start: "top 80%", end: "top 15%", scrub: 0.6 } })
@@ -120,7 +128,7 @@ export function Historia() {
       </header>
 
       {CAPITULOS.map((c) => (
-        <section key={c.ano} className={s.capitulo} data-capitulo aria-labelledby={`h-${c.ano}`}>
+        <section key={c.ano} className={`${s.capitulo} ${c.rels.length ? "" : s.soTexto}`} data-capitulo aria-labelledby={`h-${c.ano}`}>
           <div className={s.cabCap}>
             <h2 className={s.ano} id={`h-${c.ano}`} data-ano>{c.ano}</h2>
             <div className={s.fatos}>
@@ -128,7 +136,7 @@ export function Historia() {
               {c.fatos.map((f) => <p key={f} className="t-caption" data-fato>{f}</p>)}
             </div>
           </div>
-          <ul className={s.faixa} data-faixa>
+          {c.rels.length > 0 && <ul className={s.faixa} data-faixa>
             {c.rels.map((r) => (
               <li key={r.id}>
                 <a href={`/releases/${r.id}/`} className={s.card}>
@@ -139,7 +147,7 @@ export function Historia() {
                 </a>
               </li>
             ))}
-          </ul>
+          </ul>}
         </section>
       ))}
 

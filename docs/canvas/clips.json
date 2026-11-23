@@ -9,11 +9,32 @@
       "release": "nin"
     },
     {
+      "id": "de-novo-transito",
+      "arquivo": "vidssave.com Krys, raphh - DE NOVO 💔 480P.mp4",
+      "inicio": 48,
+      "duracao": 6,
+      "release": "de-novo"
+    },
+    {
       "id": "nin-danca",
       "arquivo": "vidssave.com CALEBB - NIN@ 🎸 480P.mp4",
       "inicio": 96,
       "duracao": 7,
       "release": "nin"
+    },
+    {
+      "id": "de-novo-cidade",
+      "arquivo": "vidssave.com Krys, raphh - DE NOVO 💔 480P.mp4",
+      "inicio": 96,
+      "duracao": 7,
+      "release": "de-novo"
+    },
+    {
+      "id": "role-remix",
+      "arquivo": "vidssave.com lx & T'H feat. raphh - Rolê (Remix) 360P.mp4",
+      "inicio": 78,
+      "duracao": 6,
+      "release": "role-remix"
     },
     {
       "id": "nin-close",
@@ -23,28 +44,25 @@
       "release": "nin"
     },
     {
-      "id": "te-vejo-longe",
-      "arquivo": "vidssave.com raphh & Gringoo - Te Vejo Longe 💁_♀️ 720P.mp4",
-      "duracao": 8,
-      "release": "te-vejo-longe",
-      "usar": false,
-      "_por_que": "emoji parado sobre amarelo: quase sem movimento"
+      "id": "de-novo-corrida",
+      "arquivo": "vidssave.com Krys, raphh - DE NOVO 💔 480P.mp4",
+      "inicio": 30,
+      "duracao": 6,
+      "release": "de-novo"
     },
     {
       "id": "reesenha-3",
       "arquivo": "vidssave.com REESENHA 3 - Nada Além 💞 _ M4relli, Mika MC, Aionn, raphh & Ramoss 720P.mp4",
-      "duracao": 8,
-      "release": "reesenha-3-nada-alem",
-      "usar": false,
-      "_por_que": "logo 'Nada Além' parado: briga com o wordmark"
+      "inicio": 60,
+      "duracao": 6,
+      "release": "reesenha-3-nada-alem"
     },
     {
-      "id": "role-remix",
-      "arquivo": "vidssave.com lx & T'H feat. raphh - Rolê (Remix) 360P.mp4",
-      "duracao": 8,
-      "release": "role-remix",
-      "usar": false,
-      "_por_que": "letra legendada em quase todo quadro: texto no fundo"
+      "id": "te-vejo-longe",
+      "arquivo": "vidssave.com raphh & Gringoo - Te Vejo Longe 💁_♀️ 720P.mp4",
+      "inicio": 30,
+      "duracao": 6,
+      "release": "te-vejo-longe"
     }
   ]
 }

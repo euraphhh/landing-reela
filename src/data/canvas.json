@@ -6,15 +6,51 @@
     "release": "nin"
   },
   {
+    "id": "de-novo-transito",
+    "src": "/canvas/de-novo-transito.mp4",
+    "poster": "/canvas/de-novo-transito.jpg",
+    "release": "de-novo"
+  },
+  {
     "id": "nin-danca",
     "src": "/canvas/nin-danca.mp4",
     "poster": "/canvas/nin-danca.jpg",
     "release": "nin"
   },
   {
+    "id": "de-novo-cidade",
+    "src": "/canvas/de-novo-cidade.mp4",
+    "poster": "/canvas/de-novo-cidade.jpg",
+    "release": "de-novo"
+  },
+  {
+    "id": "role-remix",
+    "src": "/canvas/role-remix.mp4",
+    "poster": "/canvas/role-remix.jpg",
+    "release": "role-remix"
+  },
+  {
     "id": "nin-close",
     "src": "/canvas/nin-close.mp4",
     "poster": "/canvas/nin-close.jpg",
     "release": "nin"
+  },
+  {
+    "id": "de-novo-corrida",
+    "src": "/canvas/de-novo-corrida.mp4",
+    "poster": "/canvas/de-novo-corrida.jpg",
+    "release": "de-novo"
+  },
+  {
+    "id": "reesenha-3",
+    "src": "/canvas/reesenha-3.mp4",
+    "poster": "/canvas/reesenha-3.jpg",
+    "release": "reesenha-3-nada-alem"
+  },
+  {
+    "id": "te-vejo-longe",
+    "src": "/canvas/te-vejo-longe.mp4",
+    "poster": "/canvas/te-vejo-longe.jpg",
+    "release": "te-vejo-longe"
   }
 ]

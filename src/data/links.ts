@@ -19,7 +19,7 @@ const CORPO = [
   "nome artístico:",
   "link da demo ou do pré-mix:",
   "@ (instagram / tiktok):",
-  "o que você precisa (beat, mix, master, arte):",
+  "o que você precisa (beat, mix, master):",
   "",
   "conta um pouco da faixa:",
 ].join("\n");

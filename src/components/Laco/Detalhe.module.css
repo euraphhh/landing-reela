@@ -1,6 +1,9 @@
 .detalhe { position: fixed; inset: 0; z-index: 130; background: var(--ground); padding: 80px var(--gutter) 40px; overflow: auto; overscroll-behavior: contain; }
 .detalhe[hidden] { display: none; }
 .voltar {
-  position: fixed; top: 14px; right: var(--gutter); z-index: 131; min-height: 44px; padding: 0 14px;
-  font-weight: 500; border: 1px solid var(--line); background: var(--ground);
+  position: fixed; top: 14px; left: var(--gutter); z-index: 131; min-height: 44px; padding: 0 10px 0 4px;
+  display: inline-flex; align-items: center; gap: 12px; color: var(--ink, currentColor); background: none; border: 0;
 }
+.seta { font-size: 22px; line-height: 1; transition: transform .3s cubic-bezier(.22,1,.36,1); }
+.voltar:hover .seta { transform: translateX(-3px); }
+.logo { width: 28px; height: 28px; }

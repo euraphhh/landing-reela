@@ -17,7 +17,7 @@ export function PaginaRelease({ i }: { i: number }) {
     <Casca>
         <main id="content" tabIndex={-1} className={s.pagina}>
           <nav className={s.volta} aria-label="navegação do release">
-            <a href={`/?r=${r.id}#releases`}>← voltar ao laço</a>
+            <a href={`/?r=${r.id}#releases`} aria-label="voltar ao laço"><span aria-hidden="true">←</span></a>
           </nav>
           <article className={`${grade} ${s.release}`} aria-labelledby="r-tit">
             <div className={lugarCapa}><Arte r={r} sizes="(max-width: 760px) 70vw, 36vw" prioridade /></div>

@@ -6,6 +6,7 @@
 import { useImperativeHandle, useLayoutEffect, useRef, useState } from "react";
 import { gsap, Flip, EASE, calmo } from "@/lib/gsap";
 import { LACO as RELEASES } from "@/data"; // mesmos índices do laço
+import { Simbolo } from "@/components/marca/Simbolo";
 import { Arte } from "@/components/Arte/Arte";
 import { ReleaseInfo, grade, lugarCapa } from "@/components/Release/ReleaseInfo";
 import { useScroll } from "@/components/providers/SmoothScroll";
@@ -109,7 +110,10 @@ export function Detalhe({ ref }: { ref?: React.Ref<DetalheHandle> }) {
   const r = RELEASES[idx];
   return (
     <div ref={caixa} className={`${s.detalhe} ${grade}`} hidden={!aberto} role="dialog" aria-modal="true" aria-labelledby="d-tit">
-      <button ref={voltar} className={s.voltar} type="button" onClick={() => fechar()}>voltar ao laço</button>
+      <button ref={voltar} className={s.voltar} type="button" onClick={() => fechar()} aria-label="voltar ao laço">
+        <span aria-hidden="true" className={s.seta}>←</span>
+        <Simbolo variante="small" className={s.logo} />
+      </button>
       {/* a caixa segura o lugar da capa: durante o Flip a arte fica absolute e o texto não pode escorregar */}
       <div className={lugarCapa}>
         <Arte r={r} ref={arte} data-flip-id={`capa-${r.id}`} sizes="(max-width: 760px) 70vw, 36vw" />

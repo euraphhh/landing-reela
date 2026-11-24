@@ -1,0 +1,31 @@
+.botao {
+  position: relative; display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  background: none; border: 0; color: inherit; cursor: pointer; transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.botao:active { transform: scale(0.97); }
+.icones { position: relative; width: 20px; height: 20px; }
+.ico { position: absolute; inset: 0; display: grid; place-items: center; }
+.ico svg { display: block; }
+.off { opacity: 0; transform: rotate(90deg) scale(0.5); filter: blur(2px); }
+
+/* só depois do primeiro clique: o velho sai girando para frente, o novo entra vindo de trás */
+.usado .on { animation: entra 0.3s cubic-bezier(0.23, 1, 0.32, 1) both; }
+.usado .off { animation: sai 0.3s cubic-bezier(0.23, 1, 0.32, 1) both; }
+@keyframes entra {
+  from { opacity: 0; transform: rotate(-90deg) scale(0.5); filter: blur(2px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes sai {
+  from { opacity: 1; transform: none; filter: blur(0); }
+  to { opacity: 0; transform: rotate(90deg) scale(0.5); filter: blur(2px); }
+}
+
+/* reduced motion: só cruza pelo blur, sem girar nem escalar */
+@media (prefers-reduced-motion: reduce) {
+  .botao, .botao:active { transform: none; transition: none; }
+  .off { transform: none; }
+  .usado .on { animation-name: entraCalmo; }
+  .usado .off { animation-name: saiCalmo; }
+  @keyframes entraCalmo { from { opacity: 0; filter: blur(2px); } to { opacity: 1; filter: blur(0); } }
+  @keyframes saiCalmo { from { opacity: 1; filter: blur(0); } to { opacity: 0; filter: blur(2px); } }
+}

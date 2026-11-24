@@ -32,6 +32,6 @@ export const MOSTRAR_SELO_PROTOTIPO = false;
 
 /** catálogos de beats (beatstars) */
 export const BEATS = [
-  { id: "reela", nome: "beats da reela", href: "https://www.beatstars.com/reelastudio" },
-  { id: "raphh", nome: "beats do raphh", href: "https://www.beatstars.com/euraphh" },
+  { id: "reela", nome: "beats da reela", quem: "reela studio", sobre: "os beats do estúdio da reela.", href: "https://www.beatstars.com/reelastudio" },
+  { id: "raphh", nome: "beats do raphh", quem: "raphh", sobre: "o catálogo do raphh, fundador da reela.", href: "https://www.beatstars.com/euraphh" },
 ];

@@ -1,0 +1,22 @@
+.beats { padding: clamp(80px, 14vh, 160px) var(--gutter); border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: clamp(32px, 6vh, 64px); }
+.topo { display: grid; grid-template-columns: auto minmax(0, 36ch); gap: clamp(20px, 4vw, 64px); align-items: end; }
+.tit { margin: 0; font: 300 clamp(72px, 13vw, 200px) / 0.85 var(--f-display); }
+.sub { margin: 0; font: 300 clamp(18px, 1.6vw, 22px) / 1.4 var(--f-display); color: var(--ink-2, inherit); opacity: 0.7; }
+.lista { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.lista li { border-bottom: 1px solid var(--line); }
+.linha {
+  display: grid; grid-template-columns: 48px minmax(0, 1fr) minmax(0, 1fr) auto; gap: 24px; align-items: center;
+  padding: clamp(20px, 3vw, 36px) 0; min-height: 72px; text-decoration: none; color: inherit;
+}
+.quem { white-space: nowrap; font: 300 clamp(36px, 5.6vw, 88px) / 1 var(--f-display); transition: transform 0.5s var(--ease); }
+.sobre { font-size: 15px; opacity: 0.6; }
+.ir { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; font-size: 15px; white-space: nowrap; }
+.marca { font-size: 18px; transition: transform 0.5s var(--ease); }
+.linha:hover .quem { transform: translateX(12px); }
+.linha:hover .marca { transform: rotate(-8deg); }
+@media (max-width: 860px) {
+  .topo { grid-template-columns: 1fr; }
+  .linha { grid-template-columns: 32px minmax(0, 1fr); gap: 8px 16px; }
+  .sobre, .ir { grid-column: 2; }
+}
+@media (prefers-reduced-motion: reduce) { .quem, .marca { transition: none; } .linha:hover .quem, .linha:hover .marca { transform: none; } }

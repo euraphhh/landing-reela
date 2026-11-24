@@ -26,7 +26,7 @@
 }
 .lnk:hover::after, .lnk:focus-visible::after { transform: scaleX(1); }
 
-.nav .toggle { margin-left: 8px; padding: 0 12px; }
+.nav .toggle { margin-left: 4px; }
 
 .nav .menuBtn { display: none; }
 @media (max-width: 860px) {

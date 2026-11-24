@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap, useGSAP, ScrollTrigger, calmo } from "@/lib/gsap";
 import { Simbolo } from "@/components/marca/Simbolo";
 import { useAncora, useScroll } from "@/components/providers/SmoothScroll";
-import { LiquidToggle } from "@/components/LiquidToggle/LiquidToggle";
+import { BotaoTema } from "@/components/BotaoTema/BotaoTema";
 import { usePulso } from "@/hooks/usePulso";
 import { EV, ouvir } from "@/lib/eventos";
 import { tocaEntrada, liberarEntrada } from "@/lib/entrada";
@@ -13,6 +13,7 @@ const LINKS = [
   { href: "/#releases", rot: "destaques" },
   { href: "/#people", rot: "quem passou" },
   { href: "/#label", rot: "o selo" },
+  { href: "/#beats", rot: "beats" },
   { href: "/story/", rot: "história" },
   { href: "/how-it-works/", rot: "como funciona" },
 ];
@@ -100,7 +101,7 @@ export function Barra() {
           {LINKS.map((l) => (
             <a key={l.href} className={s.lnk} href={l.href} onClick={ancora}>{l.rot}</a>
           ))}
-          <LiquidToggle className={s.toggle} />
+          <BotaoTema className={s.toggle} />
           <button ref={menuBtn} className={s.menuBtn} type="button" aria-expanded={menuAberto} aria-controls="menu" onClick={() => setMenuAberto(true)}>
             menu
           </button>

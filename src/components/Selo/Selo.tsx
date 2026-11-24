@@ -1,8 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { gsap, useGSAP, SplitText, calmo } from "@/lib/gsap";
-import { BeatstarsB } from "@/components/marca/BeatstarsB";
-import { BEATS, EMAIL, EMAIL_HREF } from "@/data/links";
+import { EMAIL, EMAIL_HREF } from "@/data/links";
 import s from "./Selo.module.css";
 
 const LINHAS = [
@@ -42,12 +41,6 @@ export function Selo() {
         <p className="t-caption">manda o link do pré-mix ou da demo. a gente ouve tudo, responde em até uma semana.</p>
         <a className="btn btn-1" href={EMAIL_HREF} onClick={EMAIL_HREF === "#" ? (e) => e.preventDefault() : undefined}>mandar faixa</a>
         <span className={s.mail}>{EMAIL}</span>
-        <p className="t-caption">precisa de beat? escolhe no catálogo.</p>
-        <div className={s.beats}>
-          {BEATS.map((b) => (
-            <a key={b.id} className="btn btn-2" href={b.href} target="_blank" rel="noopener noreferrer"><BeatstarsB className="bs" /> {b.nome} <span aria-hidden="true">↗</span><span className="sr"> (abre o beatstars em nova aba)</span></a>
-          ))}
-        </div>
         <a className="lnk-rodape" href="/how-it-works/">como funciona o acordo →</a>
       </aside>
     </section>

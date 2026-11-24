@@ -47,7 +47,7 @@ export function Hero() {
       <div className={s.baixo}>
         <div className={s.txt}>
           <p className={s.linha} data-entra style={{ "--j": 0 } as React.CSSProperties}>
-            selo de trap e r&amp;b. <span>a gente faz o beat, a mix e a arte. a faixa é sua.</span>
+            selo de trap e r&amp;b. <span>a gente faz o beat, a mix e o master. a faixa é sua.</span>
           </p>
           <ul className={s.links} aria-label="ouvir a reela">
             {STREAMING.map((p, j) => (

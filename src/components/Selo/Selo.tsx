@@ -7,7 +7,7 @@ import s from "./Selo.module.css";
 const LINHAS = [
   "a reela não contrata artista.",
   "contrata música.",
-  "a gente entra com beat, mix e arte.",
+  "a gente entra com beat, mix e master.",
   "você entra com a voz.",
   "o split fica no papel antes do primeiro play.",
 ];

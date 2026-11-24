@@ -5,7 +5,8 @@
  */
 import type { Metadata } from "next";
 import { RELEASES } from "@/data";
-import { EMAIL_HREF, STREAMING } from "@/data/links";
+import { BeatstarsB } from "@/components/marca/BeatstarsB";
+import { BEATS, EMAIL_HREF, STREAMING } from "@/data/links";
 import { Arte } from "@/components/Arte/Arte";
 import { Parceiro } from "@/components/Parceiro/Parceiro";
 import { Grao } from "@/components/Grao/Grao";
@@ -65,6 +66,9 @@ export default function Links() {
         <nav className={s.botoes} aria-label="caminhos">
           {r.links?.spotify && <a className={`${s.botao} ${s.cheio}`} href={r.links.spotify} target="_blank" rel="noopener noreferrer">ouvir {r.titulo} no spotify <span aria-hidden="true">↗</span></a>}
           <a className={s.botao} href={EMAIL_HREF}>mandar faixa <span aria-hidden="true">→</span></a>
+          {BEATS.map((b) => (
+            <a key={b.id} className={s.botao} href={b.href} target="_blank" rel="noopener noreferrer"><span><BeatstarsB className="bs" />{b.nome}</span> <span aria-hidden="true">↗</span></a>
+          ))}
           {caminhos.map((c) => (
             <a key={c.href} className={s.botao} href={c.href}>{c.rot} <span aria-hidden="true">→</span></a>
           ))}

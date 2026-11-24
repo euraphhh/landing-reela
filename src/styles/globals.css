@@ -88,3 +88,4 @@ main:focus { outline: none; }
 /* primeira página da visita: o que vai animar na entrada começa escondido (ver tema-script.ts) */
 html.entra header .sym-anim { visibility: hidden; }
 #top:focus { outline: none; }
+.bs { flex: none; margin-right: 8px; vertical-align: -0.15em; }

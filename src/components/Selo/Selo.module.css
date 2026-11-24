@@ -5,3 +5,4 @@
 .aside p { margin: 0; }
 .mail { font: 500 15px / 22px var(--f-text); }
 @media (max-width: 860px) { .selo { grid-template-columns: 1fr; } }
+.beats { display: flex; gap: 10px; flex-wrap: wrap; }
